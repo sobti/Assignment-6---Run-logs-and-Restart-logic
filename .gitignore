@@ -1,0 +1,15 @@
+# Python environment -- never commit, recreate with:
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/
+__pycache__/
+*.pyc
+
+# Generated corpus + intermediate pipeline artifacts (routed/, shards/,
+# packed/, stats/ are hundreds of MB combined; checkpoints_tt/ alone is
+# ~700MB of .pt weight files). All fully regenerable by running
+# ./run_pipeline.sh -- see README.md.
+routed/
+shards/
+
+# macOS Finder junk
+.DS_Store
