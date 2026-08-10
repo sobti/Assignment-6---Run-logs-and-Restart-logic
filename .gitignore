@@ -10,6 +10,11 @@ __pycache__/
 # ./run_pipeline.sh -- see README.md.
 routed/
 shards/
+packed/
+checkpoints/
+checkpoints_tt/
+stats/
+
 
 # macOS Finder junk
 .DS_Store
