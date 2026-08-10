@@ -1,0 +1,43 @@
+using System;
+
+using Argotic.Common;
+using Argotic.Syndication.Specialized;
+
+namespace Argotic.Examples
+{
+    /// <summary>
+    /// Contains the code examples for the <see cref="RsdApplicationInterface"/> class.
+    /// </summary>
+    /// <remarks>
+    ///     This class contains all of the code examples that are referenced by the <see cref="RsdApplicationInterface"/> class. 
+    ///     The code examples are imported using the unique #region identifier that matches the method or entity that the sample code describes.
+    /// </remarks>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Rsd")]
+    public static class RsdApplicationInterfaceExample
+    {
+        /// <summary>
+        /// Provides example code for the RsdApplicationInterface class.
+        /// </summary>
+        public static void ClassExample()
+        {
+            RsdDocument document    = new RsdDocument();
+
+            document.EngineName     = "Blog Munging CMS";
+            document.EngineLink     = new Uri("[URL]
+            document.Homepage       = new Uri("[URL]
+
+            //  Identify supported services using well known names
+            document.AddInterface(new RsdApplicationInterface("MetaWeblog", new Uri("[URL] true, "123abc"));
+            document.AddInterface(new RsdApplicationInterface("Blogger", new Uri("[URL] false, "123abc"));
+            document.AddInterface(new RsdApplicationInterface("MetaWiki", new Uri("[URL] false, "123abc"));
+            document.AddInterface(new RsdApplicationInterface("Antville", new Uri("[URL] false, "123abc"));
+
+            RsdApplicationInterface conversantApi   = new RsdApplicationInterface("Conversant", new Uri("[URL] false, String.Empty);
+            conversantApi.Documentation             = new Uri("[URL]
+            conversantApi.Notes                     = "Additional explanation here.";
+            conversantApi.Settings.Add("service-specific-setting", "a value");
+            conversantApi.Settings.Add("another-setting", "another value");
+            document.AddInterface(conversantApi);
+        }
+    }
+}

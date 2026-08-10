@@ -1,0 +1,140 @@
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover {
+  background-color: #D65128;
+  border-color: #D65128;
+}
+
+a,
+a:hover,
+a:focus {
+  color: #D65128;
+}
+
+a.skip {
+  left: -999px;
+  position: absolute;
+  top:auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+.outer-header {
+  padding-bottom: 12px;
+  margin: auto;
+}
+
+.outer-header header {
+  background-color: #D65128;
+  border-radius: 0;
+}
+
+.outer-header header h1.navbar-brand,
+.outer-header header h1.navbar-brand:hover {
+  color: #FFF;
+}
+
+.nav-link.active,
+.nav-link.active:hover,
+.nav-link.active:focus {
+  background-color: #D65128 !important;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-group *,
+input[type=text] {
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: #D65128;
+  outline: 0;
+}
+
+.nav-link .tag {
+  margin-top: 3px;
+}
+
+.alert-container {
+  position: absolute;
+  float: right;
+  min-width: 30%;
+  right: 7px;
+  top: 7px;
+  z-index: 3;
+}
+
+#leaflet {
+  width: 100%;
+  height: 450px;
+}
+
+#bboxSubmitBtn {
+  position: fixed;
+  right: 5px;
+  bottom: 22px;
+  display:none;
+}
+
+.about-footer {
+  text-align: left;
+}
+
+.abbe {
+  position: relative;
+  display: inline-block;
+  margin: 10px 5px;
+  outline: none;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: #333;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+}
+
+.abbe::before,
+.abbe::after  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #EDF7D2;
+  content: '';
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.abbe::after  {
+  border-color: #4B3B47;
+  opacity: 0;
+  transform: translateY(-7px) translateX(6px);
+}
+
+.abbe:hover,
+.abbe:focus {
+  color: rgb(55, 58, 60);
+  text-decoration: none;
+}
+
+.abbe:hover::before,
+.abbe:focus::before {
+  opacity: 0;
+  transform: translateY(5px) translateX(-5px);
+}
+
+.abbe:hover::after,
+.abbe:focus::after  {
+  opacity: 1;
+  transform: translateY(0px) translateX(0px);
+}

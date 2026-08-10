@@ -1,0 +1,15 @@
+
+import { environment } from '../../environments/environment';
+
+export class AppSettings {
+    public static YOUTUBE_API_KEY: string = 'AIzaSyBgJ0KTiDr4VQKrAJ9-BmR7oMFMivAksEc';
+    //public static  SOLR_SERVER_PATH: string = '[URL]
+    public static SOLR_SERVER_PATH: string = (environment.production) ? '[URL] : '[URL]
+    public static EXPRESS_API_PATH: string = 'localhost';
+    public static base_url: string = '[URL]
+    public static max_results: number = 12;
+    public static LOCATION_SERVICE_PATH: string = '[URL]
+
+}
+
+

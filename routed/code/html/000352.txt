@@ -1,0 +1,161 @@
+
+<!DOCTYPE html lang="ua">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="[URL] integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="[URL] integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <title>Декларація</title>
+</head>
+
+<style>
+	.wrapper{
+		word-wrap: break-word;
+	}
+	
+	/* Spin loader */
+	.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #005cff; /* Green */
+    border-radius: 50%;
+    margin-top: 50px;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    animation: spin 2s linear infinite;
+	}
+
+	@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+	}
+</style>
+
+<script type="text/javascript">
+	function trigger_search(e) {
+		e = e || window.event;
+		console.log("event", e);
+	  if (e.keyCode == 13) {
+	      searchServer()
+	  }
+	}
+
+  function searchServer() {
+    $('.data > tbody').empty();
+    $('.data').addClass('hidden');
+		$('button').prop('disabled', true);
+		$('#search').prop('disabled', true);	
+		$(".loader").removeClass('hidden');
+		
+
+    var search_query = document.getElementById('search').value;
+    $.ajax({
+      url: '/search',
+      data: {
+        search_query: search_query
+      },
+      contentType: 'application/json;charset=UTF-8',
+      type: 'GET',
+      success: function(response) {
+        var object = JSON.parse(response).items;
+        for (var index in object) {
+          var obj = object[index];
+          $('.data > tbody').append(createTableRow(obj));
+        }
+      },
+      error: function(error) {
+        console.log("error!", error);
+      }
+    }).done(function() {
+  		$(".loader").addClass('hidden');
+  		$('#search').prop('disabled', false);
+    	$('.data').removeClass('hidden');
+    	$('button').prop('disabled', false);
+    });
+  }
+
+  function createTableRow(object) {
+    return "<tr>" +
+                  createTableCell(object.firstname) +
+                  createTableCell(object.lastname) +
+                  createTableCell(object.placeOfWork) +
+                  createTableCell(object.position) +
+                  createTableCellAsLink(object.linkPDF) +
+           "</tr>";
+  }
+
+  function createTableCell(object) {
+    if (object === undefined || object === null) {
+      object = "";
+    }
+    return "<td>" + object + "</td>"
+  }
+
+  function createTableCellAsLink(object) {
+    var pdf = "PDF";
+    if (object === undefined || object == null) {
+      object = "#";
+      pdf = "";
+    }
+    return "<td><a href=\"" + object + "\" target=\"_blank\">" + pdf + "</a></td>"
+  }
+</script>
+
+<body>
+  <div class="row invisible">Small margin</div>
+    <!-- Render it beautifully -->
+  <div class="row">
+      <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+        <div class="input-group">
+          <input id="search" type="text" class="form-control" onkeypress="trigger_search(event)" placeholder="Введіть пошуковий запит...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" onclick="searchServer()">Шукати!</button>
+          </span>
+        </div><!-- /input-group -->
+      </div>
+  </div><!-- /.row -->
+
+	<div class="row invisible">Small margin</div>
+
+	<div class="loader center-block hidden"></div>
+
+  <div class="row">
+    <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+			<table class="table table-hover hidden data wrapper">
+				<thead>
+					<tr>
+						<th>Ім'я</th>
+						<th>Прізвище</th>
+						<th>Місце роботи</th>
+						<th>Посада</th>
+						<th>Посилання на PDF</th>		
+					</tr>	
+				</thead>
+				<tbody>
+		  	</tbody>
+		  </table>
+    </div>
+  </div>
+
+
+
+    <script src="[URL]
+    <script src="[URL] integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','[URL]
+
+  ga('create', 'UA-97831532-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+
+</html>

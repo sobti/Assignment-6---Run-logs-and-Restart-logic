@@ -1,0 +1,28 @@
+.checkbox{
+	display: inline-block;
+	width: 100%;
+	height: 36px;
+	
+}
+.halfCheckBox{
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	height: 100%;
+	line-height: 36px;
+	border: 1px solid gray;
+	box-sizing: border-box;
+}
+.left{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.right{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.highlight{
+	background-color: teal;
+	color: white;
+	border: 1px solid teal;
+}

@@ -1,0 +1,113 @@
+@model VendedorModel
+
+@{
+    ViewData["Title"] = "Apagar";
+}
+
+<h1>Agapar Vendedor?</h1>
+
+<form asp-controller="Vendedor" asp-action="Delete">
+    <hr />
+    <div class="row">
+
+        <div class="form-group col-md-8" hidden="hidden">
+            <label>ID *</label>
+            <input type="text" class="form-control" asp-for="Idvendedor"
+                   value="@ViewBag.Vendedor.Idvendedor">
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-8">
+            <label>Nome *</label>
+            <input type="text" class="form-control" asp-for="Nome"
+                   value="@ViewBag.Vendedor.Nome" readonly="readonly">
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label>Sexo *</label>
+            @{
+                var sexo = ViewBag.Vendedor.Sexo;
+            }
+            <select asp-for="Sexo" class="form-control" readonly="readonly">
+                <option value="@sexo" selected>@sexo</option>
+                <option value=""></option>
+                <option value="Feminino">Feminino</option>
+                <option value="Masculino">Masculino</option>
+            </select>
+            <span asp-validation-for="Sexo" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label>Status *</label>
+            @{
+                var status = ViewBag.Vendedor.Status;
+            }
+            <select asp-for="Status" class="form-control" readonly="readonly">
+                <option value="@status" selected>@status</option>
+                <option value=""></option>
+                <option value="Ativo">Ativo</option>
+                <option value="Inativo">Inativo</option>
+            </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="form-group col-md-8">
+            <label>E-mail *</label>
+            <input type="text" class="form-control" asp-for="Email"
+                   value="@ViewBag.Vendedor.Email" readonly="readonly">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Nível *</label>
+            @{
+                var nivel = ViewBag.Vendedor.Nivel;
+            }
+            <select asp-for="Nivel" class="form-control" readonly="readonly">
+                <option value="@nivel">@nivel</option>
+                <option value=""></option>
+                <option value="Operador">Operador</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+            <span asp-validation-for="Nivel" class="text-danger"></span>
+        </div>
+
+        <div class="row" hidden="hidden">
+            <div class="form-group col-md-3">
+                <label>Senha</label>
+                <input asp-for="Senha" type="password" class="form-control"
+                       value="@ViewBag.Vendedor.Senha">
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label>Confirmar Senha</label>
+                <input asp-for="ConfirmSenha" type="password" class="form-control"
+                       value="@ViewBag.Vendedor.Senha">
+                <span asp-validation-for="ConfirmSenha" class="text-danger"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="actions" class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-danger btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-trash"></i>
+                </span>
+                <span class="text">Apagar</span>
+            </button>
+            <a class="btn btn-light" asp-action="Index">Voltar</a>
+        </div>
+    </div>
+
+</form>
+
+
+
+

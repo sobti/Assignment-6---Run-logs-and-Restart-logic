@@ -1,0 +1,11 @@
+“Product Fee for Woocommerce” enables admin to add custom fee per product. admin can also decide whether this custom fee should be visible user or not.
+- Look at your product tab section Product Fee.
+- Go and manage Product Fee.
+- I don’t checked the additional fee , will visible the product fee for Front end user?
+No. The product fee do not visible for Front end user , you will need to cheked the additional fee.
+- Will this additional fee applied on guest user?
+There are no reviews for this plugin.
+Translate “Product Fee for Woocommerce” into your language.
+Interested in development?
+Browse the code, check out the SVN repository, or subscribe to the development log by RSS.
+- Initial release of plugin.

@@ -1,0 +1,4 @@
+module.exports = {
+  'api.mock.com': '[URL]
+  'api.mock2.com': '[URL]
+};

@@ -1,0 +1,9 @@
+const devConfig = {
+  API_URL: '[URL]
+  AUTH_API_URL: '[URL]
+  PACKAGE_URL: '[URL]
+  SENTRY_DSN: '[URL]
+  SENTRY_ENV: 'Development',
+};
+
+export default devConfig;

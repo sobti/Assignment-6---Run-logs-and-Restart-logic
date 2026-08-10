@@ -1,0 +1,46 @@
+The Outlook app on your Windows 11 PC gives you access to the Calendar for planning your routine. You can add reminders for important events and appointments in the Outlook Calendar to never miss them. These include birthdays, doctor’s appointments, or sales meetings with your colleagues.
+But some users complain that their Outlook Calendar is not showing events and appointments on Windows 11. If you are also facing the same, here are working solutions to fix events not showing in the Outlook Calendar on Windows 11.
+Starting with the basic solution if you can’t see events after adding them to your Outlook Calendar is to check the strength of your Internet connection. The event entries in the Outlook Calendar will require good internet connectivity to sync with your account. So we suggest running a speed test and checking the same.
+Once your internet speed is in order, you need to configure your Outlook account settings. Since you can add multiple accounts to the Outlook app on your Windows 11 PC, you need to check whether you are using the correct email ID. Here’s how.
+Step 1: Click the Start icon on Windows 11, type Outlook, and press Enter to open Microsoft Outlook.
+Step 2: Click on File at the top-left corner.
+Step 3: Click on Account Settings.
+Step 4: Click on Account Settings again.
+Step 5: Check which email account you use for your Outlook Calendar.
+If you use the wrong email account, you can remove it from Outlook and add the correct one.
+After that, close the window and check if the problem is solved.
+Another reason your Outlook calendar might not show your meetings is because of the custom calendar view hiding your meetings. Here’s how you can reset your Outlook Calendar view.
+Step 1: Click the Start icon on Windows 11, type Outlook, and press Enter to open Microsoft Outlook.
+Step 2: Select the Calendar from the left panel.
+Step 3: Click on View at the top Menu Bar.
+Step 4: Click on Current View.
+Step 5: Select View Settings.
+Step 6: In the Advanced View Settings window, click on Reset Current View.
+Step 7: Click Yes to confirm.
+Step 8: After that, click on Ok, close the window, and check if the problem is solved.
+Outlook will automatically archive all your data after specific intervals of time. If your Outlook calendar events are still not showing up on Windows 11, they may have been archived. You can check the Auto Archive settings and even turn off the feature.
+Step 1: Click the Start icon on Windows 11, type Outlook, and press Enter to open Microsoft Outlook.
+Step 2: Click on File at the top-left corner.
+Step 3: Click on Options at the bottom-left corner.
+Step 4: Select Advanced from the left menu.
+Step 5: Click the AutoArchive Settings button.
+Step 6: Check the number of days for running AutoArchive in the background.
+You can change the number of days or select the uncheck option to stop using the feature.
+Step 7: Click on Ok at the bottom right side to save your preference.
+You can delegate access to your Outlook Calendar, let someone else plan your meetings, and make changes. But that also permits the person to remove your events from Calendar. So you need to check the Delegate Access for your Outlook Calendar on your Windows 11 PC.
+Step 1: Click the Start icon on Windows 11, type Outlook, and press Enter to open Microsoft Outlook.
+Step 2: Click on File at the top-left corner.
+Step 3: Click on Account Settings.
+Step 4: Select Delegate Access.
+Step 5: Check which account has access to your Outlook Calendar. You can remove the access if you wish to.
+Step 6: After you make the changes, click on Ok to confirm. And then check if the problem is solved.
+If none of the solutions work, we suggest updating the version of Outlook on your Windows 11 PC.
+Step 1: Click the Start icon on Windows 11, type Outlook, and press Enter to open Microsoft Outlook.
+Step 2: Click on File at the top-left corner.
+Step 3: Click on Office Account at the bottom-left corner.
+Step 4: Select Update Options.
+Step 5: Click on Update Now.
+Step 6: If an update is available, download and install it.
+Step 7: Relaunch Outlook and check if the problem is solved.
+These solutions will fix the issue with your Outlook Calendar not showing events and appointments on Windows 11. You can also read our post on how to add images to Outlook Email.
+The above article may contain affiliate links which help support Guiding Tech. However, it does not affect our editorial integrity. The content remains unbiased and authentic.

@@ -1,0 +1,11 @@
+(Reuters) – Meta Platforms Inc (META. O) signed an agreement to have chip-maker Qualcomm Inc (QCOM. O) produce custom chipsets for its Quest virtual reality (VR) devices, the companies announced at a consumer electronics conference in Berlin on Friday.
+ Engineering and product teams of both companies will work together to produce the chips, powered by Qualcomm’s Snapdragon platforms, they said in a statement.
+ The agreement shows the dependency of Meta, known as Facebook until last year, on Qualcomm’s technology even as it tries to develop custom silicon of its own for its virtual, augmented and mixed reality devices.
+ “Unlike mobile phones, building VR brings novel multidimensional challenges in spatial computing, cost and form factor,” Meta Chief Executive Mark Zuckerberg said in a video message.
+ “We are still in the early stages of the metaverse and this sort of deep technical integration will help VR move towards being a multifunctional computing platform,” he said.
+ Meta has been investing heavily in technologies like pass-through goggles and augmented reality glasses as it tries to bring to life Zuckerberg’s vision for the metaverse, a concept involving an immersive set of digital worlds.
+ It has relied on Qualcomm’s chips for its VR devices for years, including for its latest Quest2 headset.
+ The chipsets produced through the collaboration will not be exclusive to Meta, but will be optimized specifically for Quest’s system specifications, Meta spokesperson Tyler Yee told Reuters.
+ Financial terms of the deal were not disclosed.
+ The agreement covers only VR devices, Yee said, and Meta will continue working to develop some of its own silicon solutions.
+ “There could be situations where we use off-the-shelf silicon or work with industry partners on customizations, while also exploring our own novel silicon solutions. There could also be scenarios where we use both partner and custom solutions in the same product,” said Yee.

@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container text-center round home shadow mt-4">
+    <h1>page could not be found</h1>
+</div>
+{% endblock %}
+
+

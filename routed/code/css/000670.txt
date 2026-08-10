@@ -1,0 +1,23 @@
+table{
+    border-collapse: collapse;
+    width: 100%;
+    background:  rgba(3, 64, 120, 1);
+    border-radius: 0.5rem;
+    margin-bottom:2rem;
+    box-shadow: 5px 5px 26px 5px rgba(0, 0, 0, 0.247);
+    border: 0.2rem solid rgb(253, 207, 3);  
+}
+
+tr{
+    margin-top:30px;
+    margin-left:15px;
+    color:rgba(235, 235, 235, 1);
+ 
+}
+
+th{
+    margin-top:30px;
+    margin-left:15px;
+    color: rgba(235, 235, 235, 1);
+    background: rgb(58, 58, 58);
+}

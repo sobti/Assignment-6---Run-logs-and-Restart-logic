@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eux
+
+NIC=${NIC:-eth1}
+
+sudo ip addr add [IP]/24 dev $NIC
+sudo ip link set dev $NIC up
+sudo ip link set dev $NIC mtu 1400

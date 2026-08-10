@@ -1,0 +1,534 @@
+/* Copyright © 2012 RGen Solutions . All Rights Reserved.
+   Contact : [EMAIL] */
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+.selHeading{ color:#4044b0 /*#1f2275*/ !important; } /* to highlight tabs */
+
+/*.btn{margin-left:890px;background-color:#ffbb05;color:#000;border:solid 1px gray;cursor:pointer;font-size:12px;margin-right:1em; width:70px; height:25px;padding-bottom:10px;padding-top:1px;padding-bottom :0.1em}*/
+.btn{background-color:#4044b0!important;color:#fff!important;border:solid 1px gray!important;cursor:pointer;font-size:12px;margin-right:1em; width:70px; height:25px;padding-bottom:10px!important;padding-top:1px!important;padding-bottom :0.1em!important}
+.btnClr{background-color:#ffbb05;color:#000;border:solid 1px gray;cursor:pointer;font-size:12px;margin-right:1em; width:70px; height:25px;padding-bottom:10px;padding-top:1px; padding-bottom:0.1em}
+.btnNew{margin-left:880px;background-color:#ffbb05;color:#000;border:solid 1px gray;cursor:pointer;font-size:12px;margin-right:1em; width:70px; height:25px; padding-top:1px; padding-bottom:0.1em}
+.btnTC{margin-left:870px;background-color:#ffbb05;color:#000;border:solid 1px gray;cursor:pointer;font-size:12px;margin-right:1em; width:70px; height:25px; padding-top:1px; padding-bottom:0.1em}
+.btnNew3{margin-left:860px;background-color:#ffbb05;color:#000;border:solid 1px gray;cursor:pointer;font-size:12px;margin-right:1em; width:70px; height:25px; padding-top:1px; padding-bottom:0.1em}
+.btnLogasBug{background:url('../../../images/logasbug.png');height:inherit;width:80%;cursor:pointer;background-repeat:no-repeat; padding:5%}
+/*.btnNew1{background-color:white;color:#000;border:solid 1px gray;cursor:pointer;font-size:12px;width:70px; height:25px}*/
+input[type=button].btnNew1{ 
+	border:solid 0px gray;
+    padding:5px 15px 5px 15px;
+	cursor: pointer;
+	color: white !important;
+	background-color: #4044b0!important; /*orange --> rgb(255, 102, 0)*/
+	margin:0px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;
+	min-width:0px;vertical-align:baseline;
+}
+span.btnNew1{ 
+	border:solid 0px gray;
+    padding:5px 15px 5px 15px;
+	cursor: pointer;
+	color: white !important;
+	background-color: #4044b0!important; /*orange --> rgb(255, 102, 0)*/
+}
+
+.urltextboxNew1{height:70px;overflow: auto;width: 300px; border-top-color: #ccc; border-right-color: #ccc; border-bottom-color: #ccc; border-left-color: #ccc; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;}
+li{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+ul{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+form{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+label{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+span{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+p{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+div{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+h4{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+h3{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+h2{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+h1{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+body{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+
+html{margin:0;padding:0;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+img{border:none;text-decoration:none;}
+a{border:none;text-decoration:none;}
+.rgtNew{float:left; padding-left:20px;}
+#wrapper-hd{background:url('../../../images/bg-wrapper-hd.png');background-position:top center;background-repeat:no-repeat;width:1280px;padding:15px 10px 5px 10px;margin:0px auto;overflow:hidden;background-size: 100% 100%;}
+#wrapper-ft{background:url('../../../images/bg-wrapper-ft.png');background-position:top center;background-repeat:no-repeat;width:1280px;padding:10px;margin:0px auto;height:50px;border:none;background-size: 100% 100%;}
+
+.header{padding:10px;height:90px;}
+.header .adv{float:left;border:solid 1px #999;}
+.header .logo{float:right;}
+.clear{clear:both;height:2px;font-size:0px;}
+.center{text-align:center;}
+.blue{color:#09f;}
+.blk{color:#000;}
+
+a:link{	color:black}
+a:visited{color:black}
+a:hover{color:#0769f0}
+
+.lft{float:left;}
+.rgt{float:right;}
+.bggray{background-color:#E9E9E9;}
+.lftNew{float:left;padding-right:30px;}
+.rgtNew{float:left;}
+.thirdCol{float:right;padding-right:80px}
+.rgtNew{float:left; padding-left:100px;}
+.rgtTstStep{float:left; padding-left:30px;}
+.thirdColPrj{float:right;padding-right:50px}
+
+.border{border:solid 1px #ccc;}
+.addNew{background-image:url('../../../images/bg-new.jpg');background-repeat:no-repeat;padding:2px 5px 3px 30px;background-position:0px -5px;}
+
+.addRole{background-image:url('../../../images/add.png');cursor:pointer;}
+.deleteRole{background-image:url('../../../images/delete.png');background-repeat: no-repeat ;}
+
+.project{padding:0px 10px 15px 0px;overflow:hidden;}
+.upload{padding:10px;}
+.frm .input{border: solid 1px #ccc;padding:2px;width:90%;font-size:12px;}
+.frm .mininput{border: solid 1px #ccc;padding:2px;width:45%;font-size:12px;}
+.frm .miniddl{border: solid 1px #ccc;padding:1px;width:45%;font-size:12px;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+.submit{padding:3px 10px;background-color:#ffbb05;color:#000;display:block;border:solid 1px #ccc;margin:0.5em 0em;cursor:pointer;font-size:12px;}
+.frm .submit{padding:3px 10px;background-color:#ffbb05;color:#000;display:block;border:solid 1px #ccc;margin:0.5em 0em;cursor:pointer;font-size:12px;}
+.frm .submit:hover{background-color:#ffcd49;}
+.frm label{display:block;font-weight:bold;color:#333;padding:5px 0px 1px 0px;}
+.submitNew{padding:3px 10px;background-color:#ffbb05;color:#000;display:block;border:solid 1px #ccc;margin:0.5em 0em;cursor:pointer;font-size:12px;float:right}
+.frm .submitNew{padding:3px 10px;background-color:#ffbb05;color:#000;display:block;border:solid 1px #ccc;margin:0.5em 0em;cursor:pointer;font-size:12px;float:right}
+.frm .inputNew{border: solid 1px #ccc;padding:2px;width:400px;font-size:12px;}
+.frm .desc{border: solid 1px #ccc;padding:2px;width:400px;font-size:12px;height:50px;}
+.frm .Medinput{border: solid 1px #ccc;padding:2px;width:300px;font-size:12px;}
+.frm .Mediumddl{border: solid 1px #ccc;padding:1px;width:300px;font-size:12px;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+.frm .Lddl{border: solid 1px #ccc;padding:1px;width:407px;font-size:12px;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+.frm .sminput{border: solid 1px #ccc;padding:2px;width:250px;font-size:12px;}
+.frm .descNew{border: solid 1px #ccc;padding:2px;width:300px;font-size:12px;height:50px;}
+.frm .date{border: solid 1px #ccc;padding:2px;width:200px;font-size:12px;}
+.frm .ddl{border: solid 1px #ccc;padding:1px;width:185px;font-size:12px;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+.frm .descLarge{border: solid 1px #ccc;padding:2px;width:400px;font-size:12px;height:50px;font-weight:normal;font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;font-size:12px;color:#1f1f1f;}
+.frm .descNewFrTP{border: solid 1px #ccc;padding:2px;width:311px;font-size:12px;height:50px;}
+.frm .ddlStatusDDL{border: solid 1px #ccc;padding:1px;width:255px;font-size:12px;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+
+.gridtext{border: solid 1px #ccc;padding:2px;width:95%;font-size:12px;}
+.gridddl{border: solid 1px #ccc;padding:2px;width:98%;font-size:12px;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+.gridfile{border: solid 1px #ccc;padding:2px;width:20%;font-size:12px;}
+
+
+.nav{background-image:url('../../../images/bg-nav.jpg');height:43px;margin-bottom:1em;}
+.nav ul{list-style:none;padding:0px 0px 0px 15px;width:720px;float:left;}
+.nav ul li{float:left;background-image:url('../../../images/bg-nav-divider.jpg');background-repeat:no-repeat;background-position:top right;}
+.nav ul li.clr{background:none;}
+.nav ul li.signout{background:none;}
+
+.nav .user{float:right;width:220px;padding:4px 10px 0px 0px;}
+.nav .user span{display:block;font-size:12px;text-align:right;}
+
+.col-lft{float:left;width:200px;padding:0px 0px 0px 10px;}
+.col-rgt{float:right;width:1050px;padding:0px 10px 0px 0px;}
+.col-full{width:1240px;padding:0px 10px 0px 20px;}
+
+
+.col-lft .box{background-image:url('../../../images/bg-lftbox.jpg');width:190px;background-position:0px 0px;background-repeat:no-repeat;padding:5px;}
+.col-lft .box h1{font-size:14px;height:20px;width:180px; padding:3px 10px 8px 10px;font-weight:bold;background-image:url('../../../images/drop-arrow.gif');background-position:175px 10px;background-repeat:no-repeat;cursor:pointer;}
+.col-lft .box-ft{background-image:url('../../../images/bg-lftbox-ft.jpg');width:190px;background-position:bottom center;background-repeat:no-repeat;padding:1px 5px 10px 5px;text-align:center;font-size:12px;margin-bottom:0.5em}
+
+.col-lft .box div a{display:block;padding:5px 5px 5px 25px;background-image:url('../../../images/bullet-1.jpg');background-position:10px 9px;background-repeat:no-repeat;border-bottom:dotted 1px #ebebeb;}
+.col-lft .box div a:hover{background-color:#ebebeb;}
+.col-lft .box div a.sub{padding:5px 5px 5px 25px;background:none;}
+.col-lft .box div a.sub:hover{background-position:25px 9px;}
+
+.col-rgt .box{background-image:url('../../../images/bg-rgtbox.jpg');width:1020px;background-position:top center;background-repeat:no-repeat;padding:0px 10px;overflow:hidden;}
+.col-rgt .box h1{font-size:14px;height:20px;width:500px; padding:8px 10px 8px 0px;font-weight:bold;float:left;}
+.col-rgt .box a.new{float:right;display:inline-block;background-image:url('../../../images/bg-new.jpg');background-position:0px 1px;background-repeat:no-repeat;padding:8px 10px 8px 40px;}
+.col-rgt .box-ft{background-image:url('../../../images/bg-rgtbox-ft.jpg');width:1030px;background-position:bottom center;background-repeat:no-repeat;padding:1px 5px 10px 5px;text-align:center;font-size:12px;margin-bottom:0.5em;height:20px;}
+.col-rgt .breadcrums{clear:both;margin-bottom:1em;}
+
+.col-full .box{background-image:url('../../../images/bg-fullbox.jpg');width:1220px;background-position:top center;background-repeat:no-repeat;padding:0px 10px;overflow:hidden;}
+.col-full .box h1{font-size:14px;height:20px;width:500px; padding:10px 10px 8px 0px;font-weight:bold;float:left;margin-bottom:0.5em;}
+.col-full .box h4{font-size:14px;color:#1f2275;font-weight:bold;padding:10px 0px 5px 10px;}
+.col-full .box h1.panel{background-image:none;width:100%;font-size:14px;padding:0px;margin:0px;}
+
+.scenario{margin:0em 0em 1em 1em;}
+.scenario h3 {background-image:url('../../../images/arrow-u.jpg');background-position:0px 10px;background-repeat:no-repeat;margin: 0;padding:5px 10px 5px 15px;cursor:pointer;border-top:dotted 1px #e1e1e1;}
+.scenario h3 span.desc{display:inline-block;color:#030;font-size:13px;font-weight:bold;padding-right:5px;}
+.scenario h3 span.desc2{display:block;color:#016097;}
+.scenario div {padding:5px;}
+
+.col-full .box a.new{float:right;display:inline-block;background-image:url('../../../images/bg-new.jpg');background-position:0px 1px;background-repeat:no-repeat;padding:8px 10px 8px 40px;}
+.col-full .box-ft{background-image:url('../../../images/bg-fullbox-ft.jpg');width:1220px;background-position:bottom center;background-repeat:no-repeat;padding:1px 10px 10px 10px;text-align:center;font-size:12px;margin-bottom:0.5em;height:20px;}
+.col-full .breadcrums{clear:both;margin-bottom:1em;}
+
+.filter{padding:5px 5px 15px 5px;}
+.filter label{padding:0px 0px 0px 0px;font-weight:bold;color:#616161;}
+.filter .ddl{border:solid 1px #ccc;padding:1px;width:175px;margin-right:1em;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+.filter .ddl-small{border:solid 1px #ccc;padding:1px;width:80px;margin-right:1em;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+.filter .ddl-large{border:solid 1px #ccc;padding:1px;width:500px;margin-right:1em;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+.filter .submit {padding:3px 10px;background-color:#ffbb05;color:#000;margin:0.5em 0.5em 0.5em 0em;cursor:pointer;font-size:12px;display:inline-block;}
+
+.proj-desc{padding:5px 5px 5px 5px;background-color:#f7f7f7;border:solid 1px #e1e1e1;margin-bottom:0.5em; min-height:100px;} 
+.proj-desc h2{font-size:14px;color:#1f2275;font-weight:bold;padding:0px 0px 5px 0px;float:left;width:900px;}
+.proj-desc h2 span{color:#616161;font-size:12px;display:inline-block;padding:0px 10px;font-weight:bold;}
+.proj-desc p{padding:0px 0px 5px 0px;float:left;width:900px;}
+.proj-desc span.export{float:right;width:200px;text-align:right;}
+
+
+.dashboard{width:540px;padding:25px;float:left;background-image:url('~./images/bg-dashboard-box.jpg');height:275px;margin-left:1em;}
+.dashboard h2{font-size:14px;color:#656565;font-weight:bold;padding:0px 0px 15px 5px;} /* modified for bug 7542 */
+.dashboard_Revamp{width:540px;padding:25px;float:left;background-image:url('../../../images/bg-dashboard-box_new.png');height:600px;margin-left:1em;}
+.dashboard_Revamp1{width:540px;padding:25px;float:left;background-image:url('../../../images/bg-dashboard-box680.jpg');height:680px;margin-left:1em;}
+.grapharea{padding:10px;text-align:center;}
+.scroll-pane{width:100%;height:215px;overflow: auto;}
+
+
+table.gridDetails{width:100%;border:solid 1px #999;margin-top:0px;margin-bottom:0px;}
+table.gridDetails td{border-bottom:solid 1px #999;border-right:solid 1px #999;background-color:#fff;}
+table.gridDetails td.center{vertical-align:middle;text-align:center;}
+table.gridDetails td.center a{display:inline-block;}
+table.gridDetails td.tblhd{background-color:#e7e8ff/*f8d03d*/;height:30px;border-bottom:solid 1px #222;}
+table.gridDetails td.tblhd-b{background-color:#e7e8ff/*#cae581*/;height:30px;border-bottom:solid 1px #222;}
+table.gridDetails td.bggray{background-color:#f4f4f4;}
+/* 
+table.grid td.tblhd{background-color:#f8d03d;height:30px;}
+
+table.gridDetails td a.proj{font-weight:bold;display:block;padding:2px 5px 2px 5px;}
+table.gridDetails td {padding:2px 5px;display:block;}*/
+.selectedRow {background-color:#f8f8f8;cursor:pointer;}
+table.gridDetails td .ddl{border:solid 1px #000;width:100%;font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";}
+
+.pager{padding:0px 1px;font-size:11px;text-align:right;margin-top:0.5em;} /* modified for bug 7223 */
+.pager label{padding-right:5px;} /* modified for bug 7223 */
+
+.action{padding:5px 10px;font-size:11px;text-align:right;}
+.actionTstStep{padding:50px;font-size:11px;text-align:right;width:295px; padding-right:2px; height:100px}
+.actionNew{font-size:11px;text-align:right;}
+.action .sub{padding:3px 10px;background-color:#ffbb05;color:#000;border:solid 1px #ccc;margin:0.5em 0em;cursor:pointer;font-size:12px;margin-right:1em;}
+.actionTstStep .sub{background-color:#ffbb05;color:#000;border:solid 1px #ccc;cursor:pointer;font-size:12px; float:right; width:85px; height:28px; margin-left:10px;}
+.actionNew .sub{padding:3px 10px;background-color:#ffbb05;color:#000;border:solid 1px #ccc;margin:0.5em 0em;cursor:pointer;font-size:12px;margin-right:1em;}
+
+.col-rgt .doublecol-1{width:600px;padding:0px;}
+.col-rgt .doublecol-2{width:375px;padding:0px;}
+
+.table-wrapper {
+	width: 520px;
+}
+
+.wrapper-paging {
+	display: none;
+	padding-left: 20px;
+}
+
+.wrapper-paging li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper-paging ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper-paging ul {
+	float: left;
+	list-style-type: none;
+	text-align: left;
+}
+
+.wrapper-paging a {
+	border: 2px solid #FFFFFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	display: inline-block;
+	color: #015287;
+	cursor: pointer;
+	margin-right: 3px;
+	padding: 3px 7px;
+	text-decoration: none;
+}
+
+.wrapper-paging .paging-this {
+	cursor: default;
+	padding: 3px 0;
+}
+
+.wrapper-paging a:hover {
+	background-color: #015287;
+	color: #FFFFFF;
+}
+
+.wrapper-paging .paging-next {
+	border-color: #015287;
+}
+
+.wrapper-paging .paging-back {
+	border-color: #015287;
+}
+
+.wrapper-paging .paging-this:hover {
+	background-color: #FFFFFF;
+	color: #015287;
+}
+
+.wrapper-paging .paging-this b {
+	font-weight: normal;
+}
+
+.wrapper-paging .paging-disabled:hover {
+	background-color: #FFFFFF;
+	border-color: grey;
+	color: grey;
+	cursor: default;
+}
+
+.wrapper-paging .paging-disabled {
+	background-color: #FFFFFF;
+	border-color: grey;
+	color: grey;
+	cursor: default;
+}
+
+.wrapper-panel {
+	clear: both;
+	padding-top: 10px;
+}
+.textAreaFont{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";
+	font-size:11.5px;
+}
+.cursPoint{
+	cursor: pointer;
+}
+
+
+#scrollbar1 {}
+#scrollbar1 .viewport { width: 1200px; height:480px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0;height:475px; }
+#scrollbar1 .scrollbar{ background: transparent url('../../../images/bg-scrollbar-track-y.png') no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 15px; }
+#scrollbar1 .track { background: transparent url('../../../images/bg-scrollbar-trackend-y.png') no-repeat 0 100%; height: 100%; width:13px; position: relative; padding: 0 1px; }
+#scrollbar1 .thumb { background: transparent url("../../../images/bg-scrollbar-thumb-y.png") no-repeat 50% 100%; height: 5px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; }
+#scrollbar1 .thumb .end { background: transparent url("../../../images/bg-scrollbar-thumb-y.png") no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
+#scrollbar1 .disable { display: none; }
+
+
+/*
+#scrollbar1 { width: 100%; clear: both; margin: 20px 0 10px; }
+#scrollbar1 .viewport { width: 98%; height: 480px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#scrollbar1 .thumb .end,
+#scrollbar1 .thumb { background-color: #003D5D; }
+#scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
+#scrollbar1 .track { background-color: #D8EEFD; height: 100%; width:13px; position: relative; padding: 0 1px; }
+#scrollbar1 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#scrollbar1 .disable{ display: none; }*/
+
+
+/*Make the Begin Testing and Continue Testing links more prominent
+.myActLinkOrng a:link{
+	color: #0033CC;
+	cursor: pointer;text-decoration: underline;
+}*/
+/*.myActLinkOrng a:hover{color:#FF6600;text-decoration: underline;}*/
+
+/* Configuration Page */
+
+.doubleCoumn{width:590px;margin:1em 0em 1em 0em;}
+.doubleCoumn h2{font-size:16px;color:#4d4d4d;padding:5px;font-family:Verdana, Geneva, sans-serif;font-weight:bold;width:550px;}
+.doubleCoumn .grayBox{padding:10px 10px 10px 10px;background-color:#f7f7f7;border:solid 1px #e1e1e1;margin-bottom:0.5em;overflow:hidden;height:1%;} 
+.doubleCoumn a.orange{font-size:11px;color:#1f2275;display:inline-block;}
+.doubleCoumn a.orange:hover{color:#39C;display:inline-block;}
+.doubleCoumn a.orange span{font-size:11px;color:#1f2275;display:inline-block;width:10px;color:#666;font-size:16px;}
+
+.btnStyle
+ {
+	 color: #ff6600; 
+	 padding-top: 3px; 
+	 padding-right: 5px; 
+	 padding-bottom: 3px;
+	 padding-left: 5px; 
+	 display: inline; 
+	 cursor: pointer; 
+	 border-top-left-radius: 2px; 
+	 border-top-right-radius: 2px; 
+	 border-bottom-right-radius: 2px; 
+	 border-bottom-left-radius: 2px; 
+	 box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1); 
+	 background-color: rgb(243, 243, 243);
+ }
+ 
+ .btnContainerStyle
+ {
+ 	padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; float: right; background-color: rgb(255, 196, 13);
+ }
+.btnTemp{
+	background-color:#FFBB05;
+	width: 135px;
+	border:1px gray solid;
+	height:25px;
+}
+
+/********* 21 april ********************/
+/*Classes of Dashboard Page added by Mohini DT:18-04-2014*/
+.btnTestingStatus{/*For the link in div id divDetailAnalysisLink*/
+    border: 1px solid rgb(211, 211, 211);
+    /*height: 20px;*/
+    color: white;
+    padding:2px 5px 2px 5px;
+	font-size: 11px !important;
+	font-weight: normal; 
+	margin-top: 30px;
+	float: right;
+	cursor: pointer;
+	color: white !important;
+	margin-left:5px;
+	/*padding-right:5px !important;*/
+	background-color: #4044b0; /*orange --> rgb(255, 102, 0)*/
+	/*padding-left:5px !important;*/
+	/*text-decoration:none !important;*/
+}
+.tblhd1{/*For all table headers*/
+	/*background-color:#f8c76a !important;*/
+	background-color:#e7e8ff !important;
+}
+.tblhd1 label{
+	margin-left:5px;
+}
+.sorted{
+	background-color: #c8cce0 /*#c69f54*/ !important;
+	background-repeat:no-repeat !important;
+	background-size:15px;
+	background-position: 90%; 
+
+}
+.ratedasshboardbtn{/*For Rate The UAT Dashboard*/
+	float:right; 
+	cursor:pointer;
+	width:200px; 
+	margin-top:6px;
+	border-radius:3px; 
+	border-top-right-radius:10px; 
+	background-color:#1f2275; 
+	color:white; 
+	background-image:url('../images/btnFeedback.png'); 
+	background-repeat:no-repeat; 
+	background-position:97%; 
+	margin-right:-3.5px;
+	padding-top:6px;
+	padding-left:15px;
+	padding-bottom:3px;
+	padding-right:5px;
+}
+.dashmyAct{
+	background-image:url('../../../images/bg-dashboard-box-MyActivity.jpg'); 
+}
+.dashtestingStaus{
+	background-image:url('../../../images/bg-dashboard-box-TestingStatus.jpg'); 
+}
+.dashPrjTPStaus{
+	background-image:url('../../../images/bg-dashboard-box-MyActivity1.jpg'); 
+}
+/*************************************/
+.h3DbDa{/*For h3 tag of dashboard and detailed analysis and msg of stakeholder dashboard*/
+	color:#1f2275;
+	font-size:14px;
+	font-weight:bold;
+}
+/********************************/
+/*Classes of Detailed analysis Page added by Mohini DT:21-04-2014*/
+.daBtn{
+	width:190px !important;
+	margin-top:5px !important;
+	background-color:rgb(248, 208, 61) !important;
+}
+/*********************************************************/
+/*Classes of Feedback Page added by Mohini DT:21-04-2014*/
+.divMsg{
+	color:#1f2275; 
+	font-size:15px;
+}
+pagingColor{
+	color:#1f2275;
+}
+/*********************************************************/
+
+.btn1{
+  margin-left:15px;
+  background-color:#4044b0!important/*#ffbb05*/;
+  color:#fff!important/*#000*/;
+  border:solid 1px gray!important;
+  cursor:pointer;
+  font-size:12px;
+  margin-right:1em; 
+  width:70px;
+  height:25px;
+  padding-bottom:10px!important;
+  padding-top:1px!important;
+  padding-bottom :0.1em!important;
+  clear:both;
+ }
+.btnOk{
+  /*margin-left:600px;*/
+  background-color:#4044b0!important/*#ffbb05*/;
+  color:#fff!important/*#000*/;
+  border:solid 1px gray!important;
+  cursor:pointer;
+  font-size:12px;
+  margin-right:1em; 
+  width:70px;
+  height:25px;
+  padding-bottom:10px!important;
+  padding-top:1px!important;
+  padding-bottom :0.1em!important
+ }
+ /*for configuration page DT:22-04-2014*/
+.msgSpan{
+	color:#1f2275;
+}
+.msgGenSetng{
+	color:#1f2275;/*#ff9900;*/
+	font-weight:bold;
+	font-size:14px
+}
+.tabBgrnd{
+	margin-left:0px;
+	background-color:rgb(247,247,247);
+	border:1px solid #e1e1e1;
+	padding:10px 10px 10px  10px;
+}
+.uatStatisctic{
+	background-color:rgb(231, 232, 255);
+	}
+
+/*******************************************************/
+/*Triage Page*/
+.attachmentLink{
+	font color:#1f2275;
+    font-weight:bold;
+}
+/***********************************/
+/*************For Attachment page**************/
+.downLink{
+	color:#4044b0  !important;
+}
+div[aria-labelledby=ui-dialog-title-autoHideAlert]{
+
+	min-height:50px !important;
+	
+}
+
+#divAlert{
+	word-break:normal;
+   
+}
+

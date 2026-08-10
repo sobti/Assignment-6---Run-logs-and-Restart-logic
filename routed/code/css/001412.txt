@@ -1,0 +1,16 @@
+h1 {
+    color:#c2a589;
+    text-align:center;
+    margin-top: 1.5em !important;
+    margin-bottom: 1em !important;
+    font-size: 4em;
+    font-weight: 200;
+}
+
+body {
+    background-image: url('../assets/bckg1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}

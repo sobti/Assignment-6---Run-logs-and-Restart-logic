@@ -1,0 +1,26 @@
+.topSearch {
+  background-color: DodgerBlue;
+  border-radius: 15px;
+  align-content: center;
+  color: white;
+  flex-direction: row;
+  overflow: hidden;
+}
+.topsearch h1 {
+  float: left;
+  display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+#searchBar input[type=text]{
+float: right;
+display: block;
+padding: 6px;
+border: none;
+margin-top: 8px;
+margin-right: 16px;
+font-size: 17px;
+}

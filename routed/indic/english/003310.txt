@@ -1,0 +1,21 @@
+Office Suites (173 programs)
+PROS: More than three thousand descriptions. Fully ADA compatible. Easy to use. Fast and effective.CONS: Rather limited in its scope. The interface is quite dull. Descriptions are only partially completed. Support is just one year.
+Pdf to Doc/Docx Converter 3000 - Quickly convert your documents from docx to PDF!
+PROS: Batch conversion of documents. Combine multiple single docx/doc files into one PDF. Retains high-quality images. Simple and easy to use.CONS: Conversion can be slow. Layout is not always perfectly preserved when converting. Getting to know the program takes some work. Requires 64-bit architecture to work.
+PROS: Convert Excel files into 9 different image files. Far faster than using the screen print method. Converts xls, xlsx, xlsm into image files. It can process batches and auto-open images after conversion.CONS: Formatting and layout becomes an issue with larger files. Cannot break up larger files into sensible single images. Needs a function that allows the selection of smaller areas. Needs a function for customizing what is omitted from images.
+PROS: Converts numerous file types. Can merge several Word files. Possible to add images. Very fast and secure.CONS: Only the trial is free. Need to purchase Word separately. Takes a little time to learn. Rather dull interface.
+Typing Assistant (English)
+PROS: Easy to use. Support for many file formats.CONS: No progress bar while converting.
+PROS: High Conversion Speed. Supports Various MS Office Documents. Batch Conversion. Comes with File Parameter Options.CONS: Not Really Reliable. Sometimes Does not Work.
+PROS: Easy to use. Does what it says on the tin.CONS: Interface could be improved.
+PROS: Free access to open-source office programs. Can open multiple file formats. Available in several languages with plugins. Safety addressed by a security team.CONS: Can’t save in Microsoft file formats.
+PROS: Simple to use. Quick conversions. Support for many video formats. Lets you create custom conversion profiles.CONS: No support for PowerPoint 2010.
+PROS: Customize sound and background. Saves in .RTF and .TXT. Removes distractions.CONS: The default sound is strange. Cannot format text.
+PROS: Fun way to learn the suite. Amusing story. Share your score with friends and colleagues.CONS: Less challenges for Office 2007.
+PROS: Saves using multiple editing tools. Very fast at editing and converting.CONS: Only really useful for those dealing with large documents. Still Wordpad at heart but its not free.
+PROS: Simple and easy to use. Supports multiple languages. Supports plug-ins. Supports remote editing.CONS: Doesn’t import multimedia content. Limited without plug-ins.
+PROS: Great for helping you concentrate. Imitation typewriter sound. Word count. Full screen and windowed mode.CONS: No spell checker. No links or image support.
+PROS: Wide selection of PDF editing tools. Integrated file sharing and collaboration features. Extensive document security functions. PDF creation and conversion capabilities.CONS: Free trial requires registration. No original features included.
+PROS: Enhanced design in the 'ribbon' interface. Support for videos in PowerPoint. Lots of improvements in Outlook. Translation and screen capturing tools. Faster and lighter on system resources. Lets you share documents online in SkyDrive.CONS: None so far.
+PROS: Enjoy Google Docs's tools in Office. Support for multiple accounts.CONS: Integration is not so good with Office 2003.
+PROS: Great full-screen mode. Organizes in chapters.CONS: Too basic in functionality.

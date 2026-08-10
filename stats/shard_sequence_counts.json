@@ -1,0 +1,148 @@
+{
+  "indic": {
+    "shards": [
+      {
+        "shard_id": "v5_indic_shard_000",
+        "sequences": 500,
+        "real_tokens": 1023076
+      },
+      {
+        "shard_id": "v5_indic_shard_001",
+        "sequences": 500,
+        "real_tokens": 1023006
+      },
+      {
+        "shard_id": "v5_indic_shard_002",
+        "sequences": 500,
+        "real_tokens": 1023048
+      },
+      {
+        "shard_id": "v5_indic_shard_003",
+        "sequences": 500,
+        "real_tokens": 1023209
+      },
+      {
+        "shard_id": "v5_indic_shard_004",
+        "sequences": 170,
+        "real_tokens": 346403
+      }
+    ],
+    "total_shards": 5,
+    "total_sequences": 2170,
+    "total_real_tokens": 4438742
+  },
+  "web": {
+    "shards": [
+      {
+        "shard_id": "v5_web_shard_000",
+        "sequences": 500,
+        "real_tokens": 1022796
+      },
+      {
+        "shard_id": "v5_web_shard_001",
+        "sequences": 500,
+        "real_tokens": 1023219
+      },
+      {
+        "shard_id": "v5_web_shard_002",
+        "sequences": 500,
+        "real_tokens": 1023296
+      },
+      {
+        "shard_id": "v5_web_shard_003",
+        "sequences": 500,
+        "real_tokens": 1022936
+      },
+      {
+        "shard_id": "v5_web_shard_004",
+        "sequences": 500,
+        "real_tokens": 1022368
+      },
+      {
+        "shard_id": "v5_web_shard_005",
+        "sequences": 500,
+        "real_tokens": 1022515
+      },
+      {
+        "shard_id": "v5_web_shard_006",
+        "sequences": 500,
+        "real_tokens": 1023168
+      },
+      {
+        "shard_id": "v5_web_shard_007",
+        "sequences": 500,
+        "real_tokens": 1022829
+      },
+      {
+        "shard_id": "v5_web_shard_008",
+        "sequences": 500,
+        "real_tokens": 1022749
+      },
+      {
+        "shard_id": "v5_web_shard_009",
+        "sequences": 500,
+        "real_tokens": 1023131
+      },
+      {
+        "shard_id": "v5_web_shard_010",
+        "sequences": 102,
+        "real_tokens": 208667
+      }
+    ],
+    "total_shards": 11,
+    "total_sequences": 5102,
+    "total_real_tokens": 10437674
+  },
+  "code": {
+    "shards": [
+      {
+        "shard_id": "v5_code_shard_000",
+        "sequences": 500,
+        "real_tokens": 749092
+      },
+      {
+        "shard_id": "v5_code_shard_001",
+        "sequences": 500,
+        "real_tokens": 730794
+      },
+      {
+        "shard_id": "v5_code_shard_002",
+        "sequences": 500,
+        "real_tokens": 728943
+      },
+      {
+        "shard_id": "v5_code_shard_003",
+        "sequences": 500,
+        "real_tokens": 737430
+      },
+      {
+        "shard_id": "v5_code_shard_004",
+        "sequences": 500,
+        "real_tokens": 739044
+      },
+      {
+        "shard_id": "v5_code_shard_005",
+        "sequences": 500,
+        "real_tokens": 743879
+      },
+      {
+        "shard_id": "v5_code_shard_006",
+        "sequences": 500,
+        "real_tokens": 724972
+      },
+      {
+        "shard_id": "v5_code_shard_007",
+        "sequences": 16,
+        "real_tokens": 26373
+      }
+    ],
+    "total_shards": 8,
+    "total_sequences": 3516,
+    "total_real_tokens": 5180527
+  },
+  "grand_total": {
+    "total_sequences": 10788,
+    "total_real_tokens": 20056943,
+    "sequence_length": 2048
+  }
+}

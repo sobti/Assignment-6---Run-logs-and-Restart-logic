@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+
+"""Top-level package for Easy graphviz."""
+
+__author__ = """Gus Dunn"""
+__email__ = '[EMAIL]'
+__version__ = '0.1.1'

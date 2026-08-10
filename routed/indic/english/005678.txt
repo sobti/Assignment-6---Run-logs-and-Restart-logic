@@ -1,0 +1,52 @@
+Marvel's Avengers update (2. 8) marked the end of the road for Crystal Dynamics' live-service superhero title. While the game will still be supported until September this year, this patch is its final update, which makes almost everything in the store wholly free and transfers the currency to in-game resources.
+ Marvel’s Avengers, developed by Crystal Dynamics, was a controversial title, to say the least. Fans were expecting a narrative-driven AA title in the same vein as Rocksteady's Batman Arkham series and Insomniac's Spider-Man titles, but featuring the iconic Marvel roster. However, what they got instead was a live-service-focused title filled to the brim with microtransactions and lackluster stories.
+ With the live-service Marvel's Avengers set to end in September, this might just be the perfect time to try it out, especially when it's included in the Xbox Game Pass. With patch 2. 8, the majority of the marketplace items have been made free, which addresses one of the major concerns of the playerbase. With that being said, let's take a look at the full patch notes.
+ The Marketplace has been unlocked! What does this mean?
+ - Nearly all MCU- and non-MCU-inspired Outfits, Emotes, Takedowns, and Nameplates in Marvel's Avengers are now automatically available on your Hero Card.
+ - Items that are earned through the campaign or purchased through the Cosmetic Vendor in Marvel's Avengers must be earned or purchased, respectively, as they always have been.
+ - Both the Shipments system and Hero Challenge Cards have been completely removed from Marvel's Avengers. Items that were previously earnable from Shipments and Hero Challenge Cards are included in the hundreds of Marketplace items that are automatically granted when you update to v2. 8.
+ - You do not need to be connected to the internet to be able to access all of the unlocked Marketplace content after updating to v2. 8.
+ - As a thank-you to players who’ve been with us on the journey, we’re granting a special Founder’s Gift – Iron Man’s ‘Variable Threat Response Battle Suit. ’ This Outfit will be automatically granted to any player who has earned at least one Trophy/Achievement before April 1.
+ - Owned Hero’s Catalysts and Fragment Extractors have been completely removed from the game. In their place, there is now a permanent 1. 5x multiplier on Fragments earned and XP gained.
+ - There will be a small hotfix, Update 2. 8. 1, that goes live on April 4 to address a Known Issue. (This issue is detailed in the Patch Notes. )
+- Friendly fire! AI Companions will no longer target Kate Bishop’s Decoy when it is deployed during certain boss encounters.
+ - We fixed an exploit where the Winter Soldier could activate the heavy intrinsic attack ‘Blast Zone’ as a heavy dodge attack if ‘Vengeful Ghost’ was not a purchased skill.
+ - Banter between Jane and Bucky, which wasn’t activating for some players, now triggers when intended.
+ - Thor’s ‘Rampant Supercharge’ perk now functions properly when ‘Warrior’s Fury’ is activated.
+ - Hawkeye’s ‘Rocket Arrow’ wasn’t initiating for some players when the ‘Volatile Rockets’ skill was activated, but the ‘Rocket Arrow’ now activates, as intended.
+ - Switching gun types at the start of a charge animation no longer prevents the Winter Soldier from executing ranged power attacks.
+ - You are no longer able to use the Winter Soldier’s ‘Press the Charge’ skill without having first acquired it.
+ - The Mighty Thor’s gear perk ‘Divine Blast Assistance’ now applies intrinsic overload to teammates, as intended.
+ - The Winter Soldier’s ‘Lethal Rampant Plasma Boost’ perk now grants nanites when intended.
+ - Ms. Marvel’s ‘Ultimate Lethal Cryo Administrator’ gear perk now applies the correct number of Cryo charges to allies.
+ - The Ultimate Lethal Plasma Administrator gear perk now grants charges when defeating an enemy on the initial hit.
+ - Both the Winter Soldier’s ‘Cryo-’ and ‘Plasma Administrator’ perks now grant charges to allies.
+ - Ms. Marvel’s ‘Polymorph Counter Spike’ perk now increases Critical Attack Damage, as intended.
+ - Kate Bishop’s ‘Explosive Blast Frenzy’ perk now increases the firing speed of explosive arrows, as intended.
+ - We fixed an issue with Heroes and invisibility where completing a takedown would enable enemy attacks on the player while the invisibility effect was active. That’s not how invisibility works!
+ Endgame Mission Rewards (Both OLTs and Raid)
+- Superior gear can now be obtained from every completion, not just the weekly rotation.
+ - Family Reunion and both versions of the Discordant Sound raid now grant up to PL 165 gear.
+ - Events and Cloning Lab now provide a path to PL 175 gear.
+ - Resources required to bring a piece of gear from the old PL cap to the new PL cap has been reduced.
+ - Upgrade module cost is now capped at 150 per upgrade within this range.
+ - Dismantling exotic gear returns 100 upgrade modules. 50 are returned from legendary gear.
+ - Nanite charges from Cloning Lab gear now apply status damage via heavy melee attacks. Status build-up has been increased.
+ - Cooldowns reduced for major artifact active effects.
+ - Exotic artifact stat scaling improved.
+ - The Winter Soldier’s skill icons now display properly in the Hero Terminal.
+ - JARVIS is back online! The Cloning Lab gear reward charges were not always appearing on the HUD when defeating enemies, but charges now display properly.
+ - Lorem oop-sum! We replaced the placeholder text that appears in Captain America’s ‘Vanguard Charge’ skill with the correct description.
+ - We repositioned Hawkeye’s Heroic Mission Chain reward icon to appear in the correct place.
+ - When wearing his “Wasteland Warrior” Outfit, Hulk’s right shoulder no longer tears during gameplay.
+ - The Winter Soldier’s gun no longer clips through his armor during gameplay.
+ - The Winter Soldier’s muzzle flash VFX now display properly when executing takedowns on dreadbots during multiplayer sessions.
+ - There’s a glitch in the multiverse! The Mighty Thor now uses the correct Mjolnir when activating her Ultimate while wearing her MCU-inspired Outfit.
+ - Cap’s shield can do many things, but invisibility is not one of them! We fixed an issue where Captain America’s shield would disappear momentarily when using the ‘Looking Sharp’ emote.
+ - We fixed an issue where the Winter Soldier’s rifle would appear, stuck to his hand, during several interactions on the Helicarrier (including the interaction with Mjolnir).
+ - Similarly, the Winter Soldier’s rifle no longer attaches to random props when performing various emotes.
+ - We adjusted The Mighty Thor’s ‘Unhelmed’ Outfit mesh so that the Outfit displays the correct hair color.
+ - Bucky’s legs no longer distort or experience clipping with Cap’s shield when using the ‘Passing the Mantle’ emote.
+ - Captain America’s shield now reseats on his arm properly when activating his intrinsic ability while vaulting.
+ - Faction Terminal Missions and Assignments will not be completable from 12 p. m. UTC to 5 p. m. local time. This will be fixed in an upcoming hotfix, Update 2. 8. 1, which launches on April 4.
+ Marvel's Avengers is included in the Xbox Game Pass for both PC and console. With the majority of the in-store items becoming free, this the perfect time to try out the title in the service.

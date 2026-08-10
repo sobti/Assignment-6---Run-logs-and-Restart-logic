@@ -1,0 +1,92 @@
+.search-bar-container {
+    position: relative;
+}
+
+.search-bar {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, .1);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.search-bar input {
+    background: white;
+    width: 100%;
+    border: 1px solid var(--light-border-outer);
+    border-radius: 3px;
+
+    box-sizing: border-box;
+    padding-left: 37px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+
+    font-size: 20px;
+    color: #333333;
+    transition: all .3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    transition: all .1s ease;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, .2);
+}
+
+@keyframes littleBlip {
+    0% { transform: scale(1); }
+    75% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
+
+.clickable-mag-glass-div {
+    top: 6px;
+    left: 8px;
+    right: auto;
+}
+
+.clickable-mag-glass-div {
+    animation: .8s cubic-bezier(.18,.89,.32,1.28) 1.3s 1 littleBlip;
+    position: absolute;
+
+    z-index: 101;
+    width: 28px;
+    height: 28px;
+    padding: 0px;
+    border: 0px;
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.clickable-mag-glass-div:hover {
+    transform: scale(1.05);
+}
+
+.clickable-mag-glass-div:active {
+    transform: scale(1.00);
+}
+
+.clickable-mag-glass-button {
+    font-size: 0px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 0px;
+}
+
+.clickable-mag-glass {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0px;
+    top: 0px;
+}
+
+.search-area-buffer {
+    height: 41px;
+}
+
+.search-bar input {
+    height: 40px;
+}

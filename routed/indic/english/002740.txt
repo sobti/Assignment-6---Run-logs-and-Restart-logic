@@ -1,0 +1,5 @@
+It’s no secret that Microsoft and Salesforce just plain don’t like each other (remember when Microsoft communications head Frank Shaw basically said that Salesforce CEO Marc Benioff is obsessed with them?). In fact, the two companies have spent the last year suing one another over patents. But today they’re announcing that they’ve settled the suit. But Microsoft couldn’t help but get one final jab in.
+Here’s the key humorous blurb:
+Although the contents of the agreement have not been disclosed, Microsoft indicated that it is being compensated by Salesforce.com based on the strength of Microsoft’s leading patent portfolio in the areas of operating systems, cloud services and customer relationship management software.
+So the contents of the agreement haven’t been disclosed — and yet they’ve directed their PR wing to vaguely disclose the fact that Salesforce has to pay. In other words, leaking out that Microsoft is the winner here.
+Microsoft also made sure to highlight this key point in the email to us about the agreement. I suspect the hostilities between the two sides may not be over just yet.

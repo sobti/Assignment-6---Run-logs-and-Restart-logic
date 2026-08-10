@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cheese Tier List</title>
+<link rel="stylesheet" href="[URL]
+<link rel="stylesheet" href="style.css">
+<style></style>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="contact.html">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i></a>
+</div>
+<script src="pain.js"></script>
+<h1 class="cheese">News about cheese!</h1>
+<img class="cheese" src="[URL] alt="construction picture">
+<p class="cheese">Cheese is good. This week the website is still being built, cheese has become even more popular and todays top story being that red leister is the top cheese of the week!</p>
+</body>
+</HTML>

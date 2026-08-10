@@ -1,0 +1,19 @@
+Different Types of EV chargers to Suit Different Types of Electric Cars Sockets .
+These chargers are slower to charge and are often Level 2, which means as a charger, you could do it at home.
+Looks like: The Type 1 is a round connector with 5 prongs.
+Suits vehicles: BMW, Nissan, Porsche, Mercedes, Volvo and Mitsubishi.
+About: Type 1 is considered the standard plug for Japanese and North American cars.
+Looks like: The Type 2 is a round connector with 7 prongs.
+Suits vehicles: Tesla and Renault electric vehicles. Tesla vehicles can plug into any Type 2 charging point unless it states “Tesla Only”.
+About: The Type 2 is the plug standard for Europe. It is a single and 3-phase connector, capable of 3-phase charging if available. In Australia, it can present as just a socket on the wall where you have to bring your own cable.
+Looks like: The Tesla charger is a plug with five prongs. It uses the Type 2 connector.
+Suits vehicles: The Destination Chargers were designed for exclusive use with Tesla vehicles.
+About: The Tesla charger use two of the pins on the standard Type 2 plug for DC current. The Supercharger gives a faster charge-up than the Destination charger.
+Rapid chargers are, as the name suggests, faster. They are Level 3, which means they are industrial strength and can’t be used at home.
+Looks like: The CHAdeMO is a round plug with two prongs.
+Suits vehicles: Mitsubishi I-Miev, Mitsubishi Outlander PHEV, and Nissan Leaf.
+About: The CHAdeMO, an abbreviation for “CHArge de Move”, uses a lot of power, giving the ‘fast charge’. Not found in homes.
+Charge rate: Fast (up to 62.5kW of power)
+Looks like: A plug with two connectors. It has Type 1 or Type 2 male/female prongs at the top and two male/female prongs at the bottom.
+Suits vehicles: CCS Type 1 for Japanese and North American vehicles and CCS Type 2 for European vehicles.
+About: The CCS plug is a combination socket and comes in Type 1 and Type 2. In Australia there is both single and three phase power, which is supported by the Type 2 plug. The DC connector in the plug allows for fast charging while the AC connector is used for conventional at-home charging.

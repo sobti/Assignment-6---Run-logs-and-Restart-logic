@@ -1,0 +1,6 @@
+You are viewing a single comment's thread from:
+does not reveal keys when you re-enter your password.
+I also had issues with key chrome addon,
+it did not recognize the account or password.
+So its still a little buggy. This is very important.
+I suspect we are going to lose a LOT of accounts in this split.

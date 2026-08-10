@@ -1,0 +1,49 @@
+From UPSC perspective, the following things are important :
+Prelims level : Types of NBFC.
+Mains level : Paper 3- NBFC crisis.
+While India was trying to deal with the problems arising out of the large NPA accumulated by the commercial banks, the Indian financial sector was dealt with another blow in the form of the NBFC crisis.
+Effects of IL&FS and DHFL collapse:
+- Balance sheets affected: The collapse of these two big entities affected the balance sheets of banks and mutual fund companies.
+- Credit crunch: It also resulted in a credit crunch that dampened demand and pushed a slowing economy towards recession.
+- Tarnished image of NBFCs: Being leaders in the industry, their failure has tarnished the image of the NBFC sector as a whole.
+- Total number: As of September 2019 there were a total 9,642 NBFCs in India.
+- Deposit-taking NBFC (NBFCs-D): Only 82 of India’s NBFCs were deposit-taking institutions (NBFCs-D) permitted to mobilise and hold deposits.
+- Non-deposit taking NBFCs (NBFCs-ND): The rest of the NBFCs which are not deposit-taking, are categorised as non-deposit taking NBFCs.
+- They did not have access to the savings of ordinary households.
+- Systematically important (NBFCs-ND-SI): Of a large number of non-deposit taking NBFCs (NBFCs-ND), only 274 were identified as being systematically important (NBFCs-ND-SI), by virtue of having an asset size of ₹500 crores or more.
+- A significant player in the financial markets: As at the end of March 2019, these two sets-NBFCs-D and NBFC-ND-SI- held assets that amounted to almost a fifth of that held by the scheduled commercial banks.
+- This made them significant players in the web of credit, as well as large enough as a group to affect the health of the financial sector.
+- Non-deposit taking NBFCs must rely on resources garnered from the “market,” including the banking system, besides the market for bonds, debentures, and short-term paper.
+- Extension of financial entities: Individual investors would only be marginally involved in direct investment in these instruments.
+- So, the NBFCs are essentially extensions of the activity of other financial entities such as banks, insurance companies, and mutual funds.
+- Industry getting lion’s share: Industry accounted for the biggest chunk of lending, amounting to 57% of gross advances in September 2019.
+- Much of this lending to industry went to the infrastructural sector.
+- At second place-retail sector: A second major target for lending by the NBFCs was the retail sector, with retail loans accounting for 20% of gross advances.
+- Within the retail sector, vehicle/auto loans accounted for as much as 44% of loans.
+What went wrong?
+- Diversification by commercial banks: Following a surge in capital flows into India which began in 2004, banks were flush with liquidity.
+- Increase in retail lending by banks: The pressure resulted in a significant increase in retail lending, with lending for housing, automobiles and consumer durables.
+- There was also a substantial increase in lending to the infrastructural sector and commercial real estate.
+- Why NBFCs flourished even in the face of competition by banks? What the growth of the NBFCs indicates is that banks were unable to exhaust the liquidity at their disposal.
+- Banks were also unable to satisfy the potential for lending to these sectors, providing a space for NBFCs to flourish.
+- The willingness of NBFCs suited the banks: The willingness of the NBFCs to enter these areas suited the banks in two ways.
+- First, it permitted the banks to use their liquidity even when they themselves were stretched and could not discover, scrutinise and monitor new borrowers.
+- Banks could lend to the NBFCs, which could then take on the tasks associated with expanding the universe of borrowers to match the increased access to liquid funds.
+- The second was that it helped the banks to move risks out of their own books.
+- Short term lending to NBFCs, and long-term lending by NBFCs: Banks accepts short term deposits, so there is limit in their ability to lend that short term deposits as a long term debt.
+- On the other hand, these were the sectors to which additional credit could be easily pushed.
+- Lending to NBFCs that in turn lent to these sectors, appeared to be a solution to the problem.
+- NBFCs expected that they would be able to roll over much of these loans so that they were not capital short.
+- Role of rating agencies: What they needed for the purpose were ratings that ranked their instruments as safe.
+- The ratings companies were more than willing to provide such ranks.
+- The two risks involved in this model: The NBFC-credit build-up was an edifice that was burdened with two kinds of risks.
+- First risk: A possible default on the part of borrowers.
+- The probability of which only increases as the universe of borrowers is expanded rapidly to exhaust the liquidity at hand.
+- Since the NBFCs banked on being able to roll-over short-term debt to sustain long-term lending.
+- A slowdown in or halt to the flow of funds would lead to a liquidity crunch that can damage the balance sheet of these institutions.
+- Which of the two risks is involved in the present crisis? The crisis that affected the NBFCs was a result of both kinds of setbacks.
+- First setback: Loans to areas like infrastructure, commercial real estate and housing went bad.
+- Second setback: With the non-performing assets problem in the commercial banking sector curtailing their access to bank lending.
+- Why the problem turned systemic? Given the importance of ratings and “image” in ensuring access to capital, some firms with the requisite image were able to mobilise large sums of capital and expand their business.
+- When entities like that go bust, the response of lenders and investors to the event tends to be drastic, with systemic effects on the sector as a whole.
+The episode was a shadow banking crisis that has had far-reaching consequences for the economy as a whole. Therefore, its high time that measures are taken to avoid the occurrence of such a crisis in the future.

@@ -1,0 +1,13 @@
+(IoT) by 2016, an increase of 39 per cent from 2015, Gartner said in a report.
+IoT is the network of physical objects or "things" embedded with electronics, software, sensors, and network connectivity, which enables these objects to collect and exchange data.
+"Smart commercial buildings will be the highest user of IoT until 2017, after which smart homes will take the lead with just over 1 billion connected things in 2018," said Gartner's Research Vice President Bettina Tratz-Ryan.
+Commercial real estate benefits greatly from IoT implementation as it creates a unified view of facilities management as well as advanced service operations through the collection of data and insights from a multitude of sensors.
+"Especially in large sites, such as industrial zones, office parks, shopping malls, airports or seaports, IoT can help reduce the cost of energy, spatial management and building maintenance by up to 30 per cent," Tratz-Ryan said.
+The business applications that are fuelling the growth of IoT in commercial buildings are handled through building information management systems that drive operations management, especially around energy efficiency and user-centric service environments, Gartner said.
+"In 2016, commercial security cameras and webcams as well as indoor LEDs will drive total growth, representing 24 per cent of the IoT market for smart cities," she said.
+Tratz-Ryan further said IoT deployment in commercial buildings will continue to grow at a rapid pace over the next few years, and is on pace to reach just over 1 billion in 2018.
+"Incentives into the deployment of IoT in commercial real estate will fuel its development," she added.
+In smart homes, the consumer IoT applications that are fuelling growth are smart TVs, smart set-top boxes, smart bulbs and various home automation tools such as smart thermostats, home security systems and kitchen appliances.
+"The growing maturity of smart home platforms through an ecosystem of home appliances, infotainment and home sensors will mean that smart home investments overtake those of commercial buildings in 2018," Tratz-Ryan added.
+Gartner further noted that smart homes will represent 21 per cent of total IoT use in smart cities in 2016, and will record the highest increase over the next five years.
+"Device and wireless standards will be embedded in more devices. Homes will move from being interconnected to information and smart-enabled - an integrated services environment that will provide value to the home and the individual ambiance," she said.

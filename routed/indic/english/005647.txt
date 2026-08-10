@@ -1,0 +1,15 @@
+prompt = prompt_template.format(system="You are a programming assistant",
+query="How do I sort a list in Python?")
+As described in more detail in the blog post, we used:
+We also used LiON, flash attention, early dropout. It's not that innovative that you can't run it, in fact you can -- see an example below.
+For the base model, we used our own dataset that contains code with permissive licenses only, and open text datasets. Filtering is the key to success of this model:
+The text to code proportion was 50:50, model trained for 1.2T tokens.
+We don't release the base model, because its Fill-in-the-Middle (FIM) capability likes to repeat itself too much, so its practical use is limited. But if you still want it, write us a message on Discord.
+We tested our hypothesis that chat data should boost base model performance in FIM and regular left-to-right code completion. We found that just 15% of open code instruction-following datasets, that we filtered for quality, improves almost all metrics.
+Additionally, to improve FIM, we observed common failure modes, and prepared a synthetic dataset based on The Stack dedup v1.1 to address them.
+There is a distribution shift between typical code on the internet, and the code you write in your IDE. The former is likely finished, so the model tries to come up with a suggestion that makes the code complete. You are likely to have half-written code as you work on it, there is no single addition that can repair it fully.
+In practice, model needs to have a tendency to stop after a couple of lines are added, and sometimes don't write anything at all. We found that just giving it empty completions, single line completions, multiline completions that end with a smaller text indent or at least a newline -- makes it much more usable. This data was used as the rest 85% of the finetune dataset.
+The final model is the result of several attempts to make it work as good as possible for code completion, and to perform well on a wide range of metrics. The best attempt took 40B tokens.
+The Refact-1.6B model was trained on text in English. But it has seen a lot more languages in code comments. Its performance on non-English languages is lower, for sure.
+If you are using this model, please give a link to this page.
+Inference API does not yet support model repos that contain custom code.

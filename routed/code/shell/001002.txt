@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+set -ex
+
+export LC_CTYPE=C.UTF-8
+
+export CC=${CC:-clang}
+export CXX=${CXX:-clang++}
+export LIB_FUZZING_ENGINE=${LIB_FUZZING_ENGINE:--fsanitize=fuzzer}
+
+SANITIZER=${SANITIZER:-address -fsanitize-address-use-after-scope}
+flags="-O1 -fno-omit-frame-pointer -gline-tables-only -DFUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION -fsanitize=$SANITIZER -fsanitize=fuzzer-no-link"
+
+export CFLAGS=${CFLAGS:-$flags}
+export CXXFLAGS=${CXXFLAGS:-$flags}
+
+cd lvm2
+
+./configure --enable-static_link --disable-selinux
+# make -j$(nproc) ./device_mapper/libdevice-mapper.a
+# make -j$(nproc) libdm
+make -j$(nproc) libdm.device-mapper
+
+cd ..
+./autogen.sh
+./configure --enable-static --disable-ssh-token --disable-blkid --disable-udev --disable-selinux --disable-pwquality --with-crypto_backend=openssl --disable-cryptsetup --disable-veritysetup --disable-integritysetup
+make -j$(nproc) all
+
+for fuzzer in tests/fuzz/*_fuzz.cc
+do
+  fuzzer_name=$(basename ${fuzzer%.cc})
+  $CXX $CXXFLAGS -I./ -I./lib -I.libs/ \
+     $fuzzer -o $OUT/$fuzzer_name \
+     $LIB_FUZZING_ENGINE \
+     .libs/libcryptsetup.a \
+     lvm2/libdm/ioctl/libdevmapper.a \
+	-lm \
+     	-Wl,-Bstatic \
+	-lblkid \
+	-lcrypto \
+	-ljson-c \
+	-lpopt \
+	-lssl \
+	-luuid \
+	-Wl,-Bdynamic \
+	-Wl,-R$OUT
+  cp tests/fuzz/${fuzzer_name}_seed_corpus.zip $OUT
+done
+cp .libs/libcryptsetup.so $OUT/
+cp -r $SRC ${OUT}/src
+#ln -s $OUT/libcryptsetup.so $OUT/libcryptsetup.so.12

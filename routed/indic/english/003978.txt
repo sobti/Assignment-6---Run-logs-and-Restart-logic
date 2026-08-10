@@ -1,0 +1,6 @@
+Microsoft today announced at its Build conference in Seattle that it’s releasing a Windows Mixed Reality motion controller for its headsets, including HoloLens.
+The controllers, which look very similar to what’s available for Oculus and Vive virtual reality headets, require no external tracking in order to follow your movements. In other words, you do not need any markers or other hardware.
+Instead, the sensors are inside the headsets. You can use the controllers anywhere, so long as you have the headset.
+Acer is selling the controller bundled with a Windows Mixed Reality headset later this year for $399.
+Follow all our coverage of Microsoft’s Build conference here.
+Get the most important tech news in your inbox each week.

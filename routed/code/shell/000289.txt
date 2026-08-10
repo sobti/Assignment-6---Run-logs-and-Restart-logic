@@ -1,0 +1,64 @@
+#!/bin/bash
+
+#
+# fuentes.sh ~ Instalador de fuentes tipográficas
+#
+# Descripción:
+#   Este script descarga fuentes tipográficas desde varios sitios
+#   para luego instalarlas mediante la herramiente fc-cache.
+#
+# Configuración:
+#   - TMPDIR: Carpeta temporal donde se almacenan las fuentes a
+#             instalar.
+#
+
+TMPDIR=tmp/fonts
+
+mkdir $TMPDIR
+cd $TMPDIR
+
+# Fira-Mono
+wget [URL] -O fira-mono.zip
+unzip -oj fira-mono.zip
+
+# Source Code Pro
+wget [URL] -O source-code-pro.zip
+unzip -oj source-code-pro.zip
+
+# Droid Sans Mono
+wget [URL] -O droid-sans-mono.zip
+unzip -oj droid-sans-mono.zip
+
+# Inconsolata
+wget [URL] -O Inconsolata.zip
+unzip -oj Inconsolata.zip
+
+# Menlo
+wget [URL] -O menlo.zip
+unzip -oj menlo.zip
+
+# Source Sans Pro
+wget [URL] -O source-sans-pro.zip
+unzip -oj source-sans-pro.zip
+
+# Open Sans
+wget [URL] -O open-sans.zip
+unzip -oj open-sans.zip
+
+# Terminal Dosis
+wget [URL]
+unzip -oj terminal-dosis.zip
+
+# Fantasque Sans
+wget [URL]
+unzip -oj FantasqueSansMono.zip
+
+# Copiar fuentes y actualizar cache
+mkdir ~/.fonts
+cp *.otf *.ttf ~/.fonts
+fc-cache -f -v
+
+# Eliminar carpeta temporal
+CWD=$(pwd)
+cd ~/
+rm -Rf $CWD

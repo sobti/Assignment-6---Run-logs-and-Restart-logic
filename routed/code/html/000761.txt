@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="[URL]
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-BVRTXP9407');
+	</script>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/thumb.png">
+
+<title>Useful links | CosmicVarta</title>
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Useful links | Welcome to CosmicVarta.</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Useful links" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Platform for promoting Indian astronomy research to the public." />
+<meta property="og:description" content="Platform for promoting Indian astronomy research to the public." />
+<meta property="og:site_name" content="Welcome to CosmicVarta." />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Useful links" />
+<script type="application/ld+json">
+{"url":"/links","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/images/cv.png"}},"description":"Platform for promoting Indian astronomy research to the public.","headline":"Useful links","@context":"[URL]
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="[URL] integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-page">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="[URL] rel="stylesheet">
+		<link rel="stylesheet" href="[URL] integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/cv.png" alt="CosmicVarta">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/index.html">Home</a>
+                </li>
+
+								<li class="nav-item">
+								<a target="_blank" class="nav-link" href="/about">About us</a>
+								</li>
+
+								<li class="nav-item">
+                <a target="_blank" class="nav-link" href="/upcoming"> Upcoming articles</a>
+                </li>
+
+								<li class="nav-item">
+								<a target="_blank" class="nav-link" href="/writers"> Join us</a>
+								</li>
+
+
+								<li class="nav-item">
+								<a target="_blank" class="nav-link" href="/career_help">  Career help</a>
+								</li>
+
+								<li class="nav-item">
+								<a target="_blank" class="nav-link" href="/links"> Useful Links</a>
+								</li>
+
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="/contact"> Contact Us</a>
+                </li>
+
+
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">CosmicVarta</h1>
+    <p class="lead">
+         Platform for promoting Indian astronomy research to the public.
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <section>
+    <div class="section-title">
+        <h2><span>Useful links</span></h2>
+    </div>
+
+    <div class="article-post">
+    <p><img src="assets/images/links.jpg" /></p>
+
+<h2 id="useful-links">Useful links</h2>
+
+<p>A lot of data and softwares are available publicly for free. Be it the huge database from the Sloan Digital Sky Survey, to the multi wavelength dataset provided by the NASA- HEASARC, a lot of data and the tools to acces them are publicly available nowadays. Further, newcomers might find it a duanting task to search for relevant research papers in their specific areas of interest, in view of the hundreds of papers being published on a daily basis! With services like ADS it becomes an easy task. We attach links to a few of these useful services below, so that interested people may visit these URLs to gain further information. Of course, the members of <strong>CosmicVarta</strong> team use a lot of these softwares and databases on a usual basis, in their Ph.D work! If you have any problem, you may ask us through the forms available in the <a href="/contact">contact</a> section, or even in the comments section below.</p>
+
+<hr />
+
+<h4 id="astrophysics-data-system">Astrophysics Data System</h4>
+<p>The <a href="[URL] Data System (ADS)</a> is an online database of astronomy and physics papers from both peer-reviewed and non-peer-reviewed sources.</p>
+
+<h4 id="arxiv">arXiv</h4>
+<p><a href="[URL] is an open-access archive for scholarly articles in the fields of physics and astronomy, mathematics, computer science, quantitative biology, quantitative finance, statistics, electrical engineering and systems science, and economics.</p>
+
+<h4 id="simbad">SIMBAD</h4>
+<p>The <a href="[URL] astronomical database provides basic data, cross-identifications, bibliography and measurements for all astronomical objects outside the solar system which have been studied in scientific articles.</p>
+
+<h4 id="nasaipac-extragalactic-database">NASA/IPAC Extragalactic Database</h4>
+<p><a href="[URL] is a master list of extragalactic objects for which cross-identifications of names have been established and contains information about accurate positions, redshifts as well as other data collected.</p>
+
+<h4 id="the-high-energy-astrophysics-science-archive-research-center-heasarc">The High Energy Astrophysics Science Archive Research Center (HEASARC)</h4>
+<p><a href="[URL] is the primary archive for high energy space based missions from NASA (and other space agencies) studying the cosmic bodies ranging from black holes to the events leading to the Big Bang.</p>
+
+<h4 id="the-sloan-digital-sky-survey-sdss">The Sloan Digital Sky Survey (SDSS)</h4>
+<p>The <a href="[URL] archive is one of the most heavily used data sets in modern astronomy. It has produced some of the most detailed three-dimensional maps of the Universe ever made, with deep multi-colour images of the northern sky and spectra for more than three million astronomical objects.</p>
+
+<h4 id="gaia">GAIA</h4>
+<p><a href="[URL] is a European space mission providing astrometry, photometry, and spectroscopy of more than 1000 million stars in the Milky Way. Also, data for significant samples of extragalactic and Solar system objects are made available.</p>
+
+<h4 id="helioviewer">Helioviewer</h4>
+<p><a href="[URL] allows you to look at near real-time images of the Sun taken by several space telescopes in various light wavelengths.</p>
+
+<h4 id="european-southern-observatory-eso-public-archives">European Southern Observatory (ESO) public archives</h4>
+<p>The <a href="[URL] archive</a> contains data from the telescopes operated by the ESO at the Paranal observatory in Chile.</p>
+
+<h4 id="astrosat-archive">ASTROSAT archive</h4>
+<p><a href="[URL] observes the universe in the optical, Ultraviolet, low and high energy X-ray regions of the electromagnetic spectrum. The science data from observations made by the instruments onboard the spacecraft are available for download after the proprietary period from this portal.</p>
+
+<h4 id="chandrayaan-2">Chandrayaan 2</h4>
+<p>Data from all the instruments on-board <a href="[URL] are made public which can be downloaded for free.</p>
+
+<h4 id="nasa-public-data">NASA public data</h4>
+<p>NASA has publicly archived all of its data received from spacecraft projects, including over 4TB of new Earth Science data each day. The data is—grouped by subject— described on NASA’s open data catalog. The data is available at the <a href="[URL] Mission Data Products</a> page.</p>
+
+<h4 id="xmm---newton-science-archive">XMM - Newton Science Archive</h4>
+<p>The <a href="[URL] - Newton</a>
+ mission is helping scientists to solve a number of cosmic mysteries, ranging from the enigmatic black holes to the origins of the Universe itself. Observing time on XMM-Newton is being made available to the scientific community, applying for observational periods on a competitive basis.</p>
+
+<h4 id="two-micron-all-sky-survey-2mass">Two Micron All Sky Survey (2MASS)</h4>
+<p>The <a href="[URL] Micron All-Sky Survey (2MASS)</a> was an astronomical survey of the whole sky in the infrared and one of the most ambitious such projects. Observations from 2MASS are made public for the usage of the scientific community.</p>
+
+<h4 id="hubble-space-telescope-hst">Hubble Space Telescope (HST)</h4>
+<p>The <a href="[URL] Legacy Archive (HLA)</a> is designed to optimize science from the Hubble Space Telescope by providing online, enhanced Hubble products and advanced browsing capabilities.</p>
+
+<h4 id="röntgen-satellite">Röntgen Satellite</h4>
+<p><a href="[URL] the Röntgen Satellite, was an X-ray observatory developed through a cooperative program between Germany, the United States, and the United Kingdom. The archive is available publicly.</p>
+
+<h4 id="astronomical-image-processing-system-aips">Astronomical Image Processing System (AIPS)</h4>
+<p>The <a href="[URL] is a software package to support the reduction and analysis of data taken with radio telescopes.</p>
+
+<h4 id="interactive-data-language-idl">Interactive Data Language (IDL)</h4>
+<p><a href="[URL] is used for data analysis and visualization in astronomy, atmospheric physics. IDL combines all of the tools you need for any type of project — from “quick-look,” interactive analysis and display to large-scale commercial programming projects. All in an easy-to-use, fully extensible environment.</p>
+
+<h4 id="image-reduction-and-analysis-facility-iraf">Image Reduction and Analysis Facility (IRAF)</h4>
+<p><a href="[URL] is the Image Reduction and Analysis Facility, a general-purpose software system for the reduction and analysis of astronomical data. It is available for all major operating systems for mainframes and desktop computers.</p>
+
+<h4 id="pgplot">PGPLOT</h4>
+<p>The <a href="[URL] Graphics Subroutine Library is a Fortran- or C-callable, device-independent graphics package for making simple scientific graphs. It is intended for making graphical images of publication quality with minimum effort on the part of the user.</p>
+
+<h4 id="the-astropy-project">The Astropy project</h4>
+<p>The <a href="[URL] Project</a> is a community effort to develop a common core package for Astronomy in Python and foster an ecosystem of interoperable astronomy packages. Mostt of the packages used in astronomical data analysis are available on the astropy platform.</p>
+
+<hr />
+<hr />
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: [URL]    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '[URL]
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="[URL] powered by Disqus.</a></noscript>
+
+<hr />
+<hr />
+
+    </div>
+
+    
+</section>
+
+</div>
+
+
+<!-- Bottom Alert Bar
+================================================== -->
+<div class="alertbar">
+	<div class="container text-center">
+		<span> &nbsp; Never miss an <b>article</b> from us. Subscribe to our website <a href='[URL]
+        </form>
+	</div>
+</div>
+
+
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+
+
+<!-- Begin Footer
+================================================== -->
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="[URL] integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="[URL] integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+<script src="/assets/js/lazyload.js"></script>
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+
+
+        <footer class="ftco-footer ftco-section" id="contact-section">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+
+
+                  <p>Beauty is that to what the human mind responds at its deepest and most profound.</p> <b><a href="[URL] Chandrasekhar</a></b></p>
+
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                  <h2 class="ftco-heading-2">Links</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="/index.html"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                    <li><a href="/about"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                    <li><a href="/writers"><span class="icon-long-arrow-right mr-2"></span>Join Us</a></li>
+                    <li><a href="/upcoming"><span class="icon-long-arrow-right mr-2"></span>Upcoming articles</a></li>
+                    <li><a href="/contact"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md">
+                 <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Social media</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="[URL] class="icon-long-arrow-right mr-2"></span>Facebook</a></li>
+                    <li><a href="[URL] class="icon-long-arrow-right mr-2"></span>Twitter</a></li>
+                    <li><a href="[URL] class="icon-long-arrow-right mr-2"></span>Medium</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                	<h2 class="ftco-heading-2">Enquiry </h2>
+                	<div class="block-23 mb-3">
+    	              <ul  class="list-unstyled">
+    	             <span class="icon icon-map-marker"></span><span class="text">   For any enquiry, you may drop in an email to us at:</span></li>
+
+    	               <a href="mailto:[EMAIL]"><span class="icon icon-envelope"></span><span class="text">[EMAIL]</span></a></li>
+    	              </ul>
+    	            </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  <b>  Copyright © 2022 CosmicVarta.  All rights reserved </b> </p>
+
+
+
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
+
+
+</body>
+</html>

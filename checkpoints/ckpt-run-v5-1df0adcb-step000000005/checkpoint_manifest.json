@@ -1,0 +1,42 @@
+{
+  "run_id": "run-v5-1df0adcb",
+  "branch_id": "main",
+  "global_step": 5,
+  "checkpoint_id": "ckpt-run-v5-1df0adcb-step000000005",
+  "rank": 0,
+  "microbatch_id": "mb-v5_web_shard_000-rows4-7",
+  "packed_sample_ids": [
+    "v5_web_shard_000:4",
+    "v5_web_shard_000:5",
+    "v5_web_shard_000:6",
+    "v5_web_shard_000:7"
+  ],
+  "shard_ids": [
+    "v5_web_shard_000"
+  ],
+  "token_span_ids": [
+    [
+      0,
+      2048
+    ],
+    [
+      0,
+      2048
+    ],
+    [
+      0,
+      2048
+    ],
+    [
+      0,
+      2048
+    ]
+  ],
+  "loss_mask_hash": "sha256_6ba042a6672c",
+  "attention_and_position_policy": "causal, flat (non-reset) position_ids across packed documents; no explicit cross-document attention mask is emitted by this pipeline -- attention is NOT restricted at document boundaries within a packed sequence unless the training framework derives a block mask from doc_id itself",
+  "mixture_lane": "Web",
+  "curriculum_stage": "stage_0_uniform",
+  "tokenizer_version": "o200k_base:tok_0794272a2782",
+  "dataloader_version": "dataloader_a74d39b6f188",
+  "opus_decision_id": "opus-mix-v5-50w25i25c"
+}

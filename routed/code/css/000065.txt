@@ -1,0 +1,69 @@
+@import url(colors.css);
+
+
+.navbar {
+    top: 0;
+    z-index: 99;
+    position: fixed!important;
+    width: 100%;
+    background-color: black;
+
+}
+
+.main-menu li{
+    padding-right: 20px;
+    text-transform: uppercase;
+
+}
+
+.main-menu li{
+    padding-right: 20px;
+    text-transform: uppercase;
+    margin-top: 3%;
+
+}
+
+.navbar-brand img {
+    top: -1px!important;
+    position: absolute;
+    width: 100px;
+    height: auto;
+}
+
+.navbar a{
+    color: white;
+    font-weight: bold;
+    font-family: "Trebuchet MS";
+}
+
+.navbar a:hover{
+    color: white;
+    border-bottom: solid 2px white;
+}
+
+
+
+@media (max-width: 992px) {
+
+    .navbar a{
+        font-size: .7rem;
+        color: white;
+    }
+    .navbar a:hover{
+        color: white;
+
+    }
+    .navbar{
+        background-color: black;
+    }
+    .navbar-brand img {
+        top: 0!important;
+        position: absolute;
+        width:auto ;
+        height: 100%;
+    }
+}
+
+
+
+

@@ -1,0 +1,54 @@
+.ndl-tag {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  border: 1px solid var(--ndl-black-5);
+  background-color: var(--ndl-black-7);
+
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+
+  margin-right: 0.5rem;
+
+  &.interactive {
+    & .ndl-tag-remove {
+      display: none;
+      position: absolute;
+      padding: 0 0.5rem;
+      border-radius: 100%;
+      background-color: var(--ndl-black-6t);
+      color: var(--ndl-gray-1);
+
+      &:hover {
+        color: var(--ndl-white);
+      }
+    }
+
+    &:hover {
+      border-color: var(--ndl-black-1);
+      background-color: var(--ndl-black-6);
+
+      & .ndl-tag-remove {
+        display: block;
+        right: 0.2rem;
+        animation: tag-remove 0.3s ease-in-out;
+      }
+    }
+
+    &:focus-visible {
+      outline: var(--ndl-outline);
+    }
+  }
+}
+
+@keyframes tag-remove {
+  0% {
+    right: -0.4rem;
+    opacity: 0;
+  }
+  100% {
+    right: 0.2rem;
+    opacity: 1;
+  }
+}

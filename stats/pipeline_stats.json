@@ -1,0 +1,1321 @@
+{
+  "build_corpus": {
+    "generated_at": "2026-08-10T14:08:34.955171+00:00",
+    "total_rows": 6250,
+    "samples_per_lang": 1250,
+    "seed": 42,
+    "token_counts_by_language": {
+      "Bengali": {
+        "pre_tokens": 1137754.0,
+        "post_tokens": 1135732.0,
+        "delta": -2022.0,
+        "pct_change": -0.2
+      },
+      "English": {
+        "pre_tokens": 705920.0,
+        "post_tokens": 705060.0,
+        "delta": -860.0,
+        "pct_change": -0.1
+      },
+      "Hindi": {
+        "pre_tokens": 1060352.0,
+        "post_tokens": 1059158.0,
+        "delta": -1194.0,
+        "pct_change": -0.1
+      },
+      "Tamil": {
+        "pre_tokens": 1086915.0,
+        "post_tokens": 1085885.0,
+        "delta": -1030.0,
+        "pct_change": -0.1
+      },
+      "Telugu": {
+        "pre_tokens": 1077167.0,
+        "post_tokens": 1076142.0,
+        "delta": -1025.0,
+        "pct_change": -0.1
+      },
+      "TOTAL": {
+        "pre_tokens": 5068108.0,
+        "post_tokens": 5061977.0,
+        "delta": -6131.0,
+        "pct_change": -0.1
+      }
+    },
+    "type_distribution": {
+      "Bengali": {
+        "pdf": 162,
+        "speech": 1,
+        "web": 1087
+      },
+      "English": {
+        "pdf": 18,
+        "speech": 0,
+        "web": 1232
+      },
+      "Hindi": {
+        "pdf": 155,
+        "speech": 0,
+        "web": 1095
+      },
+      "Tamil": {
+        "pdf": 101,
+        "speech": 7,
+        "web": 1142
+      },
+      "Telugu": {
+        "pdf": 149,
+        "speech": 2,
+        "web": 1099
+      }
+    }
+  },
+  "build_code_corpus": {
+    "generated_at": "2026-08-10T14:13:20.003362+00:00",
+    "dataset": "bigcode/the-stack-smol-xs",
+    "languages": [
+      "python",
+      "javascript",
+      "typescript",
+      "java",
+      "c",
+      "c++",
+      "c-sharp",
+      "go",
+      "rust",
+      "ruby",
+      "php",
+      "html",
+      "css",
+      "sql",
+      "shell"
+    ],
+    "raw_rows": 1500,
+    "after_quality_filter": 1422,
+    "after_dedup": 1422,
+    "written_by_language": {
+      "html": 97,
+      "c": 92,
+      "rust": 100,
+      "php": 100,
+      "go": 98,
+      "css": 87,
+      "typescript": 95,
+      "shell": 82,
+      "sql": 87,
+      "python": 98,
+      "c-sharp": 99,
+      "java": 99,
+      "ruby": 96,
+      "c++": 99,
+      "javascript": 93
+    },
+    "total_tokens": 5205937,
+    "tokens_by_language": {
+      "C": {
+        "files": 92,
+        "tokens": 540017
+      },
+      "C#": {
+        "files": 99,
+        "tokens": 113187
+      },
+      "C++": {
+        "files": 99,
+        "tokens": 370266
+      },
+      "CSS": {
+        "files": 87,
+        "tokens": 684436
+      },
+      "Go": {
+        "files": 98,
+        "tokens": 433615
+      },
+      "HTML": {
+        "files": 97,
+        "tokens": 857954
+      },
+      "Java": {
+        "files": 99,
+        "tokens": 205871
+      },
+      "JavaScript": {
+        "files": 93,
+        "tokens": 337876
+      },
+      "PHP": {
+        "files": 100,
+        "tokens": 85538
+      },
+      "Python": {
+        "files": 98,
+        "tokens": 247776
+      },
+      "Ruby": {
+        "files": 96,
+        "tokens": 70255
+      },
+      "Rust": {
+        "files": 100,
+        "tokens": 406007
+      },
+      "SQL": {
+        "files": 87,
+        "tokens": 562465
+      },
+      "Shell": {
+        "files": 82,
+        "tokens": 78428
+      },
+      "TypeScript": {
+        "files": 95,
+        "tokens": 212246
+      }
+    }
+  },
+  "build_web_corpus": {
+    "generated_at": "2026-08-10T14:10:05.489062+00:00",
+    "total_rows": 12400,
+    "samples_per_lang_target": 3100,
+    "seed": 42,
+    "token_counts_by_language": {
+      "Bengali": {
+        "pre_tokens": 2319118.0,
+        "post_tokens": 2317154.0,
+        "delta": -1964.0,
+        "pct_change": -0.1
+      },
+      "Hindi": {
+        "pre_tokens": 2518472.0,
+        "post_tokens": 2517282.0,
+        "delta": -1190.0,
+        "pct_change": -0.0
+      },
+      "Tamil": {
+        "pre_tokens": 3130419.0,
+        "post_tokens": 3126800.0,
+        "delta": -3619.0,
+        "pct_change": -0.1
+      },
+      "Telugu": {
+        "pre_tokens": 3049567.0,
+        "post_tokens": 3046852.0,
+        "delta": -2715.0,
+        "pct_change": -0.1
+      },
+      "TOTAL": {
+        "pre_tokens": 11017576.0,
+        "post_tokens": 11008088.0,
+        "delta": -9488.0,
+        "pct_change": -0.1
+      }
+    }
+  },
+  "quality_filter_indic": {
+    "generated_at": "2026-08-10T14:10:28.971587+00:00",
+    "input_rows": 6250,
+    "kept_rows": 5802,
+    "drop_counts_by_rule": {
+      "word_count": 1,
+      "mean_word_length": 0,
+      "symbol_to_word_ratio": 10,
+      "top_2gram_ratio": 4,
+      "mltd": 0,
+      "flesch_reading_ease": 250,
+      "difficulty_ratio": 23,
+      "term_frequency_ratio": 2,
+      "duplicate_line_ratio": 63,
+      "duplicate_paragraph_ratio": 0,
+      "boilerplate_line_ratio": 135,
+      "source_type": 10
+    },
+    "by_language": {
+      "Bengali": {
+        "kept": 1174,
+        "total": 1250
+      },
+      "English": {
+        "kept": 1174,
+        "total": 1250
+      },
+      "Hindi": {
+        "kept": 1156,
+        "total": 1250
+      },
+      "Tamil": {
+        "kept": 1144,
+        "total": 1250
+      },
+      "Telugu": {
+        "kept": 1154,
+        "total": 1250
+      }
+    },
+    "by_source_type": {
+      "pdf": {
+        "kept": 503,
+        "total": 585
+      },
+      "speech": {
+        "kept": 0,
+        "total": 10
+      },
+      "web": {
+        "kept": 5299,
+        "total": 5655
+      }
+    },
+    "tokens": {
+      "tokens_before": 5061977,
+      "tokens_after": 4525565,
+      "tokens_dropped": 536412,
+      "pct_dropped": 10.596887342633126
+    },
+    "tokens_by_language": {
+      "Bengali": {
+        "tokens_before": 1135732,
+        "tokens_after": 1088977,
+        "tokens_dropped": 46755,
+        "pct_dropped": 4.116728242226159
+      },
+      "English": {
+        "tokens_before": 705060,
+        "tokens_after": 673106,
+        "tokens_dropped": 31954,
+        "pct_dropped": 4.532096559158086
+      },
+      "Hindi": {
+        "tokens_before": 1059158,
+        "tokens_after": 794354,
+        "tokens_dropped": 264804,
+        "pct_dropped": 25.001369011988768
+      },
+      "Tamil": {
+        "tokens_before": 1085885,
+        "tokens_after": 1007254,
+        "tokens_dropped": 78631,
+        "pct_dropped": 7.2411903654622725
+      },
+      "Telugu": {
+        "tokens_before": 1076142,
+        "tokens_after": 961874,
+        "tokens_dropped": 114268,
+        "pct_dropped": 10.618301302244499
+      }
+    },
+    "thresholds": {
+      "word_count_min": 20,
+      "word_count_max": 100000,
+      "mean_word_length_min": 1.5,
+      "mean_word_length_max": 20.0,
+      "symbol_to_word_ratio_max": 0.1,
+      "top_2gram_ratio_max": 0.2,
+      "mltd_min": 10.0,
+      "difficulty_ratio_max": 0.6,
+      "term_frequency_max": 0.15,
+      "duplicate_line_ratio_max": 0.3,
+      "duplicate_paragraph_ratio_max": 0.3,
+      "boilerplate_line_ratio_max": 0.3,
+      "flesch_lo_pct": 0.02,
+      "flesch_hi_pct": 0.98
+    },
+    "allowed_types": [
+      "pdf",
+      "web"
+    ],
+    "metric_percentiles": {
+      "word_count": {
+        "count": 6250.0,
+        "mean": 373.76864,
+        "std": 1424.0543277379156,
+        "min": 25.0,
+        "5%": 62.0,
+        "25%": 135.25,
+        "50%": 232.0,
+        "75%": 384.0,
+        "95%": 1052.0,
+        "max": 104226.0
+      },
+      "mean_word_length": {
+        "count": 6250.0,
+        "mean": 5.9182620168082325,
+        "std": 1.4956490954262536,
+        "min": 3.112947658402204,
+        "5%": 3.876950801946297,
+        "25%": 4.721737161064601,
+        "50%": 5.632666666666667,
+        "75%": 7.162074838776784,
+        "95%": 8.354034442724455,
+        "max": 18.066666666666666
+      },
+      "symbol_to_word_ratio": {
+        "count": 6250.0,
+        "mean": 0.001748652960614504,
+        "std": 0.008518390894659153,
+        "min": 0.0,
+        "5%": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "95%": 0.00904977375565611,
+        "max": 0.19290465631929046
+      },
+      "top_2gram_ratio": {
+        "count": 6250.0,
+        "mean": 0.0333895893463983,
+        "std": 0.02045291287405656,
+        "min": 0.0019704433497536944,
+        "5%": 0.010309278350515464,
+        "25%": 0.019937697285026635,
+        "50%": 0.028985507246376812,
+        "75%": 0.04195804195804196,
+        "95%": 0.07027241470510434,
+        "max": 0.24561403508771928
+      },
+      "mltd": {
+        "count": 6250.0,
+        "mean": 240.84885893969647,
+        "std": 267.6957929822026,
+        "min": 18.795605244945065,
+        "5%": 71.50270986830137,
+        "25%": 110.22831091323476,
+        "50%": 165.82955065893657,
+        "75%": 277.47053082191786,
+        "95%": 605.0190458821384,
+        "max": 4445.280000000016
+      },
+      "flesch_reading_ease": {
+        "count": 6250.0,
+        "mean": -37.34541564563167,
+        "std": 66.21225990913655,
+        "min": -1923.844614543466,
+        "5%": -110.75514191222241,
+        "25%": -79.0904230803889,
+        "50%": -47.947547346321045,
+        "75%": 6.449745344506546,
+        "95%": 53.88718152866238,
+        "max": 90.95638805970151
+      },
+      "difficulty_ratio": {
+        "count": 6250.0,
+        "mean": 0.25322693176655786,
+        "std": 0.15164632923755159,
+        "min": 0.0,
+        "5%": 0.03303641041634181,
+        "25%": 0.10672166026246527,
+        "50%": 0.2767216075863626,
+        "75%": 0.3770491803278688,
+        "95%": 0.48056480920654115,
+        "max": 0.8673469387755102
+      },
+      "term_frequency_ratio": {
+        "count": 6250.0,
+        "mean": 0.04255949331270063,
+        "std": 0.019051154244014115,
+        "min": 0.005390835579514825,
+        "5%": 0.017190350736356604,
+        "25%": 0.02877697841726619,
+        "50%": 0.04,
+        "75%": 0.05263157894736842,
+        "95%": 0.07743535516504596,
+        "max": 0.17543859649122806
+      },
+      "duplicate_line_ratio": {
+        "count": 6250.0,
+        "mean": 0.007693078018650781,
+        "std": 0.0517358438174688,
+        "min": 0.0,
+        "5%": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "95%": 0.0,
+        "max": 0.8
+      },
+      "duplicate_paragraph_ratio": {
+        "count": 6250.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "5%": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "95%": 0.0,
+        "max": 0.0
+      },
+      "boilerplate_line_ratio": {
+        "count": 6250.0,
+        "mean": 0.022715100606153827,
+        "std": 0.08545091330893043,
+        "min": 0.0,
+        "5%": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "95%": 0.2,
+        "max": 1.0
+      }
+    },
+    "boilerplate_lines_found": 203
+  },
+  "quality_filter_web": {
+    "generated_at": "2026-08-10T14:11:20.746965+00:00",
+    "input_rows": 12400,
+    "kept_rows": 11847,
+    "drop_counts_by_rule": {
+      "word_count": 0,
+      "mean_word_length": 0,
+      "symbol_to_word_ratio": 6,
+      "top_2gram_ratio": 2,
+      "mltd": 0,
+      "flesch_reading_ease": 496,
+      "difficulty_ratio": 30,
+      "term_frequency_ratio": 0,
+      "duplicate_line_ratio": 20,
+      "duplicate_paragraph_ratio": 0,
+      "boilerplate_line_ratio": 26,
+      "source_type": 0
+    },
+    "by_language": {
+      "Bengali": {
+        "kept": 2973,
+        "total": 3100
+      },
+      "Hindi": {
+        "kept": 2965,
+        "total": 3100
+      },
+      "Tamil": {
+        "kept": 2956,
+        "total": 3100
+      },
+      "Telugu": {
+        "kept": 2953,
+        "total": 3100
+      }
+    },
+    "by_source_type": {
+      "web": {
+        "kept": 11847,
+        "total": 12400
+      }
+    },
+    "tokens": {
+      "tokens_before": 11008088,
+      "tokens_after": 10614671,
+      "tokens_dropped": 393417,
+      "pct_dropped": 3.573890397678507
+    },
+    "tokens_by_language": {
+      "Bengali": {
+        "tokens_before": 2317154,
+        "tokens_after": 2240586,
+        "tokens_dropped": 76568,
+        "pct_dropped": 3.3043984128806287
+      },
+      "Hindi": {
+        "tokens_before": 2517282,
+        "tokens_after": 2438743,
+        "tokens_dropped": 78539,
+        "pct_dropped": 3.1199921184833483
+      },
+      "Tamil": {
+        "tokens_before": 3126800,
+        "tokens_after": 3003437,
+        "tokens_dropped": 123363,
+        "pct_dropped": 3.945343482154279
+      },
+      "Telugu": {
+        "tokens_before": 3046852,
+        "tokens_after": 2931905,
+        "tokens_dropped": 114947,
+        "pct_dropped": 3.772647965834901
+      }
+    },
+    "thresholds": {
+      "word_count_min": 20,
+      "word_count_max": 100000,
+      "mean_word_length_min": 1.5,
+      "mean_word_length_max": 20.0,
+      "symbol_to_word_ratio_max": 0.1,
+      "top_2gram_ratio_max": 0.2,
+      "mltd_min": 10.0,
+      "difficulty_ratio_max": 0.6,
+      "term_frequency_max": 0.15,
+      "duplicate_line_ratio_max": 0.3,
+      "duplicate_paragraph_ratio_max": 0.3,
+      "boilerplate_line_ratio_max": 0.3,
+      "flesch_lo_pct": 0.02,
+      "flesch_hi_pct": 0.98
+    },
+    "allowed_types": [
+      "pdf",
+      "web"
+    ],
+    "metric_percentiles": {
+      "word_count": {
+        "count": 12400.0,
+        "mean": 368.34572580645164,
+        "std": 542.1309435052727,
+        "min": 23.0,
+        "5%": 72.0,
+        "25%": 146.0,
+        "50%": 236.0,
+        "75%": 395.0,
+        "95%": 1018.0499999999993,
+        "max": 12571.0
+      },
+      "mean_word_length": {
+        "count": 12400.0,
+        "mean": 6.246751894650432,
+        "std": 1.578727232072513,
+        "min": 3.2933333333333334,
+        "5%": 3.8715128139742445,
+        "25%": 4.881969128236555,
+        "50%": 6.244912452161523,
+        "75%": 7.562964211300404,
+        "95%": 8.647411497493733,
+        "max": 12.082375478927203
+      },
+      "symbol_to_word_ratio": {
+        "count": 12400.0,
+        "mean": 0.0013117438333780141,
+        "std": 0.0058653322030876535,
+        "min": 0.0,
+        "5%": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "95%": 0.007751937984496124,
+        "max": 0.1864406779661017
+      },
+      "top_2gram_ratio": {
+        "count": 12400.0,
+        "mean": 0.031782856810744976,
+        "std": 0.01749964229787003,
+        "min": 0.0025380710659898475,
+        "5%": 0.010169491525423728,
+        "25%": 0.020066889632107024,
+        "50%": 0.028557836074486885,
+        "75%": 0.03980099502487562,
+        "95%": 0.06451612903225806,
+        "max": 0.25157232704402516
+      },
+      "mltd": {
+        "count": 12400.0,
+        "mean": 256.50771402688605,
+        "std": 220.26959553939707,
+        "min": 18.79752635914204,
+        "5%": 76.30410455486863,
+        "25%": 119.13178467488055,
+        "50%": 196.7710315464713,
+        "75%": 313.9842306761011,
+        "95%": 647.5926990992856,
+        "max": 4714.592715231789
+      },
+      "flesch_reading_ease": {
+        "count": 12400.0,
+        "mean": -60.4814335351784,
+        "std": 39.27253636743552,
+        "min": -250.77321839080454,
+        "5%": -116.11162390929962,
+        "25%": -88.41152010846368,
+        "50%": -68.69057645683746,
+        "75%": -26.41618130900219,
+        "95%": 5.303006046817575,
+        "max": 31.982619047619096
+      },
+      "difficulty_ratio": {
+        "count": 12400.0,
+        "mean": 0.311021287350425,
+        "std": 0.1261493660744962,
+        "min": 0.025179856115107913,
+        "5%": 0.09584635649867987,
+        "25%": 0.20474600181375865,
+        "50%": 0.3355050933786078,
+        "75%": 0.404320987654321,
+        "95%": 0.4928571428571429,
+        "max": 0.6954022988505747
+      },
+      "term_frequency_ratio": {
+        "count": 12400.0,
+        "mean": 0.03675242161640939,
+        "std": 0.015091753937389447,
+        "min": 0.005210594876248371,
+        "5%": 0.016339869281045753,
+        "25%": 0.025629710095729515,
+        "50%": 0.034782608695652174,
+        "75%": 0.04559270516717325,
+        "95%": 0.06374568838739003,
+        "max": 0.13984168865435356
+      },
+      "duplicate_line_ratio": {
+        "count": 12400.0,
+        "mean": 0.0017577310202420767,
+        "std": 0.021858300513341464,
+        "min": 0.0,
+        "5%": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "95%": 0.0,
+        "max": 0.5
+      },
+      "duplicate_paragraph_ratio": {
+        "count": 12400.0,
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "5%": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "95%": 0.0,
+        "max": 0.0
+      },
+      "boilerplate_line_ratio": {
+        "count": 12400.0,
+        "mean": 0.002449065808178141,
+        "std": 0.026287408091655765,
+        "min": 0.0,
+        "5%": 0.0,
+        "25%": 0.0,
+        "50%": 0.0,
+        "75%": 0.0,
+        "95%": 0.0,
+        "max": 0.6666666666666666
+      }
+    },
+    "boilerplate_lines_found": 78
+  },
+  "minhash_lsh_dedup_indic": {
+    "generated_at": "2026-08-10T14:11:43.634527+00:00",
+    "input_docs": 5802,
+    "clusters": 5802,
+    "near_duplicates_removed": 0,
+    "lsh_bands": 8,
+    "lsh_rows_per_band": 16,
+    "similarity_threshold": 0.8,
+    "by_language": {
+      "Bengali": {
+        "kept": 1174,
+        "total": 1174
+      },
+      "English": {
+        "kept": 1174,
+        "total": 1174
+      },
+      "Hindi": {
+        "kept": 1156,
+        "total": 1156
+      },
+      "Tamil": {
+        "kept": 1144,
+        "total": 1144
+      },
+      "Telugu": {
+        "kept": 1154,
+        "total": 1154
+      }
+    },
+    "tokens": {
+      "tokens_before": 4525565,
+      "tokens_after": 4525565,
+      "tokens_dropped": 0,
+      "pct_dropped": 0.0
+    },
+    "tokens_by_language": {
+      "Bengali": {
+        "tokens_before": 1088977,
+        "tokens_after": 1088977,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      },
+      "English": {
+        "tokens_before": 673106,
+        "tokens_after": 673106,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      },
+      "Hindi": {
+        "tokens_before": 794354,
+        "tokens_after": 794354,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      },
+      "Tamil": {
+        "tokens_before": 1007254,
+        "tokens_after": 1007254,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      },
+      "Telugu": {
+        "tokens_before": 961874,
+        "tokens_after": 961874,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      }
+    }
+  },
+  "minhash_lsh_dedup_web": {
+    "generated_at": "2026-08-10T14:12:31.543358+00:00",
+    "input_docs": 11847,
+    "clusters": 11847,
+    "near_duplicates_removed": 0,
+    "lsh_bands": 8,
+    "lsh_rows_per_band": 16,
+    "similarity_threshold": 0.8,
+    "by_language": {
+      "Bengali": {
+        "kept": 2973,
+        "total": 2973
+      },
+      "Hindi": {
+        "kept": 2965,
+        "total": 2965
+      },
+      "Tamil": {
+        "kept": 2956,
+        "total": 2956
+      },
+      "Telugu": {
+        "kept": 2953,
+        "total": 2953
+      }
+    },
+    "tokens": {
+      "tokens_before": 10614671,
+      "tokens_after": 10614671,
+      "tokens_dropped": 0,
+      "pct_dropped": 0.0
+    },
+    "tokens_by_language": {
+      "Bengali": {
+        "tokens_before": 2240586,
+        "tokens_after": 2240586,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      },
+      "Hindi": {
+        "tokens_before": 2438743,
+        "tokens_after": 2438743,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      },
+      "Tamil": {
+        "tokens_before": 3003437,
+        "tokens_after": 3003437,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      },
+      "Telugu": {
+        "tokens_before": 2931905,
+        "tokens_after": 2931905,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      }
+    }
+  },
+  "language_router_indic": {
+    "generated_at": "2026-08-10T14:12:41.357540+00:00",
+    "input_docs": 5802,
+    "purity_threshold": 0.8,
+    "written_by_folder": {
+      "english": 1168,
+      "hindi": 1135,
+      "bengali": 1157,
+      "telugu": 1114,
+      "tamil": 1122
+    },
+    "discarded": 106,
+    "mean_purity_of_routed_docs": 0.9696935519275794,
+    "agreement_with_source_lang": {
+      "agree": 5694,
+      "total": 5802,
+      "pct": 98.13857290589452
+    },
+    "tokens": {
+      "tokens_before": 4525565,
+      "tokens_after": 4433071,
+      "tokens_dropped": 92494,
+      "pct_dropped": 2.043811104248862
+    },
+    "tokens_by_language": {
+      "Bengali": {
+        "tokens_before": 1088977,
+        "tokens_after": 1078841,
+        "tokens_dropped": 10136,
+        "pct_dropped": 0.9307818255114663
+      },
+      "English": {
+        "tokens_before": 673106,
+        "tokens_after": 661739,
+        "tokens_dropped": 11367,
+        "pct_dropped": 1.6887384750693055
+      },
+      "Hindi": {
+        "tokens_before": 794354,
+        "tokens_after": 782998,
+        "tokens_dropped": 11356,
+        "pct_dropped": 1.4295893266729947
+      },
+      "Tamil": {
+        "tokens_before": 1007254,
+        "tokens_after": 983880,
+        "tokens_dropped": 23374,
+        "pct_dropped": 2.320566609812421
+      },
+      "Telugu": {
+        "tokens_before": 961874,
+        "tokens_after": 925613,
+        "tokens_dropped": 36261,
+        "pct_dropped": 3.7698284806533913
+      }
+    }
+  },
+  "language_router_web": {
+    "generated_at": "2026-08-10T14:12:59.709666+00:00",
+    "input_docs": 11847,
+    "purity_threshold": 0.8,
+    "written_by_folder": {
+      "hindi": 2949,
+      "tamil": 2872,
+      "bengali": 2965,
+      "telugu": 2822
+    },
+    "discarded": 239,
+    "mean_purity_of_routed_docs": 0.9695280360326355,
+    "agreement_with_source_lang": {
+      "agree": 11608,
+      "total": 11847,
+      "pct": 97.9826116316367
+    },
+    "tokens": {
+      "tokens_before": 10614671,
+      "tokens_after": 10426158,
+      "tokens_dropped": 188513,
+      "pct_dropped": 1.7759664901531098
+    },
+    "tokens_by_language": {
+      "Bengali": {
+        "tokens_before": 2240586,
+        "tokens_after": 2234926,
+        "tokens_dropped": 5660,
+        "pct_dropped": 0.2526124861978072
+      },
+      "Hindi": {
+        "tokens_before": 2438743,
+        "tokens_after": 2422158,
+        "tokens_dropped": 16585,
+        "pct_dropped": 0.6800634589212557
+      },
+      "Tamil": {
+        "tokens_before": 3003437,
+        "tokens_after": 2935021,
+        "tokens_dropped": 68416,
+        "pct_dropped": 2.277923592204531
+      },
+      "Telugu": {
+        "tokens_before": 2931905,
+        "tokens_after": 2834053,
+        "tokens_dropped": 97852,
+        "pct_dropped": 3.3374887658365466
+      }
+    }
+  },
+  "pii_scrub": {
+    "generated_at": "2026-08-10T14:16:32.863092+00:00",
+    "files_scanned": 18726,
+    "files_redacted": 545,
+    "redactions_by_type": {
+      "PHONE": 244,
+      "IP": 226,
+      "CREDIT_CARD": 347,
+      "EMAIL": 188,
+      "URL": 1760,
+      "AADHAAR": 5,
+      "PAN": 8
+    },
+    "redactions_by_target": {
+      "indic/hindi": {},
+      "indic/bengali": {
+        "PHONE": 1,
+        "IP": 1
+      },
+      "indic/tamil": {
+        "PHONE": 3
+      },
+      "indic/telugu": {
+        "PHONE": 1,
+        "IP": 1
+      },
+      "indic/english": {
+        "PHONE": 1
+      },
+      "web/hindi": {
+        "PHONE": 8
+      },
+      "web/bengali": {},
+      "web/tamil": {
+        "PHONE": 17,
+        "CREDIT_CARD": 2,
+        "IP": 1
+      },
+      "web/telugu": {
+        "PHONE": 5,
+        "IP": 1
+      },
+      "code/c": {
+        "EMAIL": 9,
+        "URL": 36,
+        "IP": 14,
+        "CREDIT_CARD": 3
+      },
+      "code/c++": {
+        "URL": 54,
+        "EMAIL": 10,
+        "IP": 18,
+        "CREDIT_CARD": 5
+      },
+      "code/c-sharp": {
+        "URL": 34,
+        "IP": 13,
+        "EMAIL": 12
+      },
+      "code/css": {
+        "URL": 101,
+        "EMAIL": 6,
+        "PHONE": 144
+      },
+      "code/go": {
+        "URL": 197,
+        "EMAIL": 17,
+        "PHONE": 4,
+        "CREDIT_CARD": 2,
+        "IP": 4
+      },
+      "code/html": {
+        "URL": 689,
+        "EMAIL": 15,
+        "PHONE": 35,
+        "AADHAAR": 3,
+        "IP": 8,
+        "CREDIT_CARD": 8
+      },
+      "code/java": {
+        "URL": 69,
+        "IP": 6,
+        "EMAIL": 6
+      },
+      "code/javascript": {
+        "URL": 174,
+        "IP": 1,
+        "EMAIL": 7,
+        "PHONE": 7
+      },
+      "code/php": {
+        "URL": 42,
+        "EMAIL": 22,
+        "PHONE": 4,
+        "CREDIT_CARD": 54
+      },
+      "code/python": {
+        "URL": 63,
+        "IP": 5,
+        "CREDIT_CARD": 259,
+        "EMAIL": 5
+      },
+      "code/ruby": {
+        "URL": 57,
+        "EMAIL": 22,
+        "IP": 4
+      },
+      "code/rust": {
+        "URL": 63,
+        "IP": 5,
+        "EMAIL": 6,
+        "PHONE": 1,
+        "CREDIT_CARD": 1
+      },
+      "code/shell": {
+        "URL": 103,
+        "IP": 16,
+        "EMAIL": 14
+      },
+      "code/sql": {
+        "URL": 26,
+        "IP": 121,
+        "EMAIL": 29,
+        "PHONE": 6,
+        "CREDIT_CARD": 6,
+        "PAN": 8
+      },
+      "code/typescript": {
+        "URL": 52,
+        "EMAIL": 8,
+        "IP": 7,
+        "PHONE": 7,
+        "CREDIT_CARD": 7,
+        "AADHAAR": 2
+      }
+    },
+    "tokens_by_track": {
+      "indic": {
+        "tokens_before": 4433071,
+        "tokens_after": 4433046,
+        "tokens_dropped": 25,
+        "pct_dropped": 0.0005639431446056244
+      },
+      "web": {
+        "tokens_before": 10426158,
+        "tokens_after": 10426066,
+        "tokens_dropped": 92,
+        "pct_dropped": 0.0008823959890114844
+      },
+      "code": {
+        "tokens_before": 5205150,
+        "tokens_after": 5179105,
+        "tokens_dropped": 26045,
+        "pct_dropped": 0.5003698260376742
+      }
+    },
+    "tokens_by_target": {
+      "indic/hindi": {
+        "tokens_before": 782998,
+        "tokens_after": 782998,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      },
+      "indic/bengali": {
+        "tokens_before": 1078841,
+        "tokens_after": 1078832,
+        "tokens_dropped": 9,
+        "pct_dropped": 0.0008342285841935929
+      },
+      "indic/tamil": {
+        "tokens_before": 983880,
+        "tokens_after": 983874,
+        "tokens_dropped": 6,
+        "pct_dropped": 0.0006098304671301379
+      },
+      "indic/telugu": {
+        "tokens_before": 918638,
+        "tokens_after": 918631,
+        "tokens_dropped": 7,
+        "pct_dropped": 0.0007619976530472286
+      },
+      "indic/english": {
+        "tokens_before": 668714,
+        "tokens_after": 668711,
+        "tokens_dropped": 3,
+        "pct_dropped": 0.0004486222809751254
+      },
+      "web/hindi": {
+        "tokens_before": 2422158,
+        "tokens_after": 2422142,
+        "tokens_dropped": 16,
+        "pct_dropped": 0.000660567972857262
+      },
+      "web/bengali": {
+        "tokens_before": 2234926,
+        "tokens_after": 2234926,
+        "tokens_dropped": 0,
+        "pct_dropped": 0.0
+      },
+      "web/tamil": {
+        "tokens_before": 2935021,
+        "tokens_after": 2934963,
+        "tokens_dropped": 58,
+        "pct_dropped": 0.001976135775519153
+      },
+      "web/telugu": {
+        "tokens_before": 2834053,
+        "tokens_after": 2834035,
+        "tokens_dropped": 18,
+        "pct_dropped": 0.0006351327939174038
+      },
+      "code/c": {
+        "tokens_before": 539957,
+        "tokens_after": 539522,
+        "tokens_dropped": 435,
+        "pct_dropped": 0.08056197067544267
+      },
+      "code/c++": {
+        "tokens_before": 369800,
+        "tokens_after": 369061,
+        "tokens_dropped": 739,
+        "pct_dropped": 0.19983775013520821
+      },
+      "code/c-sharp": {
+        "tokens_before": 113160,
+        "tokens_after": 112687,
+        "tokens_dropped": 473,
+        "pct_dropped": 0.41799222340049486
+      },
+      "code/css": {
+        "tokens_before": 684394,
+        "tokens_after": 683008,
+        "tokens_dropped": 1386,
+        "pct_dropped": 0.2025149256130241
+      },
+      "code/go": {
+        "tokens_before": 433615,
+        "tokens_after": 431698,
+        "tokens_dropped": 1917,
+        "pct_dropped": 0.44209725217070445
+      },
+      "code/html": {
+        "tokens_before": 857897,
+        "tokens_after": 847573,
+        "tokens_dropped": 10324,
+        "pct_dropped": 1.2034078683105314
+      },
+      "code/java": {
+        "tokens_before": 205842,
+        "tokens_after": 205119,
+        "tokens_dropped": 723,
+        "pct_dropped": 0.35124027166467486
+      },
+      "code/javascript": {
+        "tokens_before": 337824,
+        "tokens_after": 335496,
+        "tokens_dropped": 2328,
+        "pct_dropped": 0.6891162262006252
+      },
+      "code/php": {
+        "tokens_before": 85530,
+        "tokens_after": 84951,
+        "tokens_dropped": 579,
+        "pct_dropped": 0.6769554542265872
+      },
+      "code/python": {
+        "tokens_before": 247750,
+        "tokens_after": 245989,
+        "tokens_dropped": 1761,
+        "pct_dropped": 0.7107971745711402
+      },
+      "code/ruby": {
+        "tokens_before": 70252,
+        "tokens_after": 69560,
+        "tokens_dropped": 692,
+        "pct_dropped": 0.9850253373569435
+      },
+      "code/rust": {
+        "tokens_before": 406007,
+        "tokens_after": 405179,
+        "tokens_dropped": 828,
+        "pct_dropped": 0.2039373705379464
+      },
+      "code/shell": {
+        "tokens_before": 78428,
+        "tokens_after": 76576,
+        "tokens_dropped": 1852,
+        "pct_dropped": 2.3614015402662316
+      },
+      "code/sql": {
+        "tokens_before": 562448,
+        "tokens_after": 561214,
+        "tokens_dropped": 1234,
+        "pct_dropped": 0.2193980599095383
+      },
+      "code/typescript": {
+        "tokens_before": 212246,
+        "tokens_after": 211472,
+        "tokens_dropped": 774,
+        "pct_dropped": 0.364671183438086
+      }
+    }
+  },
+  "pipeline_summary_indic": {
+    "generated_at": "2026-08-10T14:16:32.864678+00:00",
+    "waterfall": [
+      {
+        "stage": "build_indic (raw)",
+        "tokens": 5068108,
+        "step_pct_change": 0.0,
+        "cumulative_pct_change": 0.0
+      },
+      {
+        "stage": "build_indic (cleaned)",
+        "tokens": 5061977,
+        "step_pct_change": -0.12097216554974756,
+        "cumulative_pct_change": -0.12097216554974756
+      },
+      {
+        "stage": "quality_filter",
+        "tokens": 4525565,
+        "step_pct_change": -10.596887342633126,
+        "cumulative_pct_change": -10.705040224083623
+      },
+      {
+        "stage": "minhash_lsh_dedup",
+        "tokens": 4525565,
+        "step_pct_change": 0.0,
+        "cumulative_pct_change": -10.705040224083623
+      },
+      {
+        "stage": "language_router",
+        "tokens": 4433071,
+        "step_pct_change": -2.043811104248862,
+        "cumulative_pct_change": -12.530060527518357
+      },
+      {
+        "stage": "pii_scrub (final)",
+        "tokens": 4433046,
+        "step_pct_change": -0.0005639431446056244,
+        "cumulative_pct_change": -12.530553808245601
+      }
+    ],
+    "initial_raw_tokens": 5068108,
+    "final_tokens": 4433046,
+    "overall_pct_change": -12.530553808245601,
+    "overall_tokens_dropped": 635062
+  },
+  "pipeline_summary_web": {
+    "generated_at": "2026-08-10T14:16:32.866082+00:00",
+    "waterfall": [
+      {
+        "stage": "build_web (raw)",
+        "tokens": 11017576,
+        "step_pct_change": 0.0,
+        "cumulative_pct_change": 0.0
+      },
+      {
+        "stage": "build_web (cleaned)",
+        "tokens": 11008088,
+        "step_pct_change": -0.08611694623209316,
+        "cumulative_pct_change": -0.08611694623209316
+      },
+      {
+        "stage": "quality_filter",
+        "tokens": 10614671,
+        "step_pct_change": -3.573890397678507,
+        "cumulative_pct_change": -3.6569296186384372
+      },
+      {
+        "stage": "minhash_lsh_dedup",
+        "tokens": 10614671,
+        "step_pct_change": 0.0,
+        "cumulative_pct_change": -3.6569296186384372
+      },
+      {
+        "stage": "language_router",
+        "tokens": 10426158,
+        "step_pct_change": -1.7759664901531098,
+        "cumulative_pct_change": -5.367950264196044
+      },
+      {
+        "stage": "pii_scrub (final)",
+        "tokens": 10426066,
+        "step_pct_change": -0.0008823959890114844,
+        "cumulative_pct_change": -5.368785293607233
+      }
+    ],
+    "initial_raw_tokens": 11017576,
+    "final_tokens": 10426066,
+    "overall_pct_change": -5.368785293607233,
+    "overall_tokens_dropped": 591510
+  }
+}

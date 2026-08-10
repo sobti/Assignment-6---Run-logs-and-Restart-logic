@@ -1,0 +1,15 @@
+:focus {
+  outline: 1px dashed var(--primary);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-bg);
+  text-shadow: none;
+}
+
+:where(template),
+:where([hidden]) {
+  display: none;
+}

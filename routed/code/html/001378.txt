@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "[URL]
+<html lang="es" xml:lang="es" xmlns="[URL]
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Fin | Cuerpos geométricos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="content-language" content="es" />
+<meta name="author" content="Víctor Monterreal Blázquez" />
+<link rel="license" type="text/html" href="[URL] />
+<meta name="generator" content="eXeLearning 2.1 - exelearning.net" />
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript">$exe_i18n={previous:"Anterior",next:"Siguiente",show:"Mostrar",hide:"Ocultar",showFeedback:"Mostrar retroalimentación",hideFeedback:"Ocultar retroalimentación",correct:"Correcto",incorrect:"Incorrecto",menu:"Menú",print:"Imprimir"}</script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+<body class="exe-web-site"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="fin.html#main" class="sr-av">Saltar la navegación</a></p>
+<div id="header" ><div id="headerContent">Cuerpos geométricos</div></div>
+<div id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">CUERPOS GEOMÉTRICOS</a></li>
+   <li><a href="reas_y_permetros.html" class="no-ch">Áreas y perímetros</a></li>
+   <li><a href="cuerpos_geomtricos.html" class="daddy">Cuerpos geométricos</a>
+   <ul class="other-section">
+      <li><a href="poliedros.html" class="daddy">poliedros</a>
+      <ul class="other-section">
+         <li><a href="slidos_platnicos.html" class="no-ch">sólidos platónicos</a></li>
+         <li><a href="prismas.html" class="no-ch">prismas</a></li>
+         <li><a href="pirmides.html" class="no-ch">pirámides</a></li>
+      </ul>
+      </li>
+      <li><a href="cuerpos_de_revolucin.html" class="daddy">cuerpos de revolución</a>
+      <ul class="other-section">
+         <li><a href="cilindro.html" class="no-ch">cilindro</a></li>
+         <li><a href="cono.html" class="no-ch">cono</a></li>
+         <li><a href="esfera.html" class="no-ch">esfera</a></li>
+      </ul>
+      </li>
+      <li><a href="volumen_de_los_cuerpos_geomtricos.html" class="no-ch">volumen de los cuerpos geométricos</a></li>
+   </ul>
+   </li>
+   <li><a href="resumen.html" class="no-ch">Resumen</a></li>
+   <li><a href="examen.html" class="no-ch">Examen</a></li>
+   <li id="active"><a href="fin.html" class="active no-ch">Fin</a></li>
+</ul>
+</div>
+<div id='topPagination'>
+<div class="pagination noprt">
+<a href="examen.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</div>
+</div>
+<div id="main-wrapper">
+<div id="main"><a name="main"></a>
+<div id="nodeDecoration"><h1 id="nodeTitle">Fin</h1></div>
+<div class="iDevice_wrapper FreeTextIdevice" id="id1">
+<div class="iDevice emphasis0">
+<div id="ta1_1" class="block iDevice_content">
+<p><iframe width="560" height="315" src="[URL] frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></p>
+</div>
+</div>
+</div>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="[URL] Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</div>
+</div>
+<div id='bottomPagination'>
+<div class="pagination noprt">
+<a href="examen.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="_seamist_js.js"></script></body></html>

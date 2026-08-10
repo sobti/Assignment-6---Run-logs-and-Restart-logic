@@ -1,0 +1,10 @@
+<?php
+
+namespace App\Models\Naics\FiftyTwo;
+
+use Illuminate\Database\Eloquent\Model;
+
+class FiftyTwoApplications extends Model
+{
+    //
+}

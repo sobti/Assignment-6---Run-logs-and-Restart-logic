@@ -1,0 +1,202 @@
+.slick-slider {
+    width: 100%;
+}
+.slider__design-inovador {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.slider__design-inovador h2{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.slider__design-inovador p{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+    max-width: 224px;
+    align-items: center;
+    margin: 0 auto;
+}
+.slider__design-inovador .slick-next {
+    right: 15px;
+}
+.slider__design-inovador .slick-prev {
+    left: 15px;
+    z-index: 9;
+}
+.SliderPrevArrow,
+.SliderNextArrow{
+    position: absolute;
+    z-index: 2;
+    bottom: 30px;
+}
+.SliderPrevArrow {
+    left: 15px;
+    cursor: pointer;
+}
+.SliderNextArrow {
+    right: 15px;
+    cursor: pointer;
+}
+.slider__design-inovador-nav {
+    bottom: 20px;
+    padding: 10px 0;
+    width: 90%;
+    left: calc(50% - 45%);
+}
+
+.slider__design-inovador-nav h3 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.slider__design-inovador-nav .slick-slide {
+    text-align: center;
+    position: relative;
+    height: 100px;
+    width: 25%;
+}
+.slider__design-inovador-nav .slick-slide:hover svg,
+.slider__design-inovador-nav .slick-slide:hover svg path {
+    stroke: #F08B1D;
+}
+.slider__design-inovador-nav .slick-slide:hover svg .hover {
+    fill: #F08B1D;
+}
+.slider__design-inovador-nav .slick-slide:hover h3 {
+    color: #F08B1D;
+}
+.slider__design-inovador-nav .slick-slide:hover::after,
+.slider__design-inovador-nav .slick-current::after  {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(91.64deg, #F08B1D 49.94%, #DB882A 136.63%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.slider__design-inovador-nav .slick-slide img {
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .slick-slider,
+    .slick-list,
+    .slick-track,
+    .slick-slide,
+    .slick-slide div,
+    .slider__grid {
+        height: 100%;
+    }
+    .slider__grid {
+        display: grid !important;
+        grid-template-columns: 50% 50%;
+    }
+    .slider__grid picture {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        overflow: hidden;
+    }
+    .slider__grid picture img {
+        max-width: max-content;
+        max-height: 100%;
+    }
+    .slider__grid .slider__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2;
+    }
+    .slider__grid .slider__content div {
+        height: auto;
+        width: 75%;
+        max-width: 440px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .slider__design-inovador-nav {
+        position: absolute;
+        left: 50%;
+        width: 48%;
+    }
+    .slider__design-inovador-nav br {
+        display: none;
+    }
+    .SliderPrevArrow {
+        left: 50%;
+        top: calc(50% - 16px);
+        height: 32px;
+    }
+    .SliderNextArrow {
+        top: calc(50% - 16px);
+        right: 45px;
+        height: 32px;
+    }
+    .slider__design-inovador {
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .slider__design-inovador .slick-slider{
+        grid-column: 1 / 3;
+        grid-row: 1 / 4;
+    }
+    .slider__design-inovador h2 {
+        font-size: 48px;
+        justify-content: flex-start;
+        width: 89%;
+        text-align: left;
+        display: flex;
+    }
+    .slider__design-inovador p {
+        font-size: 18px;
+        justify-content: flex-start;
+        text-align: left;
+        margin: 0;
+        max-width: 89%;
+    }
+    .slider__design-inovador-nav {
+        grid-column: 2;
+        grid-row: 3;
+        position: unset;
+        left: unset;
+        width: unset;
+    }
+    .slider__design-inovador-nav h3 {
+        font-size: 14px;
+    }
+    .slider__design-inovador-nav .slick-slide {
+        margin: 0 25px;
+        cursor: pointer;
+        width: auto;
+    }
+    .slider__design-inovador-nav .slick-slide:first-child {
+        margin-left: 0;
+    }
+    .slider__design-inovador-nav .slick-slide:last-child {
+        margin-right: 0;
+    }
+
+}

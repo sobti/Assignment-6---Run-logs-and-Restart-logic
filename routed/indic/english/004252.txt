@@ -1,0 +1,10 @@
+Apple topday announced a major revamp of its iOS Maps app that features improved road coverage and pedestrian data, more precise addresses, and more detailed land cover.
+“We set out to create the best and most private maps app on the planet that is reflective of how people explore the world today,” Apple senior vice president Eddy Cue is quoted as saying in the blog post announcing the update.
+Here’s a lowdown on what's new.
+Look Around: Inspired by Street View in Google Maps, Look Around shows you interactive street-level imagery with high-resolution, 3D photography and smooth and seamless transitions, but only in New York City, the San Francisco Bay Area, Los Angeles, Las Vegas, Houston, and Oahu.
+Favorites: This new feature provides quick and easy navigation to the places you visit most often. Just tap and go once it’s in Favorites on the launch screen.
+Real-time transit information: You can get detailed transit schedules, live departure times, arrival times, the current location of an en-route bus or train, and system connections to help plan a journey - Assuming you’re in the San Francisco Bay Area, Washington D.C., New York, Los Angeles, or Miami, that is.
+Share ETA: You can send an estimated time of arrival to others with a tap. The receiver can follow your journey, and Maps will update them with a revised estimate if there are delays.
+Flight status: Thanks to on-device Siri intelligence, Maps can now scan for information stored in Mail, Calendar, or Wallet and proactively display flight information such as your terminal, gate location, departure time, flight changes, and cancellations.
+Indoor Maps for airports and malls: As the name suggests, you can see what level you’re on, restroom locations, and which stores and restaurants are open.
+Flyover: Now, you can view select major metro areas using photo-realistic, immersive 3D views. It’s available in over 350 cities, Apple says.

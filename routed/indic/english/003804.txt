@@ -1,0 +1,121 @@
+If you want to get started with Bubble, use this coupon for $15 off your plan.
+Watch our Guide on how to build this article and a bubble app that scales to $42K MRR and keep share this article with friends to spread the love. In this article not only do we provide you with a Bubble.io referral code to save you money as you build your dream app, we also show you how we are building a $42K MRR Mirco-SAAS (maybe it becomes more micro at that stage), but for now we’re focusing on creating a passive income stream that enables our family to no longer worry about money at some time in the future thanks to the power of Ai.
+Enjoy this Ai-assisted Article built by Affogato.
+[Part 1] Bubble.io: The Best No-Code Micro SAAS Website & App Builder [iOS/Android] (Coupon Code for 2023)
+[Part 2] Bubble.io: The Best No-Code Micro SAAS Website & App Builder [iOS/Android] (Coupon Code for 2023)
+In a world where technology and software are ever-evolving, it’s evident that Micro-SaaS is a hot trend in the startup space. With the promise of 5-10X valuations, it’s an excellent opportunity to invest time and effort into. Today, we’re focusing on a specific industry that has shown immense demand – Real Estate.
+To fully grasp the ‘Do Your Own Research’ or DYOR phase, it’s essential to understand that we leveraged various tools and techniques. One primary tool was a Chrome extension, which allowed us to scrape data effectively. If you’re new to this, don’t worry – we’ve outlined a step-by-step guide to replicating our process.
+We’re going to start by identifying our Ideal Customer Persona. We used one of the tools available from Affogato to whip up this nifty ICP chart.
+|Micro-SaaS has become an increasingly popular business model, given its low start-up cost and high scalability.
+|Based on Glassdoor, the average budget for starting a micro-SaaS company ranges between $5000 and $15000.
+|1-10 people (mostly solo founders or small teams)
+|It greatly varies, but successful Micro-SaaS can have between 1,000-10,000 monthly users.
+|Why don’t programmers like nature? It has too many bugs!
+This gives us a great starting point to begin our research.
+For our project, we used a Chrome extension known as Data Miner1, a powerful web scraping tool. To install this extension:
+- Open Google Chrome and navigate to the Chrome Web Store.
+- In the search bar, type “Data Miner”.
+- From the search results, select the “Data Miner” extension and click “Add to Chrome”.
+- Confirm by clicking “Add extension” in the pop-up window.
+In our case, we navigated to Acquire.com2, the website from which we wanted to scrape data. Once there, click the Data Miner icon in your Chrome extension toolbar to open it.
+Data Miner operates using “recipes”, which are sets of instructions that tell Data Miner what data to scrape. You can either create a new recipe tailored to the specific website or use one of the many public recipes available.
+For beginners, we recommend using a public recipe initially to familiarize yourself with the tool.
+Once your recipe is set, click on “Start Mining”. The extension will then begin to scrape data as per the instructions in the recipe. Once completed, you can download the scraped data as a CSV file.
+With the CSV file, you can now analyze the data using your preferred data analysis tools. Excel or Google Sheets are great for beginners. You can filter, sort, and perform various operations on the data to derive meaningful insights.
+Remember, web scraping must be performed ethically and in accordance with the website’s terms of service. Ensure you respect privacy and data protection rules.
+By following these steps, you can replicate our research phase and gain valuable insights into various market verticals. This is an essential step towards creating a successful micro-SaaS business.
+When we began our journey, we aimed to analyze the market and understand which verticals held the most potential. We turned to Acquire.com, a comprehensive database that listed businesses for sale in 20231. With a range of valuations from $3.5k to a staggering $20M+, it was clear – Micro-SaaS businesses were hot commodities in various verticals.
+Our next step was determining the most promising industry for our micro-SaaS solution. We launched an extensive advertising campaign, reaching out to the largest industries including D2C/Creator, B2B/SaaS, Real Estate, and Others. After 60 days, 175 ads, and over 100 leads with an approximate CPA of $8, one industry stood out – Real Estate2.
+Launching and optimizing ads is an art and a science. In our campaign, we utilized Canva for ad creation and Facebook for ad distribution. To achieve an optimized Cost Per Action (CPA), we focused on certain Key Performance Indicators (KPIs) during various stages of the ad campaign.
+Here is a detailed walkthrough of how we accomplished this:
+Canva1 is a user-friendly graphic design platform that allows you to create engaging ad creatives. Here are the steps to create an ad:
+- Navigate to the Canva website and create an account or log in.
+- Click the “Create a design” button on the top-right corner.
+- Select “Custom dimensions” and input the dimensions suitable for a Facebook ad (1200 x 628 px is commonly used).
+- Use Canva’s drag-and-drop feature to design your ad. You can incorporate images, text, and other elements.
+- Save your ad design once you’re satisfied.
+Now that we have our ad creatives, we need to launch them on Facebook2. The steps are:
+- Log in to your Facebook Ads Manager account.
+- Click “Create” to start a new ad campaign.
+- Choose your marketing objective based on your current campaign stage (e.g., Traffic, Lead generation).
+- Define your ad set, including target audience, placements, and budget.
+- Upload your Canva-created ad creative, add a compelling headline, and ad text.
+- Review your ad and then click “Confirm” to launch it.
+We focused on specific KPIs at each step of our ad campaign:
+- Optimizing for Click-Through Rate (CTR): At the start, we aimed for a CTR of 10% or greater. To achieve this, we A/B tested multiple ad creatives and targeted various audience segments. A high CTR signifies that your ad is appealing to the audience and encourages them to click.
+- Optimizing for Leads: Our next focus was to generate leads. The goal here was to convert our ad clicks into potential customers. We continuously refined our landing page and lead capture form to improve the conversion rate.
+- Increasing Lead Volume: The objective then was to increase our lead volume to 50 leads per week. We scaled up our successful ad campaigns and explored additional audience segments.
+- Lowering Cost Per Lead (CPL): With a steady lead volume, we turned our attention to optimizing our CPL. This involved tweaking the ad creatives, ad placements, and target audience to achieve a lower CPL.
+- Optimizing for User Actions: Finally, we optimized for user actions on our app, like clicking to try, registering, and becoming a paid user. Each step required its own set of optimizations, often involving changes to the app’s user interface and user experience.
+Remember, ad optimization is an iterative process and requires constant monitoring and adjustments.
+Equipped with a clear target audience, we then set out to create our micro-SaaS product. We leveraged the power of Bubble.io3, a leading no-code platform. We found nine pre-built templates, and finally settled on a ChatGPT micro-saas platform template for $219.
+With Bubble.io, customization was straightforward. We tailored the template to our needs, transforming it into an effective tool for Real Estate agents. The platform offers comprehensive resources for beginners, including step-by-step guides on customizing, building, and designing your Bubble.io application.
+In this part, we’ll walk you through the process of setting up your Micro-SaaS app using Bubble.io1, starting from a pre-bought template. The great thing about Bubble.io is it allows you to build web applications without code, perfect for micro-SaaS business startups.
+- Log in to your Bubble.io account: Go to Bubble.io and sign in.
+- Open your Template: Navigate to your Bubble dashboard, find your template under “My Apps” section, and click on it.
+- Familiarize Yourself with the Template: Explore the template’s design, workflow, and data structures. This gives you an understanding of how the app works and how you can customize it.
+You can leverage Canva2 to design graphics for your template, and import them into Bubble. The key steps are:
+- Edit the design elements: Select any element on the Bubble design editor and replace or update it with your custom graphics.
+- Make use of Bubble’s responsiveness tools: Ensure that your app looks good on various screen sizes by utilizing Bubble’s responsive design settings.
+Bubble’s workflow editor allows you to customize how your app behaves.
+- Navigate to the Workflow Tab: This is where you define your app’s actions.
+- Edit the workflows: Click on any action to modify it. You can also add new actions or delete unnecessary ones.
+In the “Data” tab, you can define the structure of the data your app will handle, such as users, products, etc.
+- Navigate to the Data Tab: Here, you’ll find the database structure that came with your template.
+- Edit the data types and fields: Add, modify or delete data types and fields based on your needs.
+You can integrate Stripe3 with Bubble to handle payments.
+- Install the Stripe Plugin: Navigate to the “Plugins” tab in your Bubble editor, search for “Stripe”, and install it.
+- Configure the Plugin: Enter your Stripe API keys in the plugin settings.
+- Set up payment workflows: In the workflow editor, you can add actions for initiating payments, creating subscriptions, etc., using the Stripe plugin.
+Finally, you need to test your app and then launch it.
+- Preview the App: Use Bubble’s preview feature to test your app.
+- Fix any issues: If you encounter any problems, go back to the design or workflow editor to troubleshoot.
+- Launch your app: Once you’re satisfied with your app, go to the “Settings” tab, then “Domain & Email” section, to set up your custom domain. Publish your app to the live version.
+Remember, building a Micro-SaaS with Bubble involves lots of iterations and testing. But the beauty of Bubble is the freedom it gives you to build and customize your app according to your business requirements.
+As the CFO of a SaaS startup, your focus will be on ensuring each dollar spent on advertising is effectively bringing in profitable customers and leads. In addition to optimizing your ad strategy as mentioned previously, it’s crucial to model your revenue growth accurately to ensure you’re on the right track to achieve your $42K MRR goal1. Here’s how to do it:
+- Cost Per Acquisition (CPA): You’ve mentioned a $7 CPA. This is the cost to acquire each lead.
+- Lead Conversion Rate (LCR): This is the percentage of leads that convert into paying customers. As this is a new venture, we’ll use the industry average SaaS conversion rate, which is roughly 3%2.
+- Average Revenue Per User (ARPU): In this case, it’s the monthly subscription fee, which is $99.
+Given these metrics, we can calculate how many customers we expect to acquire from the leads generated.
+Using your data (125 leads and a 3% conversion rate), we can estimate that about 3.75 customers would be acquired (125 * 0.03).
+Step 3: Project Monthly Recurring Revenue (MRR)
+Next, let’s calculate the MRR from these customers. With an ARPU of $99, the MRR from these customers would be roughly $371.25 (3.75 * $99).
+To achieve a $42K MRR, we’ll need to increase our customer base. To find out how much we need to spend to achieve this, we’ll need to reverse engineer the calculation.
+First, let’s find out how many customers we need: $42,000 / $99 ≈ 424 customers.
+Next, using our LCR, we can find out how many leads we need: 424 / 0.03 ≈ 14,133 leads.
+Finally, using our CPA, we can find out our required ad spend: 14,133 * $7 ≈ $98,931.
+Remember, these calculations are based on averages and estimates. Other factors, such as customer lifetime value, churn rate, and upselling opportunities, can significantly impact these calculations.
+Moreover, your conversion rates and CPA are likely to improve over time as you refine your ads and better understand your target audience. This means you could achieve your MRR goal at a lower ad spend.
+Please consult with your marketing and finance teams to make sure these numbers are accurate and feasible for your specific case.
+With the micro-SaaS platform ready, it was time to attract paying customers. We designed and optimized ads aimed at encouraging users to sign up, try out the app, upgrade to the paid version, and finally, refer friends to our platform.
+Our funnel worked like this:
+- Click “try” to create an account.
+- Create an account.
+- Try out the app.
+- Upgrade to paid.
+- Keep paying, upgrade.
+- Refer friends, make more money.
+The ultimate goal? To ensure our clients get a 10X return on their investment. We aimed for each client spending $99 per month with us to see $1000 per month in new revenue. In essence, we didn’t just build a micro-SaaS product – we built a vehicle for growth, for us and for our clients4.
+As the CFO of a SaaS startup, my key focus is on the growth and sustainability of the company’s revenue. In our case, we’ve invested in Facebook ads, resulting in a total spend of $2600 so far, which has generated around 125 leads.
+To model our revenue growth, we need to make some assumptions based on the SaaS industry’s benchmarks. We’ll assume a lead-to-trial conversion rate of 25%1, a trial-to-paid conversion rate of 15%2, and that we can maintain our current cost per lead (CPL) of $19.15.
+Given these parameters, let’s build a revenue growth model for the next 16 months:
+To reach our target MRR of $42,000, we would need to significantly increase our ad spend or improve our conversion rates. Remember, these numbers are based on assumptions, and actual figures could be better or worse. We will need to track and analyze our conversion rates closely, optimizing our ads and our product to improve these rates where possible.
+Also, this model doesn’t consider churn, upsells, or cross-sells, which can significantly affect MRR. It’s important to consider strategies to reduce churn and increase the value of existing customers.
+Reaching a target MRR of $42,000 in a SaaS startup requires substantial optimization at each conversion point. Currently, we’ve assumed the conversion rates to be 25% for lead-to-trial and 15% for trial-to-paid. To achieve our desired MRR with the same ad spend, we would need to significantly improve these rates.
+Here’s a revised model showing the changes we would need to make in our conversion rates to reach our target MRR by September 2024:
+With these changes, we still wouldn’t reach our target MRR of $42,000 by September 2024, but we would be halfway there. To reach our target, we would need to increase our conversion rates even more, increase our ad spend, or find other ways to generate revenue (e.g., upselling and cross-selling).
+Remember, achieving these high conversion rates would require constant optimization and testing at each step in the funnel. It’s also important to ensure the quality of leads and trials doesn’t suffer as we strive to increase these rates. High-quality leads and trials are more likely to convert into paying customers and stay for longer, positively impacting our MRR.
+Based on your current Cost Per Lead (CPL) of $7, Cost Per Trial (CPT) of $99, and Cost Per Paying Customer (CAC) of $499, here’s an optimized model to reach $42,000 MRR by March 2024, while progressively decreasing the cost to acquire a paying customer:
+As you can see, the Cost Per Trial and Cost Per Lead are kept constant at $7 and $70 respectively, while the Cost to Acquire a Customer (CAC) is gradually reduced from $500 to $238.
+This model implies a steady increase in leads, trials, and paying customers as we scale ad spend. It also implies an increasing conversion rate from trials to paying customers from 14% (in June 2023) to 29% (in March 2024). This would require substantial optimization efforts and may also necessitate an investment in better onboarding and customer success initiatives.
+Remember, these are just modeled figures and actual results can and will vary. It’s important to constantly monitor your metrics and adjust your strategy accordingly to optimize performance and growth.
+Getting what you want takes determination. To achieve our goals of $42K MRR it means every day optimizing conversions and each step of the funnel. Just like it took ChatGPT 3 rounds to figure out our model, we should expect it to be a grind, every day making 1% progress.
+Here’s a new model reaching your goal of $42,000 MRR by March 2024, adjusting the CPL, CPT, CAC, and consequently, the number of leads, trials, and paying customers:
+In this model, we start with the CPL at $7 and CPT at $100. We steadily decrease CPT and CAC from $100 and $500 respectively in June 2023 to $69.99 and $62.5 respectively in March 2024.
+Please note that this model is still rather simplified and assumes that you will be able to consistently generate leads at the CPL of $7 and that trials and conversion rates can be improved significantly over time. Also, keep in mind the significant ad spend that this growth trajectory implies. You will need to make sure that the lifetime value (LTV) of your customers justifies this level of CAC and ad spend.
+We asked ChatGPT to flag the Midjourney TOS for anything that might get us in trouble if we are building an Ai-Growth Company and they found this:
+- Infringement: Any use of Midjourney that infringes on copyright or trademark rights could get you in trouble. This includes not only copying or misusing assets generated by others using the service, but also inputting copyrighted or trademarked materials into the service to create your assets.
+- Use of Assets: If you use the service on behalf of a company with annual gross revenue over $1M without purchasing a Pro membership, you would be violating the terms of service.
+- What is a Good Lead Conversion Rate?
+- What is Monthly Recurring Revenue (MRR)?
+The post Bubble.io: The Best No-Code Micro SAAS Website & App Builder [iOS/Android] (Coupon Code for 2023) appeared first on Life, Tailored.

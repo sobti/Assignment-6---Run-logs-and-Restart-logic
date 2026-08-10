@@ -1,0 +1,89 @@
+{include file="header"}
+</head>
+
+<body >
+	
+	<div class="header">
+		    <div class="wrapper">
+		    		<span class="back" on-back-render-filters></span>
+			     	<span class="title">积分详情</span>
+			</div>
+	</div>
+	<div ng-cloak ng-controller="ctrl" class="container top-container">
+		<div class="myscore-first-div">
+			<div class="myscore-add-score-div">
+				<img src="__PUBLIC__/wap/image/score.png">
+				<span>累计积分</span>
+			</div>
+			<div class="myscore-add-score-number">
+				<span>{{total.total | number : 0}}</span>
+			</div>
+		</div>
+		<div class="myscore-second-div">
+			<div class="myscore-second-detail">
+				<p class="myscore-score-detail-p">已兑换积分</p>
+				<p class="myscore-score-second-p">{{total.used | number : 0}}</p>
+			</div>
+			<div class="myscore-second-detail">
+				<p class="myscore-score-detail-p">可兑换积分</p>
+				<p class="myscore-score-second-p">{{total.available | number : 0}}</p>
+			</div>
+			<div class="myscore-second-detail">
+				<p class="myscore-score-detail-p">结算期积分</p>
+				<p class="myscore-score-second-p">{{total.balance | number : 0}}</p>
+			</div>
+		</div>
+		<div class="myscore-third-div" ng-repeat="g in records.goods">
+			<div class="myscore-goods-div">
+				<p style="">{{g.name}}</p>
+			</div>
+			<div class="myscore-goods-score-detail">
+				<div class="myscore-goods-detail">
+					<p class="myscore-goods-first-p">累计积分</p>
+					<p class="myscore-goods-second-p">{{g.total | number : 0}}</p>
+				</div>
+				<div class="myscore-goods-detail">
+					<p class="myscore-goods-first-p">已兑换积分</p>
+					<p class="myscore-goods-second-p" >{{g.used | number : 0}}</p>
+				</div>
+			</div>
+			<div class="myscore-goods-score-detail">
+				<div class="myscore-goods-detail">
+					<p class="myscore-goods-first-p">可兑换积分</p>
+					<p class="myscore-goods-second-p">{{g.available | number : 0}}</p>
+				</div>
+				<div class="myscore-goods-detail">
+					<p class="myscore-goods-first-p">结算期积分</p>
+					<p class="myscore-goods-second-p">{{g.balance | number : 0}}</p>
+				</div>
+			</div>
+			<div class="myscore-seescore-div">
+				<a href="{:U('commission/score_detail')}?goods_id={{g.goods_id}}" class="myscore-seescore-first-a">
+					<p>积分明细</p>
+				</a>
+				<a ng-click="exchange(g)" class="myscore-seescore-a">
+					<p>我要兑换</p>
+				</a>
+				<a href="{:U('commission/exchange_record')}?goods_id={{g.goods_id}}" class="myscore-seescore-a">
+					<p>兑换记录</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script>
+		var app = angular.module("myapp", ['back-filter']);
+		app.controller("ctrl", ['$scope', function($scope){
+			$scope.records = {$records | json_encode};
+			$scope.total = $scope.records.total;
+			
+			$scope.exchange = function(g){
+				if(g.order_count == 0){
+					pinet.alert("您必须购买过此产品后方可进行提现操作");
+					return;
+				}
+				location.href = "{:U('commission/exchange')}?goods_id=" + g.goods_id;
+			}
+		}]);
+	</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+I am a regular reader of digit and chip. I install almost all new softwares from the cds and try the same. subsequently I remove them if I do not use them.
+when we created some text document in linux using text editor and make a save.And such saved file cannot be opend in windows xp why?And the document created using notepad can be opend in linux using text editor.why like this?how to avoid these problem?

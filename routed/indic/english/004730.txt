@@ -1,0 +1,5 @@
+The ‘Delete message’ or ‘disappearing message’ feature will allow users to automatically remove messages by timing them.
+WhatsApp is working on a new feature, discovered WABetaInfo, a blog that tracks WhatsApp updates and developments. The new feature will allow users to automatically remove messages by timing them. These disappearing messages can be timed for deletion for 1 hour, 1 week, 1 day, 1 month and 1 year.
+The Facebook-owned instant messaging app is expected to roll out this feature for its iOS beta version. This feature will be available for group chats and will be accessible by WhatsApp group admins. The disappearing messages or self-destructing message feature has earlier been seen on apps like Snapchat and Telegram.
+The WhatsApp disappearing messages feature is also meant as a ‘cleaning tool’ for group chats which are generally flooded with messages. Deleting the clutter will free up storage space for WhatsApp users.
+This is just the latest in a host of additions WhatsApp is expected to roll out soon, like the ‘Dark Mode’ and call-waiting and reminders.

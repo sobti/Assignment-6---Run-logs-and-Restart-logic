@@ -1,0 +1,7 @@
+-- Replace bundle. Uses name instead of ID because bundle may have been deleted
+UPDATE oskari_appsetup_bundles
+SET bundle_id = (SELECT id FROM oskari_bundle WHERE name='layerlist'),
+    config = NULL,
+    state = NULL,
+    bundleinstance = 'layerlist'
+WHERE bundleinstance = 'hierarchical-layerlist';

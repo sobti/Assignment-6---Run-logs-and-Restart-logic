@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Augestina;
+  src: url(../../assets/fonts/Agustina.otf);
+}
+
+#nav-title {
+  font-family: Augestina;
+  text-transform: capitalize;
+}
+
+.nav-link-icon {
+  color: white !important;
+  font-size: 1.3rem !important;
+}

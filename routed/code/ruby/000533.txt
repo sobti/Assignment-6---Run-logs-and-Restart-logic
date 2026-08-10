@@ -1,0 +1,12 @@
+module Cryptoexchange::Exchanges
+  module Tokenize
+    class Market < Cryptoexchange::Models::Market
+      NAME = 'tokenize'
+      API_URL = '[URL]
+
+      def self.trade_page_url(args = {})
+        "[URL]
+      end      
+    end
+  end
+end

@@ -1,0 +1,25 @@
+@import url('[URL]
+
+body {
+  font-family: 'Work sans';
+  height: 100vh;
+  min-height: 100vh;
+  margin: 10px;
+  padding: 20px;
+}
+
+.f-grow-0 {
+  flex-grow: 0;
+}
+
+.f-grow-1 {
+  flex-grow: 1;
+}
+
+.column-spacer {
+  margin: 0 0 10px 0;
+}
+
+#chart {
+  max-width: 650px;
+}

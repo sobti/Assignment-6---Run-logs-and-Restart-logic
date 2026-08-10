@@ -1,0 +1,76 @@
+html{
+    width: 100%;
+}
+body {
+    width: 75%;
+    height: 75%;
+   margin: 0 auto; 
+
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background-color: white;
+}
+
+#burgerImg {
+    display: block;
+   margin: auto;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-size: 65px; */
+    margin: 50px;
+}
+
+.burgerAvailable {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background-color: bisque;
+    border: none;
+}
+
+.burgerAvailable:hover {
+    background-color: #30a8cc;
+}
+
+.burgerEaten {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #ffd1c9;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin: 50px;
+}
+.addBurgerButton:active {
+   background-color: #FFC04C;
+}
+
+#name {
+    width: 70%;
+    margin: 30 px;
+    padding-right: 20px;
+    padding-left: 20px;
+   
+}
+#burgerEatenColumn {
+    background-color: beige;
+}
+#burgerAvailableColumn {
+    background-color:teal;
+}

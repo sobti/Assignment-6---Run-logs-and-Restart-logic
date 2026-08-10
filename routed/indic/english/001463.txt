@@ -1,0 +1,27 @@
+Tokyo, November 8, 2022 - Rakuten Group, Inc. today announced the winners of the Rakuten Technology Excellence Awards. The awards will be presented to the winners at Rakuten Technology Conference 2022 which will be held on November 19, 2022. (Event website: 
+Tokyo, November 8, 2022 - Rakuten Group, Inc. today announced the winners of the Rakuten Technology Excellence Awards. The awards will be presented to the winners at Rakuten Technology Conference 2022 which will be held on November 19, 2022. (Event website: 
+Masanao Yamaoka, Ph. D.
+At Hitachi, Masanao Yamaoka is leading research and development into CMOS (Complementary Metal-Oxide-Semiconductor) annealing technology, which is a type of quantum computer, and driving the commercialization and real-world applications of the technology.
+CMOS annealing technology is a proprietary technology developed by Hitachi. The technology makes it possible to rapidly solve the complex, large scale optimization problems that quantum computers excel at, by artificially reproducing the mechanisms of quantum annealing on semiconductors. To date, several real-world applications of the technology have been carried out by a research group led by Yamaoka in collaboration with business units in Hitachi, such as work shift optimization and insurance portfolio optimization.
+By launching a CMOS annealing cloud service in October 2022, Hitachi is providing the infrastructure foundations to further promote the adoption of CMOS annealing technology.
+As CMOS annealing technology can rapidly solve optimization problems, the energy consumption required to solve calculations is reduced, so the technology is expected to contribute to reductions in CO2 emissions.
+Based on these achievements, Rakuten presented Masanao Yamaoka with an Excellence Award.
+Robust Intelligence, Inc.
+Robust Intelligence, Inc. is an AI startup that constructs engines which support the creation and operation of robust AI models by eliminating the risks concealed in the models.
+With the increased adoption of AI technologies and the growing use of AI models in a variety of applications, concerns regarding the fairness of AI models are being raised, with reports that the results of AI models vary depending on the gender or race of the person inputting the model. There have also been problems where AI models in operation have been unable to respond to changes in data, causing the accuracy of the models to gradually decrease.
+Robust Intelligence provides AI Stress Testing that detects vulnerabilities in AI models before they are deployed in the production environment. In addition, their AI Firewall can monitor the AI model to confirm that it is operating appropriately, making it a suitable solution to the current issues with AI models.
+As the utilization of AI models continues to grow, the solutions provided by Robust Intelligence are expected to contribute to society.
+Based on these achievements, Rakuten presented Robust Intelligence, Inc. with an Excellence Award.
+UMITRON K.K.
+UMITRON K.K. is a startup working to solve environmental challenges in the global food system by using technology in aquaculture.
+To realize sustainable aquaculture, UMITRON is using a variety of technologies, including IoT, satellite remote sensing and machine learning, to provide a range of services such as feeding optimization, analysis of fish school behavior, and improve the efficiency of growth management.
+UMITRON has developed the UMITRON CELL, a smart feeding system that utilizes AI and IoT technologies, to improve the efficiency of feeding, particularly for Red Sea bream. In 2022, the company began collaboration with Kura Osakana Farm, a subsidiary of Kura Sushi, Inc., to successfully carry out smart farming of yellowtail using the UMITRON CELL. Through the UMITRON CELL’s fish appetite analysis system, it has been possible to reduce the volume of fish feed that goes to waste and cut greenhouse gas emissions by approximately 20% compared to conventional automatic feeding systems. This makes the technology significant in contributing to the reduction in global warming.
+As the oceans make up about 70% of the surface of the earth, it is increasingly important to use their resources effectively. The lineup of aquaculture technologies on offer by UMITRON is therefore expected to contribute to society.
+Based on these achievements, Rakuten presented UMITRON K.K. with an Excellence Award.
+The Excellence Awards are presented to individuals or organizations in various industries and fields which have promoted the evolution of society through technology.
+Chairman: Mickey Mikitani, Chairman and CEO, Rakuten Group, Inc.
+Committee members:
+Yasufumi Hirai, Group Executive Vice President, CIO and CISO, Rakuten Group, Inc.
+Akihito Kurozumi, Group Senior Managing Executive Officer, Rakuten Group, Inc.
+Ting Cai, Group Senior Managing Executive Officer, CDO, Rakuten Group, Inc.
+Through the annual awards, Rakuten aims to support individuals and organizations that strive to achieve revolutionary advancements in technology and promote innovation.

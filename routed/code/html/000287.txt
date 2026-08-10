@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Test de mecanografía</title>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="typing-test-compiled.js" defer></script>
+  </head>
+  <body onload="addWords()">
+    <header>
+      <h3>Test de mecanografía</h3>
+    </header>
+
+    <section id="word-section">
+      <div class="waiting">⌛</div>
+    </section>
+
+    <section id="type-section">
+      <input id="typebox" name="typebox" type="text" tabindex="1" autofocus onkeyup="typingTest(event)"/>
+      <div id="timer" class="type-btn"><span>1:00</span></div>
+      <button id="restart" class="type-btn" tabindex="2" onclick="restartTest()">
+        <span id="restart-symbol">↻</span>
+      </button>
+    </section>
+
+    <footer>
+      <a href="[URL] src="./Imágenes/GitHub.png" WIDTH=25 HEIGHT=25></a> ·
+      <a href="[URL] src="./Imágenes/glyph-logo_may2016.png" WIDTH=25 HEIGHT=25></a>
+    </footer>
+    
+<script type="text/javascript" src="//cloudfront.loggly.com/js/loggly.tracker-latest.min.js" async></script>
+<script>
+    var _LTracker = _LTracker || [];
+    _LTracker.push({'logglyKey': '666a12a2-7744-44cc-b067-9fc6162ffa96',
+    'sendConsoleErrors' : true,
+    'tag' : 'loggly-jslogger'  });
+</script>
+            
+  </body>
+</html>

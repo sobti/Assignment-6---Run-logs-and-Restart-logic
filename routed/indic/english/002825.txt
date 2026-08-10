@@ -1,0 +1,74 @@
+A reliable web host keeps your site up and running (accessible to clients) consistently with minimal downtime; a bad web host, on the other hand, can be detrimental to your success by capsizing traffic, not to mention your SEO ranking.
+As a smart business owner, you must be aware that even the best of hosting providers can turn into bad hosts (or worst – ran out of business and “disappear”) one day.
+For those who are running a business online – it’s necessary to put up certain level of defense and protect yourself from your own business web host.
+Here are my ideas on how to get it done.
+Many hosting companies now offer free domain registration with the purchase of a hosting package. However, it may be smart to spend an extra $10-$15 and register your primary domain with a different registrar.
+I normally use the free domain for my secondary sites, which I use for host testing or SEO experiments. That way, if the domain gets tied to that hosting company and I want to switch, I haven’t lost untold hours of work on a website I’ve been building traffic for.
+It is much easier to move to a new hosting company when you register your domain with a different party. Otherwise, you wind up having to wait for your hosting company to release your domain. This can get tricky since they are also losing your hosting business.
+If you’ve already registered your domain with your hosting company, don’t panic. You can still transfer it out to a third party registrar easily.
+Tip – There are many different registrar services you can use in a similar way. NameCheap is just one example I use in this article. Alternatively, you can go with GoDaddy. Both GoDaddy and NameCheap work fine.
+While it is convenient to set up an automated payment plan with your hosting company, it can also cause a nightmare when you wish to cancel.
+Unscrupulous companies may continue to charge a debit or credit card long after you’ve already cancelled your account.
+There are three popular payment options when signing up for a web hosting account. Each type of payment has its own pros and cons.
+In the past, I had to cancel my credit card because a hosting company refused to stop charging my card. It was an awful experience – I have them in my list of top 10 bad web hosts.
+PayPal allows you to pay the merchant without them ever having access to your actual pay card information.
+Additionally, PayPal has built-in measures to protect both you as the customer and the merchant from fraud, theft, etc.
+Although it is more difficult to secure a new credit card account number, many credit card companies offer some built-in protection to the consumer in the case of unauthorized charges.
+However, do carefully review your credit card company’s policies before providing information to a web host. In some extreme occasions, you might need to cancel your account to stop charges .
+An unethical company may continue to charge your account (like my case back in 13-14 years ago) or you may incur fees trying to stop payment. If you were paying with debit card, it's easier to replace if anything bad happens; you will not be charged (just withdraw all the money from your debit account) should the hosting company further charge you after you have cancelled your account.
+Tip – List of hosting companies that accept PayPal payment.
+Guarantees are a signal that you can trust that company more than one that does not stand behind its service. A long trial period shows that the hosting company is confident in the quality of the service they have to offer.
+(This explains why the trial period is shown in our big host review table.)
+Web hosting providers should offer at least a month, but there are some that offer an even longer trial period.
+Some of the best hosts I’ve tried in the past offer the longest full refund period.
+Some companies offer “Anytime Money Back Guarantee” – this means you get to cancel your hosting account and ask for a refund anytime during subscription. Let’s say you pay for a year of service, but after 90 days, you are truly unhappy with the quality of the hosting company. With an anytime-money-back guarantee, you can request a refund and cancel the remainder of the time on your account.
+Tip – A2 Hosting is, as far as we knew, the only company that still offer Anytime Money Back Guarantee in 2018.
+There are many reasons to avoid blacklisted IPs, including the reputation of the hosting company and more importantly so your emails sent from your domain are not blocked by other providers due to the IP. A blacklisted host means your email may be blacklisted as well.
+Here's how you can check for blacklisted IP address in two simple steps:
+- Before signing up, ask for the IP address of your web host.
+- Run a quick check using Spam Haus Lookup tool.
+As a business owner, you want to get the best possible deal. You should compare hosting features and prices, but also look at online reviews and even contact a few people who host with those companies.
+Two questions to ask:
+- Is there a better option compared to the shortlisted web host?
+- Is the web host too expensive or too cheap?
+A rule of thumb when getting bids for any type of job is to throw out the lowest bid and the highest bid. Since a web host is essentially bidding for your business with what they have to offer and the price for that package, you should also throw out the lowest and highest hosts if it makes sense to eliminate those options.
+Don’t chase the lowest bidder.
+Remember that to make a low price offer, this provider will have to cut corners somewhere. At the very least you should know where your potential hosting provider makes these shortcuts.
+– Vasili Nikolaev (Quote: Magento Hosting Guide)
+- When a hosting deal is too good to be true, it probably is.
+- You get what you pay for. If you choose a hosting company that costs $0.99/month, you will probably end up on an overloaded server.
+- Avoid hosting companies that charge a higher price unless there is a good reason. For example, Kinsta charges $25/mo for Managed Wordpress Hosting but their plans come with WP expert support and tons of innovative features.
+In fairness, backing up your site regularly is important to regardless of where you host your website.
+Doing so ensures that you have a recent version of your site’s files and assets should anything go wrong – whether it be related to a hacker or cyber criminal or dropped hosting situation. Backups are surprisingly easy to do – particularly if you use Cron job.
+Assume that you are working in cPanel environment, log into your host control panel, then enter the following command into Cron command field:
+Replace the variable fields with the information relevant to your database and users, then email yourself the database to free up storage space that saving the file to your actual system would require. Extract the zip file, then change the database detail before saving the file and uploading it to your server.
+The final step is to enter “php -q /path-to-the-php-script-folder/backup.php” into the Cron job section of the cPanel.
+Uptime refers to the amount of time that your website is up and running, available to visitors and potential clients.
+Anything that isn’t uptime is downtime. Downtime means that people can’t reach your site which can be frustrating to potential visitors while also costing you traffic and revenue. Additionally, if people aren’t able to reach your site the first time, they may not try again.
+In short, the higher your uptime score is the better.
+A good hosting provider will provide uptime guarantees (say, 99.9%) – it means that the company will make sure that your website is live and running that percent of the total hours in a day.
+BUT – we never know for sure if the hosting company is meeting their promises.
+This is why we need to track our site uptime and ask for compensation whenever our site uptime goes below 99.9%.
+Your hosting speed matters. Tons of studies and researches proved that website's response rate affects your website search rankings, conversion rate, and visitors reach.
+Page speed is now one of Google's mobile search ranking factors. Work Coach Cafe gained an extra 40% organic traffics after cleaning up its codes and broken links, SmartFurniture.com CEO confirmed that the site made a quantum lead in search engine rankings simply by increasing his site performance. Amazon would lose $1.6 BILLION every year if they slowed down by a second!
+Hence, it's important to measure and track your server speed on regular basis. If your hosting is slowing down constantly – work with the support to figure (and solve) the root cause (or migrate to a new web host if your current web host is the bottle neck).
+Tip – Free tools to track server uptime: Uptime Robot, Host Tracker, and Pingdom. Free tools to measure website speed: Bitcatcha, GtMetrix, and UpTrends. Also, read my detail guide on how to track your host uptime efficiently.
+Hackers keep getting smarter, so it isn’t enough just to put strong security in place.
+One scenario (which happened in real life) might be if someone working for a hosting company leaves on bad terms and takes customer data. That person now has the password to your site. He can sell it or use it himself.
+Three things you can do to secure yourself in this case:
+- Use a strong password that isn’t easy to guess. Use a combination of letters, numbers, upper and lower case and special symbols.
+- Change your passwords frequently for the reason mentioned above about the password being stolen or hacked into.
+- Keep good anti-virus software on your computer and make sure it’s up to date. This will keep hackers from gaining access to your computer and stealing your keystrokes/passwords.
+You don't have to stick with the same web host forever. There are times when a hosting company starts out on a positive note but then goes downhill. Sometimes a hosting company grows too quickly for the servers they run, their server performance and customer service suffers.
+Keep in mind that:
+- It really isn’t difficult to switch your web host. Some companies will even migrate the site for free upon request.
+- Switching web host rarely affect Google rankings nowadays. Just make sure that you minimize your site downtime during the switch.
+Tip – Detail step-by-step guide I wrote on migrating a web host. And here's the list of 10 hosting companies I recommend.
+Knowing the needs of your website can go a long way to finding the right hosting solution. Be aware though that some hosts today have invested heavily along with marketing – trying to sell you what they want you to think you need.
+If you aren’t sure yet, it is best to stick to a few tried and true brands like ScalaHosting or Interserver. Hosts such as these have struck the right balance in cost versus functionality. This gives you a solid foundation to build your site on.
+Tip – Here's the step-by-step guide to host a website. You can also read more to understand how web hosting and domain name works.
+Bottom Line: Why A Good Web Host Matters?
+Think your web host is the least important part of your online business success?
+Well, think again.
+Before I end this post, I would like to talk a little more about why a good web host matters.
+The hosting company you choose for your website makes the difference in business revenue (potential customers can't reach you when your site is down), site speed, website availability, server management effort, and Google rankings. It is extremely important to host your business with a trustworthy company that offers solid hosting performance.
