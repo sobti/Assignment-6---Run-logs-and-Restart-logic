@@ -3,19 +3,21 @@ End-to-end audit of the whole pipeline: exercises every major subsystem
 (shard provenance, manifests, the eval-contamination firewall, mixture
 ratio, packing, OPUS, checkpointing, crash/resume, replay determinism,
 checkpoint forking, throughput) against REAL artifacts already on disk
-plus a few deliberately-constructed real test cases, and writes three
-outputs:
+plus a few deliberately-constructed real test cases, and writes four
+outputs under submission_artifacts/:
 
-  run.log        -- the full timestamped event sequence, [PASS]/[FAIL]
-                     tagged checks, in this fixed order: shards created,
-                     manifests validated, evaluation data blocked, mixture
-                     compiled, batches packed, OPUS decisions recorded,
-                     checkpoint saved, crash simulated, run resumed,
-                     historical stream replayed, branch forked, audit
-                     completed, performance measured.
-  evidence.json  -- machine-readable: every requirement, pass/fail, and
-                     exactly where the supporting evidence lives.
-  evidence.md    -- the same, as a short human-readable table.
+  run.log            -- the full timestamped event sequence, [PASS]/[FAIL]
+                         tagged checks, in this fixed order: shards created,
+                         manifests validated, evaluation data blocked,
+                         mixture compiled, batches packed, OPUS decisions
+                         recorded, checkpoint saved, crash simulated, run
+                         resumed, historical stream replayed, branch
+                         forked, audit completed, performance measured.
+  evidence.json      -- machine-readable: every requirement, pass/fail,
+                         and exactly where the supporting evidence lives.
+  evidence.md        -- the same, as a short human-readable table.
+  performance.json   -- the throughput numbers from the performance-measured
+                         phase (steps/sec, tokens/sec, elapsed seconds).
 
 Every check here is a real check against real data, not a hardcoded PASS:
   - tokenizer_hash_verified re-derives the tokenizer hash from a live
@@ -57,9 +59,13 @@ from train_tiny_transformer import to_batch
 from training_state import TrainingSchedule
 from tt_checkpoint import load_full_checkpoint, save_full_checkpoint
 
-RUN_LOG = Path("run.log")
-EVIDENCE_JSON = Path("evidence.json")
-EVIDENCE_MD = Path("evidence.md")
+SUBMISSION_DIR = Path("submission_artifacts")
+RUN_LOG = SUBMISSION_DIR / "run.log"
+EVIDENCE_JSON = SUBMISSION_DIR / "evidence.json"
+EVIDENCE_MD = SUBMISSION_DIR / "evidence.md"
+PERFORMANCE_JSON = SUBMISSION_DIR / "performance.json"
+MANIFESTS_DIR = SUBMISSION_DIR / "manifests"
+LEDGERS_DIR = SUBMISSION_DIR / "ledgers"
 
 PLANNED_SHARE = {"Web": 50.0, "Indic": 25.0, "Code": 25.0}
 MIXTURE_TOLERANCE_PP = 10.0  # percentage points; see build_corpus.py's docstring on why the ratio is calibrated, not exact
@@ -67,6 +73,7 @@ MIXTURE_TOLERANCE_PP = 10.0  # percentage points; see build_corpus.py's docstrin
 
 class Logger:
     def __init__(self, path: Path):
+        path.parent.mkdir(parents=True, exist_ok=True)
         self.f = path.open("w", encoding="utf-8")
 
     def _write(self, line: str) -> None:
@@ -118,7 +125,7 @@ def phase_manifests_validated(log: Logger) -> tuple[bool, str]:
 
     enc = tiktoken.get_encoding(ENCODING_NAME)
     live_hash = _tokenizer_hash(enc)
-    registry = _read_jsonl(Path("stats/registry_manifest.jsonl"))
+    registry = _read_jsonl(MANIFESTS_DIR / "registry_manifest.jsonl")
     tok_ok = all(r["tokenizer_hash"] == live_hash for r in registry)
     log.check("tokenizer_hash_verified", tok_ok, live_hash=live_hash, records_checked=len(registry))
 
@@ -126,12 +133,12 @@ def phase_manifests_validated(log: Logger) -> tuple[bool, str]:
         "shard_id", "source_url", "license_class", "contributor_id", "cleaning_script",
         "cleaning_script_hash", "ingest_timestamp", "sha256", "token_count", "lang_distribution", "status",
     }
-    shard_manifest = _read_jsonl(Path("stats/shard_manifest.jsonl"))
+    shard_manifest = _read_jsonl(MANIFESTS_DIR / "shard_manifest.jsonl")
     schema_ok = all(required_shard_fields.issubset(r) for r in shard_manifest)
     log.check("shard_manifest_schema_complete", schema_ok, records=len(shard_manifest))
 
     ok = tok_ok and schema_ok
-    return ok, f"stats/registry_manifest.jsonl ({len(registry)} records), stats/shard_manifest.jsonl ({len(shard_manifest)} records)"
+    return ok, f"submission_artifacts/manifests/registry_manifest.jsonl ({len(registry)} records), submission_artifacts/manifests/shard_manifest.jsonl ({len(shard_manifest)} records)"
 
 
 # --------------------------------------------------------------------------
@@ -155,7 +162,7 @@ def phase_eval_firewall(log: Logger) -> tuple[bool, str]:
 
 def phase_mixture_compiled(log: Logger) -> tuple[bool, str]:
     log.event("mixture_compiled")
-    registry = _read_jsonl(Path("stats/registry_manifest.jsonl"))
+    registry = _read_jsonl(MANIFESTS_DIR / "registry_manifest.jsonl")
     totals: dict[str, int] = defaultdict(int)
     for r in registry:
         totals[r["capability_lane"]] += r["token_count"]
@@ -166,7 +173,7 @@ def phase_mixture_compiled(log: Logger) -> tuple[bool, str]:
         "mixture_within_tolerance", all(d <= MIXTURE_TOLERANCE_PP for d in diffs.values()),
         planned=PLANNED_SHARE, actual=actual, tolerance_pp=MIXTURE_TOLERANCE_PP,
     )
-    return ok, f"planned {PLANNED_SHARE} vs actual {actual} (stats/registry_manifest.jsonl token_count sums)"
+    return ok, f"planned {PLANNED_SHARE} vs actual {actual} (submission_artifacts/manifests/registry_manifest.jsonl token_count sums)"
 
 
 # --------------------------------------------------------------------------
@@ -208,14 +215,14 @@ def phase_opus_recorded(log: Logger) -> tuple[bool, str]:
         "model_checkpoint_used_for_scoring", "proxy_version", "opus_score", "status",
         "rejection_reason", "protected_floor_override", "effective_token_estimate",
     }
-    registry = _read_jsonl(Path("stats/registry_manifest.jsonl"))
-    opus = _read_jsonl(Path("stats/opus_decisions.jsonl"))
+    registry = _read_jsonl(MANIFESTS_DIR / "registry_manifest.jsonl")
+    opus = _read_jsonl(LEDGERS_DIR / "opus_decisions.jsonl")
     complete = all(required.issubset(d) for d in opus)
     ok = log.check(
         "opus_decisions_complete", complete and len(opus) == len(registry),
         registry_shards=len(registry), opus_records=len(opus),
     )
-    return ok, f"stats/opus_decisions.jsonl ({len(opus)} records, one per registry shard)"
+    return ok, f"submission_artifacts/ledgers/opus_decisions.jsonl ({len(opus)} records, one per registry shard)"
 
 
 # --------------------------------------------------------------------------
@@ -381,6 +388,17 @@ def phase_performance(log: Logger, n_steps: int = 5) -> tuple[bool, str]:
         steps_per_sec=round(steps_per_sec, 2), tokens_per_sec=round(tokens_per_sec, 1),
         elapsed_sec=round(elapsed, 3), steps=n_steps,
     )
+
+    PERFORMANCE_JSON.parent.mkdir(parents=True, exist_ok=True)
+    PERFORMANCE_JSON.write_text(json.dumps({
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "steps": n_steps,
+        "tokens_processed": tokens_processed,
+        "elapsed_sec": round(elapsed, 3),
+        "steps_per_sec": round(steps_per_sec, 2),
+        "tokens_per_sec": round(tokens_per_sec, 1),
+    }, indent=2))
+
     return ok, f"{steps_per_sec:.2f} steps/sec, {tokens_per_sec:.1f} tokens/sec measured over {n_steps} real training steps"
 
 
@@ -389,9 +407,9 @@ def phase_performance(log: Logger, n_steps: int = 5) -> tuple[bool, str]:
 # --------------------------------------------------------------------------
 
 def phase_learning_trace(log: Logger) -> tuple[bool, str]:
-    log_path = Path("stats/tt_training_log.jsonl")
+    log_path = LEDGERS_DIR / "tt_training_log.jsonl"
     if not log_path.exists():
-        return log.check("loss_linked_to_source_data", False, reason="no training log found"), "stats/tt_training_log.jsonl"
+        return log.check("loss_linked_to_source_data", False, reason="no training log found"), "submission_artifacts/ledgers/tt_training_log.jsonl"
 
     records = _read_jsonl(log_path)
     doc_manifests: dict[str, dict[int, str]] = {}
@@ -411,7 +429,7 @@ def phase_learning_trace(log: Logger) -> tuple[bool, str]:
             if not doc_ids or not all(d in doc_manifests[lane] for d in doc_ids):
                 ok = False
     passed = log.check("loss_linked_to_source_data", ok, training_log_records=len(records))
-    return passed, "stats/tt_training_log.jsonl rows resolved to packed/<lane>/doc_manifest.jsonl -> real routed/ source files"
+    return passed, "submission_artifacts/ledgers/tt_training_log.jsonl rows resolved to packed/<lane>/doc_manifest.jsonl -> real routed/ source files"
 
 
 # --------------------------------------------------------------------------
@@ -472,7 +490,7 @@ if __name__ == "__main__":
     for label, key, evidence_label in table_rows:
         passed, detail = results[key]
         lines.append(f"| {label} | {'PASS' if passed else 'FAIL'} | {evidence_label} ({detail}) |")
-    lines += ["", "Full event sequence: `run.log`. Machine-readable detail: `evidence.json`."]
+    lines += ["", "Full event sequence: `run.log`. Machine-readable detail: `evidence.json`. Throughput numbers: `performance.json`."]
     EVIDENCE_MD.write_text("\n".join(lines) + "\n")
 
     log.info(f"evidence written to {EVIDENCE_JSON} and {EVIDENCE_MD}")

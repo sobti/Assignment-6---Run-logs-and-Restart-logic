@@ -1,6 +1,6 @@
 {
   "build_corpus": {
-    "generated_at": "2026-08-10T14:08:34.955171+00:00",
+    "generated_at": "2026-08-10T15:55:39.890223+00:00",
     "total_rows": 6250,
     "samples_per_lang": 1250,
     "seed": 42,
@@ -71,7 +71,7 @@
     }
   },
   "build_code_corpus": {
-    "generated_at": "2026-08-10T14:13:20.003362+00:00",
+    "generated_at": "2026-08-10T16:00:25.505575+00:00",
     "dataset": "bigcode/the-stack-smol-xs",
     "languages": [
       "python",
@@ -175,7 +175,7 @@
     }
   },
   "build_web_corpus": {
-    "generated_at": "2026-08-10T14:10:05.489062+00:00",
+    "generated_at": "2026-08-10T15:57:05.024258+00:00",
     "total_rows": 12400,
     "samples_per_lang_target": 3100,
     "seed": 42,
@@ -213,7 +213,7 @@
     }
   },
   "quality_filter_indic": {
-    "generated_at": "2026-08-10T14:10:28.971587+00:00",
+    "generated_at": "2026-08-10T15:57:28.415738+00:00",
     "input_rows": 6250,
     "kept_rows": 5802,
     "drop_counts_by_rule": {
@@ -461,7 +461,7 @@
     "boilerplate_lines_found": 203
   },
   "quality_filter_web": {
-    "generated_at": "2026-08-10T14:11:20.746965+00:00",
+    "generated_at": "2026-08-10T15:58:19.983946+00:00",
     "input_rows": 12400,
     "kept_rows": 11847,
     "drop_counts_by_rule": {
@@ -691,7 +691,7 @@
     "boilerplate_lines_found": 78
   },
   "minhash_lsh_dedup_indic": {
-    "generated_at": "2026-08-10T14:11:43.634527+00:00",
+    "generated_at": "2026-08-10T15:58:45.004618+00:00",
     "input_docs": 5802,
     "clusters": 5802,
     "near_duplicates_removed": 0,
@@ -760,7 +760,7 @@
     }
   },
   "minhash_lsh_dedup_web": {
-    "generated_at": "2026-08-10T14:12:31.543358+00:00",
+    "generated_at": "2026-08-10T15:59:34.117485+00:00",
     "input_docs": 11847,
     "clusters": 11847,
     "near_duplicates_removed": 0,
@@ -819,7 +819,7 @@
     }
   },
   "language_router_indic": {
-    "generated_at": "2026-08-10T14:12:41.357540+00:00",
+    "generated_at": "2026-08-10T15:59:43.815417+00:00",
     "input_docs": 5802,
     "purity_threshold": 0.8,
     "written_by_folder": {
@@ -876,7 +876,7 @@
     }
   },
   "language_router_web": {
-    "generated_at": "2026-08-10T14:12:59.709666+00:00",
+    "generated_at": "2026-08-10T16:00:04.321324+00:00",
     "input_docs": 11847,
     "purity_threshold": 0.8,
     "written_by_folder": {
@@ -926,7 +926,7 @@
     }
   },
   "pii_scrub": {
-    "generated_at": "2026-08-10T14:16:32.863092+00:00",
+    "generated_at": "2026-08-10T16:03:32.752823+00:00",
     "files_scanned": 18726,
     "files_redacted": 545,
     "redactions_by_type": {
@@ -1229,7 +1229,7 @@
     }
   },
   "pipeline_summary_indic": {
-    "generated_at": "2026-08-10T14:16:32.864678+00:00",
+    "generated_at": "2026-08-10T16:03:32.754508+00:00",
     "waterfall": [
       {
         "stage": "build_indic (raw)",
@@ -1274,7 +1274,7 @@
     "overall_tokens_dropped": 635062
   },
   "pipeline_summary_web": {
-    "generated_at": "2026-08-10T14:16:32.866082+00:00",
+    "generated_at": "2026-08-10T16:03:32.755814+00:00",
     "waterfall": [
       {
         "stage": "build_web (raw)",

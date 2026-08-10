@@ -1,7 +1,8 @@
 """
 The trigger to restart/resume tiny_transformer.py training from the latest
-checkpoint under checkpoints_tt/ (as opposed to train_tiny_transformer.py,
-which always starts fresh with newly initialized weights).
+checkpoint under submission_artifacts/checkpoints/ (as opposed to
+train_tiny_transformer.py, which always starts fresh with newly initialized
+weights).
 
 Restores real model weights, real optimizer momentum buffers, RNG state
 (python/numpy/torch), and the exact dataloader cursor
@@ -12,11 +13,12 @@ Proof this is a real restart, not a relabeled fresh run: the loss picks up
 from where it left off (not back at the random-init loss), and the
 dataloader cursor advances monotonically -- running this twice in a row
 processes two disjoint sets of microbatches, verifiable in
-stats/tt_training_log.jsonl (every row tagged with its run_id).
+submission_artifacts/ledgers/tt_training_log.jsonl (every row tagged with
+its run_id).
 
-Also re-runs OPUS (still dummy -- see save_checkpoint.py) over
-stats/registry_manifest.jsonl, pointed at the new checkpoint this resume
-produces.
+Also re-runs OPUS (still dummy -- see opus.py) over
+submission_artifacts/manifests/registry_manifest.jsonl, pointed at the new
+checkpoint this resume produces.
 
 Usage: .venv/bin/python restart.py [n_steps]   (default 5 steps)
 """
@@ -25,10 +27,11 @@ from __future__ import annotations
 
 import json
 import sys
+from pathlib import Path
 
 import torch
 
-from save_checkpoint import run_opus
+from opus import run_opus
 from train_tiny_transformer import TRAINING_LOG, to_batch
 from tt_checkpoint import find_latest_checkpoint, load_full_checkpoint, save_full_checkpoint
 
@@ -37,7 +40,7 @@ if __name__ == "__main__":
 
     latest = find_latest_checkpoint()
     if latest is None:
-        raise SystemExit("no checkpoint found under checkpoints_tt/ -- run train_tiny_transformer.py first")
+        raise SystemExit("no checkpoint found under submission_artifacts/checkpoints/ -- run train_tiny_transformer.py first")
 
     print(f"=== restarting from {latest.name} ===")
     model, optimizer, schedule, run_id, global_step = load_full_checkpoint(latest)
@@ -76,6 +79,7 @@ if __name__ == "__main__":
     if last_mb is None:
         raise SystemExit("all lanes exhausted -- nothing left to train on, no new checkpoint saved")
 
+    Path(TRAINING_LOG).parent.mkdir(parents=True, exist_ok=True)
     with open(TRAINING_LOG, "a", encoding="utf-8") as f:
         for r in records:
             f.write(json.dumps(r) + "\n")
@@ -85,9 +89,9 @@ if __name__ == "__main__":
     print(f"checkpoint written to {ckpt_dir}/")
     print(json.dumps(json.loads((ckpt_dir / "checkpoint_manifest.json").read_text()), indent=2))
 
-    print("\n=== OPUS (dummy): re-scoring real shards from stats/registry_manifest.jsonl ===")
+    print("\n=== OPUS (dummy): re-scoring real shards from submission_artifacts/manifests/registry_manifest.jsonl ===")
     decisions = run_opus(ckpt_dir.name)
     for d in decisions:
         print(f"  {d['candidate_id']:24s} score={d['opus_score']:.4f}  status={d['status']:9s}"
               f"  override={d['protected_floor_override']}  eff_tokens={d['effective_token_estimate']}")
-    print(f"\n{len(decisions)} OPUS decisions written to stats/opus_decisions.jsonl")
+    print(f"\n{len(decisions)} OPUS decisions written to submission_artifacts/ledgers/opus_decisions.jsonl")

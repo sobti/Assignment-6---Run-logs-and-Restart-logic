@@ -96,7 +96,7 @@ from provenance import script_hash
 
 ROUTED_DIR = Path("routed")
 PACKED_DIR = Path("packed")
-MANIFEST_PATH = Path("stats/registry_manifest.jsonl")
+MANIFEST_PATH = Path("submission_artifacts/manifests/registry_manifest.jsonl")
 
 ENCODING_NAME = "o200k_base"
 SEQ_LEN = 2048
@@ -365,7 +365,7 @@ if __name__ == "__main__":
         eval_grams = code_eval_grams if lane == "code" else prose_eval_grams
         all_records.extend(admit_shards(lane, sequences, tok_hash, eval_grams, enc))
 
-    MANIFEST_PATH.parent.mkdir(exist_ok=True)
+    MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     with MANIFEST_PATH.open("w", encoding="utf-8") as f:
         for record in all_records:
             f.write(json.dumps(record, ensure_ascii=False) + "\n")

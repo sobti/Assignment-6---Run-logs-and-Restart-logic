@@ -10,10 +10,10 @@ TrainingSchedule (round-robins indic/web/code deterministically), each row
 sliced to the model's context_len (64) out of the full 2048-token packed
 sequence -- "just a few data" per this task's ask, not the whole corpus.
 
-Also runs OPUS (still the dummy data-admission scoring pass from
-save_checkpoint.py -- no real proxy model exists in this project, see that
-module's docstring) over every real shard in stats/registry_manifest.jsonl,
-using this run's checkpoint as the nominal "scoring checkpoint".
+Also runs OPUS (opus.py's dummy data-admission scoring pass -- no real proxy
+model exists in this project, see that module's docstring) over every real
+shard in submission_artifacts/manifests/registry_manifest.jsonl, using this
+run's checkpoint as the nominal "scoring checkpoint".
 
 Usage: .venv/bin/python train_tiny_transformer.py [n_steps]   (default 5)
 """
@@ -23,15 +23,16 @@ from __future__ import annotations
 import json
 import sys
 import uuid
+from pathlib import Path
 
 import torch
 
-from save_checkpoint import run_opus
+from opus import run_opus
 from tiny_transformer import TinyTransformer, TinyTransformerConfig
 from training_state import TrainingSchedule
 from tt_checkpoint import save_full_checkpoint
 
-TRAINING_LOG = "stats/tt_training_log.jsonl"
+TRAINING_LOG = "submission_artifacts/ledgers/tt_training_log.jsonl"
 LEARNING_RATE = 0.1
 MOMENTUM = 0.9
 SEED = 0
@@ -86,6 +87,7 @@ if __name__ == "__main__":
     if last_mb is None:
         raise SystemExit("no steps ran -- nothing to checkpoint")
 
+    Path(TRAINING_LOG).parent.mkdir(parents=True, exist_ok=True)
     with open(TRAINING_LOG, "a", encoding="utf-8") as f:
         for r in records:
             f.write(json.dumps(r) + "\n")
@@ -98,9 +100,9 @@ if __name__ == "__main__":
     print(f"  checkpoint_manifest.json:")
     print(json.dumps(json.loads((ckpt_dir / "checkpoint_manifest.json").read_text()), indent=2))
 
-    print("\n=== OPUS (dummy): scoring real shards from stats/registry_manifest.jsonl ===")
+    print("\n=== OPUS (dummy): scoring real shards from submission_artifacts/manifests/registry_manifest.jsonl ===")
     decisions = run_opus(ckpt_dir.name)
     for d in decisions:
         print(f"  {d['candidate_id']:24s} score={d['opus_score']:.4f}  status={d['status']:9s}"
               f"  override={d['protected_floor_override']}  eff_tokens={d['effective_token_estimate']}")
-    print(f"\n{len(decisions)} OPUS decisions written to stats/opus_decisions.jsonl")
+    print(f"\n{len(decisions)} OPUS decisions written to submission_artifacts/ledgers/opus_decisions.jsonl")

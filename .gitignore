@@ -5,15 +5,20 @@ __pycache__/
 *.pyc
 
 # Generated corpus + intermediate pipeline artifacts (routed/, shards/,
-# packed/, stats/ are hundreds of MB combined; checkpoints_tt/ alone is
-# ~700MB of .pt weight files). All fully regenerable by running
-# ./run_pipeline.sh -- see README.md.
+# packed/, stats/ are hundreds of MB combined). All fully regenerable by
+# running ./run_pipeline.sh -- see README.md.
 routed/
 shards/
 packed/
-checkpoints/
-checkpoints_tt/
 stats/
+
+# submission_artifacts/: only the small top-level audit outputs (run.log,
+# evidence.json, evidence.md, performance.json) are committed -- the
+# manifests/ledgers/checkpoints subfolders are regenerable pipeline output
+# (checkpoints/ alone is hundreds of MB of .pt weight files).
+submission_artifacts/manifests/
+submission_artifacts/ledgers/
+submission_artifacts/checkpoints/
 
 
 # macOS Finder junk

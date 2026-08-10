@@ -24,8 +24,9 @@ if `.venv/` is already there.
 
 That's it from there — one command runs everything, dataset to audit: downloads and
 cleans all three lanes, dedupes, routes, PII-scrubs, tokenizes and packs
-into 2048-token training sequences, trains a dummy checkpoint pass + OPUS
-scoring, then runs a full audit (`run.log`, `evidence.json`, `evidence.md`).
+into 2048-token training sequences, trains the real TinyTransformer + OPUS
+scoring, then runs a full audit (`submission_artifacts/run.log`,
+`evidence.json`, `evidence.md`, `performance.json`).
 
 Before it runs, it prints all 13 steps with rough timing guidance; as each
 step finishes it prints how long that step actually took, and a total at
@@ -35,25 +36,18 @@ local CPU work on data already on disk and finishes in seconds.
 
 ### How to restart training if it stops
 
-This project has **two separate training systems**, each with its own
-checkpoint format and its own resume trigger — use the one matching what
-you were running:
+| Fresh run | Resume/restart |
+|---|---|
+| `.venv/bin/python train_tiny_transformer.py [n_steps]` | `.venv/bin/python restart.py [n_steps]` |
 
-| | Fresh run | Resume/restart |
-|---|---|---|
-| Dummy scalar model (toy, `training_state.py`) | `.venv/bin/python save_checkpoint.py [n_steps]` | `.venv/bin/python resume_training.py [n_steps]` |
-| **Real TinyTransformer** (PyTorch, `tiny_transformer.py`) | `.venv/bin/python train_tiny_transformer.py [n_steps]` | `.venv/bin/python restart.py [n_steps]` |
-
-Both resume scripts work the same way: find the checkpoint with the
-highest `global_step` under their checkpoint directory
-(`checkpoints/` for the dummy model, `checkpoints_tt/` for
-TinyTransformer), restore model weights, optimizer state, RNG state
-(python/numpy/torch), and the *exact* dataloader position (which lane,
-which shard, which row) from it, and continue training from precisely the
-next microbatch — never repeating or skipping data. Neither is part of
-`run_pipeline.sh`; resuming is deliberately a separate, on-demand action
-you trigger yourself, not something a from-scratch pipeline run should do
-automatically.
+`restart.py` finds the checkpoint with the highest `global_step` under
+`submission_artifacts/checkpoints/`, restores model weights, optimizer
+state, RNG state (python/numpy/torch), and the *exact* dataloader position
+(which lane, which shard, which row) from it, and continues training from
+precisely the next microbatch — never repeating or skipping data. It's not
+part of `run_pipeline.sh`; resuming is deliberately a separate, on-demand
+action you trigger yourself, not something a from-scratch pipeline run
+should do automatically.
 
 ```
 # example: interrupt training after a few steps, then continue it
@@ -62,12 +56,12 @@ automatically.
 ```
 
 To verify a restart genuinely continued (rather than quietly starting
-over), check `stats/tt_training_log.jsonl` (or `stats/training_log.jsonl`
-for the dummy model) — every row is tagged with its `run_id` and the exact
-`shard_id`/`rows` it trained on; a real resume never repeats a
-`(lane, shard_id, rows)` tuple across the fresh-run/resume boundary.
-`run_audit.py`'s `resume_next_batch_matched` and `replay_hash_matched`
-checks verify this automatically every pipeline run (see below).
+over), check `submission_artifacts/ledgers/tt_training_log.jsonl` — every
+row is tagged with its `run_id` and the exact `shard_id`/`rows` it trained
+on; a real resume never repeats a `(lane, shard_id, rows)` tuple across the
+fresh-run/resume boundary. `run_audit.py`'s `resume_next_batch_matched` and
+`replay_hash_matched` checks verify this automatically every pipeline run
+(see below).
 
 ## Lanes
 
@@ -132,30 +126,32 @@ code:   1,422 docs   5,179,105 tokens   routed/code/{python,javascript,...15 lan
    packing for indic/web; code is *never* combined across files — see
    below), runs a real eval-set contamination check, and admits/holds each
    shard.
-12. **`save_checkpoint.py`** — a dummy scalar-model training loop over the
-   packed data (real resumable checkpoint state, toy model) + OPUS scoring.
+12. **`train_tiny_transformer.py`** — a fresh training run of the real
+   TinyTransformer over the packed data (real resumable checkpoint state)
+   + OPUS scoring.
 13. **`run_audit.py`** — exercises every subsystem above plus a full real
    TinyTransformer checkpoint/crash/resume/replay/fork cycle, and writes
-   `run.log` + `evidence.json` + `evidence.md`.
+   `submission_artifacts/run.log` + `evidence.json` + `evidence.md` +
+   `performance.json`.
 
 ## Provenance: two manifests, different purposes
 
-- **`stats/shard_manifest.jsonl`** (via `provenance.py`) — one record per
-  ~2,000-doc shard at *every* cleaning stage. Schema:
-  `shard_id, source_url, license_class, contributor_id, cleaning_script,
-  cleaning_script_hash, ingest_timestamp, sha256, token_count,
-  lang_distribution, status`. `status` is `"BLOCKED"` for every stage
-  before PII scrub, `"OK"` only after — it's a training-readiness flag, not
-  a per-stage success flag. `source_url` is always the real HF URL the
-  shard came from, never a placeholder.
-- **`stats/registry_manifest.jsonl`** (via `tokenize_and_admit.py`) — one
-  record per *tokenized* shard (~500 packed sequences each), the final
-  admission decision: `tokenizer_hash, content_hash, cleaning_pipeline_hash,
-  dedup_status, pii_screen_status, eval_overlap_status, license_tier,
-  parent_manifest_ids (currently always []), admission`.
-  `eval_overlap_status` is a real 13-word n-gram contamination check
-  against `openai_humaneval` (code) or `ai4bharat/IndicSentiment`
-  (indic/web) — not a placeholder.
+- **`submission_artifacts/manifests/shard_manifest.jsonl`** (via
+  `provenance.py`) — one record per ~2,000-doc shard at *every* cleaning
+  stage. Schema: `shard_id, source_url, license_class, contributor_id,
+  cleaning_script, cleaning_script_hash, ingest_timestamp, sha256,
+  token_count, lang_distribution, status`. `status` is `"BLOCKED"` for
+  every stage before PII scrub, `"OK"` only after — it's a
+  training-readiness flag, not a per-stage success flag. `source_url` is
+  always the real HF URL the shard came from, never a placeholder.
+- **`submission_artifacts/manifests/registry_manifest.jsonl`** (via
+  `tokenize_and_admit.py`) — one record per *tokenized* shard (~500 packed
+  sequences each), the final admission decision: `tokenizer_hash,
+  content_hash, cleaning_pipeline_hash, dedup_status, pii_screen_status,
+  eval_overlap_status, license_tier, parent_manifest_ids (currently always
+  []), admission`. `eval_overlap_status` is a real 13-word n-gram
+  contamination check against `openai_humaneval` (code) or
+  `ai4bharat/IndicSentiment` (indic/web) — not a placeholder.
 
 Both hash the *actual* script/content bytes at run time (`script_hash()`),
 so a manifest record is tied to the exact code that produced it, not a
@@ -194,33 +190,7 @@ total: 10,788 sequences (24 shards) 20,056,943 real tokens
 
 `stats/shard_sequence_counts.json` has the same breakdown as structured JSON.
 
-## Two training systems
-
-### 1. Dummy scalar model (`training_state.py`)
-
-A toy stand-in: one scalar "weight" updated by a momentum rule, real RNG
-snapshotting, a real deterministic data iterator. Nothing here learns
-anything meaningful — it exists to demonstrate the checkpoint/resume
-mechanics cheaply before doing the same thing with a real model.
-
-- **`save_checkpoint.py [n_steps]`** — starts a *fresh* run (step 0),
-  trains for `n_steps` (default 5), writes
-  `checkpoints/ckpt-<run_id>-step<N>/{trainer_state.json,checkpoint_manifest.json}`,
-  then runs OPUS scoring (see below).
-- **`resume_training.py [n_steps]`** — finds the checkpoint with the
-  highest `global_step`, restores everything, continues from the exact
-  next microbatch, then re-runs OPUS pointed at the new checkpoint.
-
-`trainer_state.json` has everything needed to resume: model/optimizer
-state, RNG state, exact dataloader cursor (lane/shard/row), and
-code-version hashes. `checkpoint_manifest.json` is the human-auditable
-15-field record (`run_id, branch_id, global_step, checkpoint_id, rank,
-microbatch_id, packed_sample_ids, shard_ids, token_span_ids,
-loss_mask_hash, attention_and_position_policy, mixture_lane,
-curriculum_stage, tokenizer_version, dataloader_version,
-opus_decision_id`).
-
-### 2. Real TinyTransformer (`tiny_transformer.py`)
+## Training (`tiny_transformer.py`)
 
 A real, small PyTorch language model: 2 transformer layers, each with
 single-head causal self-attention (`torch.nn.functional.
@@ -236,7 +206,7 @@ positions get exactly-zero gradient) — run it any time.
 
 - **`train_tiny_transformer.py [n_steps]`** — fresh run, trains
   `n_steps` (default 5) on real microbatches from `packed/`, writes
-  `checkpoints_tt/ckpt-tt-<run_id>-step<N>/{model_state.pt,
+  `submission_artifacts/checkpoints/ckpt-tt-<run_id>-step<N>/{model_state.pt,
   optimizer_state.pt, trainer_state.json, checkpoint_manifest.json}`,
   then runs OPUS.
 - **`restart.py [n_steps]`** — the separate resume trigger: finds the
@@ -246,20 +216,33 @@ positions get exactly-zero gradient) — run it any time.
   checkpoint rather than silently loading bad weights), continues
   training, then re-runs OPUS.
 
-`model_state.pt`/`optimizer_state.pt` are real `torch.save()` state
-dicts — the standard way to checkpoint a PyTorch model, not reinvented as
-JSON. Verified replayable end to end: a fresh run + a restart produce zero
-duplicate `(lane, shard_id, rows)` tuples across the boundary, and
-`run_audit.py`'s `replay_hash_matched` check confirms reloading the same
-checkpoint twice and rerunning identical steps twice produces
-byte-identical final weights.
+`trainer_state.json` has everything needed to resume: model/optimizer
+state, RNG state, exact dataloader cursor (lane/shard/row), and
+code-version hashes. `checkpoint_manifest.json` is the human-auditable
+15-field record (`run_id, branch_id, global_step, checkpoint_id, rank,
+microbatch_id, packed_sample_ids, shard_ids, token_span_ids,
+loss_mask_hash, attention_and_position_policy, mixture_lane,
+curriculum_stage, tokenizer_version, dataloader_version,
+opus_decision_id`). `model_state.pt`/`optimizer_state.pt` are real
+`torch.save()` state dicts — the standard way to checkpoint a PyTorch
+model, not reinvented as JSON. Verified replayable end to end: a fresh run
++ a restart produce zero duplicate `(lane, shard_id, rows)` tuples across
+the boundary, and `run_audit.py`'s `replay_hash_matched` check confirms
+reloading the same checkpoint twice and rerunning identical steps twice
+produces byte-identical final weights.
 
-### OPUS (both systems)
+Shared data-iteration state (deterministic round-robin over
+`packed/<lane>/*.npz`, the `TrainingSchedule`/`LaneCursor` classes that
+both `train_tiny_transformer.py`/`restart.py` and `run_audit.py` use for
+the dataloader cursor) lives in `training_state.py`.
 
-`opus_score`/`opus_decide`/`run_opus` in `save_checkpoint.py` — a dummy
-data-admission scoring pass over every real shard in
-`stats/registry_manifest.jsonl` → `stats/opus_decisions.jsonl`
-(`candidate_id, shard_ids, capability_lane, curriculum_stage,
+### OPUS (`opus.py`)
+
+`opus_score`/`opus_decide`/`run_opus` — a dummy data-admission scoring
+pass over every real shard in
+`submission_artifacts/manifests/registry_manifest.jsonl` →
+`submission_artifacts/ledgers/opus_decisions.jsonl` (`candidate_id,
+shard_ids, capability_lane, curriculum_stage,
 model_checkpoint_used_for_scoring, proxy_version, opus_score, status,
 rejection_reason, protected_floor_override, effective_token_estimate`).
 There is no trained proxy model — the score is an illustrative formula
@@ -267,15 +250,14 @@ over real signals (shard size, `eval_overlap_status`, `license_tier`) plus
 a deterministic per-shard jitter. **Code has a protected-floor override**:
 it's force-accepted regardless of score, since it's the smallest lane
 (25.8% of tokens) and a size-favoring formula would otherwise starve it
-inconsistently. Both `save_checkpoint.py`/`resume_training.py` (dummy
-model) and `train_tiny_transformer.py`/`restart.py` (real model) run this
+inconsistently. Both `train_tiny_transformer.py` and `restart.py` run this
 same OPUS pass, pointed at whichever checkpoint they just produced.
 
 ## Audit & evidence (`run_audit.py`)
 
 The pipeline's last step. Exercises every subsystem above against real
 artifacts on disk, plus a few deliberately-constructed real test cases
-(not hardcoded passes), and writes:
+(not hardcoded passes), and writes everything under `submission_artifacts/`:
 
 - **`run.log`** — the full timestamped event sequence: shards created,
   manifests validated, evaluation data blocked, mixture compiled, batches
@@ -290,6 +272,9 @@ artifacts on disk, plus a few deliberately-constructed real test cases
   (Tokenizer integrity, Evaluation firewall, Packing correctness, Mixture
   compliance, OPUS audit trail, Crash recovery, Replay, Learning trace,
   Throughput).
+- **`performance.json`** — the throughput numbers behind the "Throughput"
+  row above: `steps_per_sec, tokens_per_sec, elapsed_sec, steps,
+  tokens_processed`.
 
 Notably real, not scripted to pass: `eval_shard_blocked` deliberately
 injects a real, verbatim `openai_humaneval` example as a poisoned
@@ -304,8 +289,8 @@ guard against the two branches silently overwriting each other on disk
 `run_audit.py` does its own self-contained checkpoint/crash/resume/
 replay/fork cycle internally — it doesn't require
 `train_tiny_transformer.py`/`restart.py` to have been run first, and its
-checkpoints land in `checkpoints_tt/` alongside (not instead of) anything
-already there.
+checkpoints land in `submission_artifacts/checkpoints/` alongside (not
+instead of) anything already there.
 
 ## Honesty notes (things that are real vs deliberately mocked)
 
@@ -339,15 +324,14 @@ provenance.py                shard-level provenance logging (shared)
 pipeline_stats.py            stats/pipeline_stats.json ledger (shared)
 tokenize_and_admit.py        tokenize, pack, eval-overlap check, registry manifest
 
-training_state.py            dummy scalar model + resumable training state (shared)
-save_checkpoint.py            dummy model: fresh training run + checkpoint + OPUS
-resume_training.py            dummy model: resume trigger
+training_state.py            resumable data-iteration state: TrainingSchedule/LaneCursor (shared)
+opus.py                       dummy data-admission scoring pass (shared)
 
 tiny_transformer.py          real PyTorch model (2-layer, single-head attention)
 test_tiny_transformer.py     loss_mask correctness check (gradient introspection)
 tt_checkpoint.py              TinyTransformer checkpoint save/load (shared)
-train_tiny_transformer.py    TinyTransformer: fresh training run + checkpoint + OPUS
-restart.py                    TinyTransformer: resume trigger
+train_tiny_transformer.py    fresh training run + checkpoint + OPUS
+restart.py                    resume trigger
 
 run_audit.py                  full audit: every subsystem + a real checkpoint/crash/resume/replay/fork cycle
 run_pipeline.sh                runs steps 1-13 above in order
@@ -356,15 +340,15 @@ routed/{indic,web,code}/<lang>/*.txt     final cleaned corpus
 shards/<lane>/<stage>/*.parquet          per-stage audit shards (consumed + deleted by the next stage)
 packed/<lane>/*.npz                       packed training sequences
 packed/<lane>/doc_manifest.jsonl          doc_id -> source file lookup
-checkpoints/ckpt-*/                       dummy model: trainer_state.json + checkpoint_manifest.json
-checkpoints_tt/ckpt-tt-*/                 TinyTransformer: model_state.pt + optimizer_state.pt + trainer_state.json + checkpoint_manifest.json
 stats/pipeline_stats.json                per-stage summary ledger
-stats/shard_manifest.jsonl                per-cleaning-stage shard provenance (BLOCKED/OK)
-stats/registry_manifest.jsonl             final tokenized-shard admission decisions
-stats/opus_decisions.jsonl                OPUS scoring pass
-stats/training_log.jsonl                  dummy model per-step training log (append-only, spans resumes)
-stats/tt_training_log.jsonl               TinyTransformer per-step training log (append-only, spans resumes)
 stats/shard_sequence_counts.json          per-lane/per-shard sequence counts
-run.log                                    full audit event sequence
-evidence.json / evidence.md                audit pass/fail + supporting evidence
+
+submission_artifacts/manifests/shard_manifest.jsonl      per-cleaning-stage shard provenance (BLOCKED/OK)
+submission_artifacts/manifests/registry_manifest.jsonl   final tokenized-shard admission decisions
+submission_artifacts/ledgers/opus_decisions.jsonl        OPUS scoring pass
+submission_artifacts/ledgers/tt_training_log.jsonl       per-step training log (append-only, spans resumes)
+submission_artifacts/checkpoints/ckpt-tt-*/              model_state.pt + optimizer_state.pt + trainer_state.json + checkpoint_manifest.json
+submission_artifacts/run.log                             full audit event sequence
+submission_artifacts/evidence.json / evidence.md          audit pass/fail + supporting evidence
+submission_artifacts/performance.json                     throughput numbers from the audit's performance phase
 ```

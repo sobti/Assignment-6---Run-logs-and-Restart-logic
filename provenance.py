@@ -51,7 +51,7 @@ from indic_normalize import count_tokens
 CONTRIBUTOR_ID = "era5-punit"
 SHARD_SIZE = 2000
 SHARDS_DIR = Path("shards")
-MANIFEST_PATH = Path("stats/shard_manifest.jsonl")
+MANIFEST_PATH = Path("submission_artifacts/manifests/shard_manifest.jsonl")
 
 
 def script_hash(script_path: str) -> str:
@@ -97,7 +97,7 @@ def log_shard(
         "lang_distribution": lang_distribution,
         "status": status,
     }
-    MANIFEST_PATH.parent.mkdir(exist_ok=True)
+    MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     with MANIFEST_PATH.open("a", encoding="utf-8") as f:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
     return record

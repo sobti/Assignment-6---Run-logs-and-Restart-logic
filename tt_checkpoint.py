@@ -3,20 +3,20 @@ Checkpoint save/load for the real tiny_transformer.py model -- shared by
 train_tiny_transformer.py (fresh runs) and restart.py (the resume
 trigger), so both write/read the exact same format.
 
-Split across three files per checkpoint, using the right tool for each:
+Checkpoints land under submission_artifacts/checkpoints/, split across
+three files per checkpoint, using the right tool for each:
   - model_state.pt / optimizer_state.pt: real torch.save() of
     model.state_dict()/optimizer.state_dict() -- the standard way to
     checkpoint a PyTorch model, not reinvented as JSON/npz.
   - trainer_state.json: everything else needed to resume exactly --
     global_step, RNG state (python + numpy + torch, snapshotted for
     completeness even though this model has no dropout/sampling to
-    desync -- see training_state.py's identical rationale for the dummy
-    model), the exact dataloader cursor (reusing training_state.py's
+    desync), the exact dataloader cursor (reusing training_state.py's
     TrainingSchedule/LaneCursor, which is framework-agnostic), the model
     config needed to reconstruct the architecture before loading weights,
     and sha256 hashes of the two .pt files for integrity checking.
-  - checkpoint_manifest.json: the same human-auditable 15-field schema
-    used by save_checkpoint.py's dummy-model checkpoints.
+  - checkpoint_manifest.json: the human-auditable 15-field record
+    describing the last microbatch actually processed.
 """
 
 from __future__ import annotations
@@ -36,7 +36,7 @@ from tiny_transformer import TinyTransformer, TinyTransformerConfig
 from tokenize_and_admit import ENCODING_NAME, tokenizer_hash as _tokenizer_hash
 from training_state import TrainingSchedule
 
-CHECKPOINT_DIR = Path("checkpoints_tt")
+CHECKPOINT_DIR = Path("submission_artifacts/checkpoints")
 SEQ_LEN = 2048  # packed sequence length in packed/<lane>/*.npz (the model's context_len is a slice of this)
 
 
