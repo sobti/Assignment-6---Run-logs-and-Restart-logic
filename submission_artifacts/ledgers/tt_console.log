@@ -1,0 +1,85 @@
+=== 2026-08-11T00:18:28Z fresh run run-tt-e8edd068: TinyTransformer(TinyTransformerConfig(vocab_size=200019, d_model=48, d_ff=96, n_layers=2, context_len=64)) ===
+    9,641,136 parameters, SGD(lr=0.1, momentum=0.9)
+=== training 5 steps ===
+  step    1  lane=indic   shard=v5_indic_shard_000    loss=12.2056  perplexity=199896.8750
+  step    2  lane=web     shard=v5_web_shard_000      loss=12.2077  perplexity=200334.4688
+  step    3  lane=code    shard=v5_code_shard_000     loss=12.2050  perplexity=199792.0469
+  step    4  lane=indic   shard=v5_indic_shard_000    loss=12.2077  perplexity=200322.2500
+  step    5  lane=web     shard=v5_web_shard_000      loss=12.2075  perplexity=200289.3906
+
+training log appended to submission_artifacts/ledgers/tt_training_log.jsonl
+checkpoint written to submission_artifacts/checkpoints/ckpt-tt-run-tt-e8edd068-step000000005/
+  model_state.pt, optimizer_state.pt (real torch state_dicts)
+  trainer_state.json (RNG + dataloader cursor + config + integrity hashes)
+  checkpoint_manifest.json:
+{
+  "run_id": "run-tt-e8edd068",
+  "branch_id": "main",
+  "global_step": 5,
+  "checkpoint_id": "ckpt-tt-run-tt-e8edd068-step000000005",
+  "rank": 0,
+  "microbatch_id": "mb-v5_web_shard_000-rows4-7",
+  "packed_sample_ids": [
+    "v5_web_shard_000:4",
+    "v5_web_shard_000:5",
+    "v5_web_shard_000:6",
+    "v5_web_shard_000:7"
+  ],
+  "shard_ids": [
+    "v5_web_shard_000"
+  ],
+  "token_span_ids": [
+    [
+      0,
+      64
+    ],
+    [
+      0,
+      64
+    ],
+    [
+      0,
+      64
+    ],
+    [
+      0,
+      64
+    ]
+  ],
+  "loss_mask_hash": "sha256_2661920f2409",
+  "attention_and_position_policy": "causal single-head attention (torch scaled_dot_product_attention, is_causal=True), absolute learned position embeddings over the first 64 tokens of each packed sequence; no LayerNorm, no multi-head split -- a minimal real architecture, not a production one",
+  "mixture_lane": "Web",
+  "curriculum_stage": "stage_0_uniform",
+  "tokenizer_version": "o200k_base:tok_0794272a2782",
+  "dataloader_version": "dataloader_dc955a6e0109",
+  "opus_decision_id": "opus-mix-v5-50w25i25c"
+}
+
+=== OPUS (dummy): scoring real shards from submission_artifacts/manifests/registry_manifest.jsonl ===
+  cand-v5_indic_shard_000  score=0.8825  status=accepted   override=False  eff_tokens=962970
+  cand-v5_indic_shard_001  score=0.5050  status=deferred   override=False  eff_tokens=769812
+  cand-v5_indic_shard_002  score=0.5260  status=deferred   override=False  eff_tokens=780586
+  cand-v5_indic_shard_003  score=0.8375  status=accepted   override=False  eff_tokens=940073
+  cand-v5_indic_shard_004  score=0.5157  status=deferred   override=False  eff_tokens=262522
+  cand-v5_web_shard_000    score=0.6795  status=deferred   override=False  eff_tokens=858893
+  cand-v5_web_shard_001    score=0.6160  status=deferred   override=False  eff_tokens=826761
+  cand-v5_web_shard_002    score=0.6405  status=deferred   override=False  eff_tokens=839359
+  cand-v5_web_shard_003    score=0.9430  status=accepted   override=False  eff_tokens=993782
+  cand-v5_web_shard_004    score=0.6310  status=deferred   override=False  eff_tokens=833741
+  cand-v5_web_shard_005    score=0.8480  status=accepted   override=False  eff_tokens=944804
+  cand-v5_web_shard_006    score=0.9525  status=accepted   override=False  eff_tokens=998868
+  cand-v5_web_shard_007    score=0.7520  status=accepted   override=False  eff_tokens=895998
+  cand-v5_web_shard_008    score=0.5085  status=deferred   override=False  eff_tokens=771408
+  cand-v5_web_shard_009    score=0.5490  status=deferred   override=False  eff_tokens=792415
+  cand-v5_web_shard_010    score=0.1838  status=rejected   override=False  eff_tokens=123510
+  cand-v5_code_shard_000   score=0.6205  status=accepted   override=True  eff_tokens=606952
+  cand-v5_code_shard_001   score=0.7179  status=accepted   override=True  eff_tokens=627716
+  cand-v5_code_shard_002   score=0.6150  status=accepted   override=True  eff_tokens=588621
+  cand-v5_code_shard_003   score=0.5537  status=accepted   override=True  eff_tokens=572872
+  cand-v5_code_shard_004   score=0.5635  status=accepted   override=True  eff_tokens=577748
+  cand-v5_code_shard_005   score=0.5534  status=accepted   override=True  eff_tokens=577771
+  cand-v5_code_shard_006   score=0.7360  status=accepted   override=True  eff_tokens=629276
+  cand-v5_code_shard_007   score=0.1622  status=accepted   override=True  eff_tokens=15325
+
+24 OPUS decisions written to submission_artifacts/ledgers/opus_decisions.jsonl
+1 rejected shard(s) (shard_id + doc_ids) written to submission_artifacts/ledgers/opus_rejected.jsonl

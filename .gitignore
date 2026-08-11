@@ -16,8 +16,8 @@ stats/
 # evidence.json, evidence.md, performance.json) are committed -- the
 # manifests/ledgers/checkpoints subfolders are regenerable pipeline output
 # (checkpoints/ alone is hundreds of MB of .pt weight files).
-submission_artifacts/manifests/
-submission_artifacts/ledgers/
+#submission_artifacts/manifests/
+#submission_artifacts/ledgers/
 submission_artifacts/checkpoints/
 
 
