@@ -222,7 +222,32 @@ def phase_opus_recorded(log: Logger) -> tuple[bool, str]:
         "opus_decisions_complete", complete and len(opus) == len(registry),
         registry_shards=len(registry), opus_records=len(opus),
     )
-    return ok, f"submission_artifacts/ledgers/opus_decisions.jsonl ({len(opus)} records, one per registry shard)"
+
+    log.event("opus_rejected_shards_recorded")
+    rejected_expected = {d["shard_ids"][0] for d in opus if d["status"] == "rejected"}
+    rejected_log = _read_jsonl(LEDGERS_DIR / "opus_rejected.jsonl")
+    rejected_required = {"candidate_id", "shard_id", "capability_lane", "opus_score", "rejection_reason", "doc_ids"}
+    rejected_complete = all(rejected_required.issubset(r) for r in rejected_log)
+    rejected_shards_match = {r["shard_id"] for r in rejected_log} == rejected_expected
+    doc_manifests: dict[str, set[int]] = {}
+    doc_ids_nonempty = True
+    for r in rejected_log:
+        lane = r["capability_lane"].lower()
+        if lane not in doc_manifests:
+            doc_manifests[lane] = {d["doc_id"] for d in _read_jsonl(Path(f"packed/{lane}/doc_manifest.jsonl"))}
+        if not r["doc_ids"] or not all(d in doc_manifests[lane] for d in r["doc_ids"]):
+            doc_ids_nonempty = False
+    rejected_ok = log.check(
+        "opus_rejected_shards_recorded", rejected_complete and rejected_shards_match and doc_ids_nonempty,
+        rejected_shards=len(rejected_expected), rejected_records=len(rejected_log),
+    )
+
+    ok = ok and rejected_ok
+    return ok, (
+        f"submission_artifacts/ledgers/opus_decisions.jsonl ({len(opus)} records, one per registry shard); "
+        f"submission_artifacts/ledgers/opus_rejected.jsonl ({len(rejected_log)} records, shard_id + doc_ids "
+        f"resolved from packed/<lane>/doc_manifest.jsonl for every rejected shard)"
+    )
 
 
 # --------------------------------------------------------------------------

@@ -18,11 +18,12 @@
 #     audit-trail behavior, not a bug.
 #   - submission_artifacts/manifests/registry_manifest.jsonl
 #     (tokenize_and_admit.py) and submission_artifacts/ledgers/
-#     opus_decisions.jsonl (opus.py, via train_tiny_transformer.py) are
-#     fully rewritten each run, since they represent current state, not
-#     history. submission_artifacts/ledgers/tt_training_log.jsonl is
-#     APPENDED to, not rewritten -- it's meant to span every run/resume,
-#     each row tagged with its run_id.
+#     opus_decisions.jsonl + opus_rejected.jsonl (opus.py, via
+#     train_tiny_transformer.py) are fully rewritten each run, since they
+#     represent current state, not history. submission_artifacts/ledgers/
+#     tt_training_log.jsonl + tt_console.log are APPENDED to, not
+#     rewritten -- meant to span every run/resume, each row/entry tagged
+#     with (or printed under) its run_id.
 #   - train_tiny_transformer.py's run_id/checkpoint_id are freshly
 #     generated (a random suffix) every run, so it writes a new
 #     submission_artifacts/checkpoints/ckpt-tt-.../ directory each time
@@ -106,8 +107,10 @@ echo "provenance manifest:  submission_artifacts/manifests/shard_manifest.jsonl"
 echo "registry manifest:    submission_artifacts/manifests/registry_manifest.jsonl"
 echo "packed sequences:     packed/<lane>/*.npz + packed/<lane>/doc_manifest.jsonl"
 echo "training log:         submission_artifacts/ledgers/tt_training_log.jsonl"
+echo "training console log: submission_artifacts/ledgers/tt_console.log"
 echo "checkpoint (resumable state + manifest): submission_artifacts/checkpoints/ckpt-tt-*/{model_state.pt,optimizer_state.pt,trainer_state.json,checkpoint_manifest.json}"
 echo "OPUS decisions:       submission_artifacts/ledgers/opus_decisions.jsonl"
+echo "OPUS rejected shards: submission_artifacts/ledgers/opus_rejected.jsonl"
 echo "audit trail:          submission_artifacts/{run.log,evidence.json,evidence.md,performance.json}"
 echo
 echo "to resume training from the latest checkpoint:"

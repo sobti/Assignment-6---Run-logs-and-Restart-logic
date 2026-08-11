@@ -21,6 +21,7 @@ result as training-ready data.
 - [Packed training sequences](#packed-training-sequences)
 - [Training (`tiny_transformer.py`)](#training-tiny_transformerpy)
 - [OPUS (`opus.py`)](#opus-opuspy)
+- [Ledgers (`submission_artifacts/ledgers/`)](#ledgers-submission_artifactsledgers)
 - [Audit & evidence (`run_audit.py`)](#audit--evidence-run_auditpy)
 - [Honesty notes](#honesty-notes-things-that-are-real-vs-deliberately-mocked)
 - [File layout](#file-layout)
@@ -75,8 +76,10 @@ provenance manifest:  submission_artifacts/manifests/shard_manifest.jsonl
 registry manifest:    submission_artifacts/manifests/registry_manifest.jsonl
 packed sequences:     packed/<lane>/*.npz + packed/<lane>/doc_manifest.jsonl
 training log:         submission_artifacts/ledgers/tt_training_log.jsonl
+training console log: submission_artifacts/ledgers/tt_console.log
 checkpoint (resumable state + manifest): submission_artifacts/checkpoints/ckpt-tt-*/{model_state.pt,optimizer_state.pt,trainer_state.json,checkpoint_manifest.json}
 OPUS decisions:       submission_artifacts/ledgers/opus_decisions.jsonl
+OPUS rejected shards: submission_artifacts/ledgers/opus_rejected.jsonl
 audit trail:          submission_artifacts/{run.log,evidence.json,evidence.md,performance.json}
 
 to resume training from the latest checkpoint:
@@ -96,7 +99,9 @@ to resume training from the latest checkpoint:
 | `submission_artifacts/manifests/shard_manifest.jsonl` | per-cleaning-stage shard provenance (`BLOCKED`/`OK`) |
 | `submission_artifacts/manifests/registry_manifest.jsonl` | final tokenized-shard admission decisions |
 | `submission_artifacts/ledgers/opus_decisions.jsonl` | OPUS scoring pass |
+| `submission_artifacts/ledgers/opus_rejected.jsonl` | rejected shards only, with `doc_ids` resolved from `packed/` |
 | `submission_artifacts/ledgers/tt_training_log.jsonl` | per-step training log (append-only, spans resumes) |
+| `submission_artifacts/ledgers/tt_console.log` | human-readable run narrative (append-only, spans resumes) |
 | `submission_artifacts/checkpoints/ckpt-tt-*/` | `model_state.pt` + `optimizer_state.pt` + `trainer_state.json` + `checkpoint_manifest.json` |
 | `submission_artifacts/run.log` | full audit event sequence |
 | `submission_artifacts/evidence.json` / `evidence.md` | audit pass/fail + supporting evidence |
@@ -318,6 +323,11 @@ positions get exactly-zero gradient) — run it any time.
   checkpoint rather than silently loading bad weights), continues
   training, then re-runs OPUS.
 
+Both append (never overwrite) to the same two files under
+`submission_artifacts/ledgers/`, so a single file spans every fresh run and
+resume — `tt_training_log.jsonl` and `tt_console.log`; schemas and details
+in [Ledgers](#ledgers-submission_artifactsledgers).
+
 `trainer_state.json` has everything needed to resume: model/optimizer
 state, RNG state, exact dataloader cursor (lane/shard/row), and
 code-version hashes. `checkpoint_manifest.json` is the human-auditable
@@ -344,18 +354,50 @@ the dataloader cursor) lives in `training_state.py`.
 
 `opus_score`/`opus_decide`/`run_opus` — a dummy data-admission scoring
 pass over every real shard in
-`submission_artifacts/manifests/registry_manifest.jsonl` →
-`submission_artifacts/ledgers/opus_decisions.jsonl` (`candidate_id,
-shard_ids, capability_lane, curriculum_stage,
-model_checkpoint_used_for_scoring, proxy_version, opus_score, status,
-rejection_reason, protected_floor_override, effective_token_estimate`).
-There is no trained proxy model — the score is an illustrative formula
-over real signals (shard size, `eval_overlap_status`, `license_tier`) plus
-a deterministic per-shard jitter. **Code has a protected-floor override**:
+`submission_artifacts/manifests/registry_manifest.jsonl`. There is no
+trained proxy model — the score is an illustrative formula over real
+signals (shard size, `eval_overlap_status`, `license_tier`) plus a
+deterministic per-shard jitter. **Code has a protected-floor override**:
 it's force-accepted regardless of score, since it's the smallest lane
 (25.8% of tokens) and a size-favoring formula would otherwise starve it
 inconsistently. Both `train_tiny_transformer.py` and `restart.py` run this
-same OPUS pass, pointed at whichever checkpoint they just produced.
+same OPUS pass, pointed at whichever checkpoint they just produced, and
+write its output to `submission_artifacts/ledgers/opus_decisions.jsonl` +
+`opus_rejected.jsonl` — schemas and details in the next section,
+[Ledgers](#ledgers-submission_artifactsledgers).
+
+---
+
+## Ledgers (`submission_artifacts/ledgers/`)
+
+Everything OPUS and training write, in one place: what's in each file, who
+writes it, and whether it's overwritten or appended to on every run.
+
+| File | Written by | Mode | Content |
+|---|---|---|---|
+| `opus_decisions.jsonl` | `opus.py`'s `run_opus()`, called from `train_tiny_transformer.py` / `restart.py` | **overwritten** every run | one record per registry shard: `candidate_id, shard_ids, capability_lane, curriculum_stage, model_checkpoint_used_for_scoring, proxy_version, opus_score, status, rejection_reason, protected_floor_override, effective_token_estimate` |
+| `opus_rejected.jsonl` | `opus.py`'s `run_opus()` | **overwritten** every run | one record per `status == "rejected"` shard only: `candidate_id, shard_id, capability_lane, opus_score, rejection_reason, doc_ids` — `doc_ids` resolved from that shard's real `packed/<lane>/<shard_id>.npz` |
+| `tt_training_log.jsonl` | `train_tiny_transformer.py` / `restart.py` | **appended**, spans every fresh run + resume | one record per training step: `run_id, step, lane, shard_id, rows, loss, perplexity` |
+| `tt_console.log` | `train_tiny_transformer.py` / `restart.py`, via the shared `log()` helper (defined in `train_tiny_transformer.py`, imported by `restart.py`) | **appended**, spans every fresh run + resume | the full human-readable run narrative — timestamped run-start banner, per-step `loss`/`perplexity` lines, the checkpoint manifest, the OPUS scoring table — everything either script prints to stdout |
+
+Why the write modes differ: `opus_decisions.jsonl`/`opus_rejected.jsonl`
+represent OPUS's *current* judgment of every shard as of the latest
+checkpoint, so they're fully rewritten each run — a stale rejection from a
+prior checkpoint shouldn't linger. `tt_training_log.jsonl`/`tt_console.log`
+are a *history* of every step ever run, so they're append-only by design —
+that's what lets `run_audit.py`'s `resume_next_batch_matched` and
+`replay_hash_matched` checks (and you, manually) verify a resume actually
+continued rather than quietly restarted (see [Restart / resume
+training](#restart--resume-training)).
+
+`run_audit.py`'s `phase_opus_recorded` checks both OPUS ledgers every run:
+`opus_decisions_complete` (schema + one record per registry shard) and
+`opus_rejected_shards_recorded` (every rejected shard has a matching
+`opus_rejected.jsonl` record with real, resolvable `doc_ids`).
+
+None of `submission_artifacts/ledgers/` is committed to git (see
+`.gitignore`) — it's fully regenerated by `run_pipeline.sh` /
+`train_tiny_transformer.py` / `restart.py`.
 
 ---
 
@@ -457,7 +499,9 @@ stats/shard_sequence_counts.json          per-lane/per-shard sequence counts
 submission_artifacts/manifests/shard_manifest.jsonl      per-cleaning-stage shard provenance (BLOCKED/OK)
 submission_artifacts/manifests/registry_manifest.jsonl   final tokenized-shard admission decisions
 submission_artifacts/ledgers/opus_decisions.jsonl        OPUS scoring pass
+submission_artifacts/ledgers/opus_rejected.jsonl         rejected shards only, with doc_ids resolved from packed/
 submission_artifacts/ledgers/tt_training_log.jsonl       per-step training log (append-only, spans resumes)
+submission_artifacts/ledgers/tt_console.log              human-readable run narrative (append-only, spans resumes)
 submission_artifacts/checkpoints/ckpt-tt-*/              model_state.pt + optimizer_state.pt + trainer_state.json + checkpoint_manifest.json
 submission_artifacts/run.log                             full audit event sequence
 submission_artifacts/evidence.json / evidence.md          audit pass/fail + supporting evidence

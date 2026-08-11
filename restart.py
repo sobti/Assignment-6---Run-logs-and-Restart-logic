@@ -27,12 +27,13 @@ from __future__ import annotations
 
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import torch
 
 from opus import run_opus
-from train_tiny_transformer import TRAINING_LOG, to_batch
+from train_tiny_transformer import TRAINING_LOG, log, to_batch
 from tt_checkpoint import find_latest_checkpoint, load_full_checkpoint, save_full_checkpoint
 
 if __name__ == "__main__":
@@ -42,20 +43,20 @@ if __name__ == "__main__":
     if latest is None:
         raise SystemExit("no checkpoint found under submission_artifacts/checkpoints/ -- run train_tiny_transformer.py first")
 
-    print(f"=== restarting from {latest.name} ===")
+    log(f"=== {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')} restarting from {latest.name} ===")
     model, optimizer, schedule, run_id, global_step = load_full_checkpoint(latest)
-    print(f"restored: run_id={run_id}  global_step={global_step}  "
-          f"next_lane={schedule.next_lane_pointer}  "
-          f"cursors={ {lane: (c.shard_idx, c.row_idx) for lane, c in schedule.cursors.items()} }")
+    log(f"restored: run_id={run_id}  global_step={global_step}  "
+        f"next_lane={schedule.next_lane_pointer}  "
+        f"cursors={ {lane: (c.shard_idx, c.row_idx) for lane, c in schedule.cursors.items()} }")
 
-    print(f"\n=== continuing training: {n_steps} more steps ===")
+    log(f"\n=== continuing training: {n_steps} more steps ===")
     records = []
     last_mb = None
     step = global_step
     for _ in range(n_steps):
         mb = schedule.next_microbatch()
         if mb is None:
-            print("  all lanes exhausted -- stopping early")
+            log("  all lanes exhausted -- stopping early")
             break
         token_ids, loss_mask = to_batch(mb, model.config.context_len)
 
@@ -73,8 +74,8 @@ if __name__ == "__main__":
             "rows": mb["rows"], "loss": round(loss_val, 4), "perplexity": round(perplexity, 4),
         }
         records.append(record)
-        print(f"  step {step:4d}  lane={mb['lane']:6s}  shard={mb['shard_id']:20s}"
-              f"  loss={loss_val:.4f}  perplexity={perplexity:.4f}")
+        log(f"  step {step:4d}  lane={mb['lane']:6s}  shard={mb['shard_id']:20s}"
+            f"  loss={loss_val:.4f}  perplexity={perplexity:.4f}")
 
     if last_mb is None:
         raise SystemExit("all lanes exhausted -- nothing left to train on, no new checkpoint saved")
@@ -83,15 +84,17 @@ if __name__ == "__main__":
     with open(TRAINING_LOG, "a", encoding="utf-8") as f:
         for r in records:
             f.write(json.dumps(r) + "\n")
-    print(f"\ntraining log appended to {TRAINING_LOG}")
+    log(f"\ntraining log appended to {TRAINING_LOG}")
 
     ckpt_dir = save_full_checkpoint(model, optimizer, schedule, run_id, step, last_mb)
-    print(f"checkpoint written to {ckpt_dir}/")
-    print(json.dumps(json.loads((ckpt_dir / "checkpoint_manifest.json").read_text()), indent=2))
+    log(f"checkpoint written to {ckpt_dir}/")
+    log(json.dumps(json.loads((ckpt_dir / "checkpoint_manifest.json").read_text()), indent=2))
 
-    print("\n=== OPUS (dummy): re-scoring real shards from submission_artifacts/manifests/registry_manifest.jsonl ===")
+    log("\n=== OPUS (dummy): re-scoring real shards from submission_artifacts/manifests/registry_manifest.jsonl ===")
     decisions = run_opus(ckpt_dir.name)
     for d in decisions:
-        print(f"  {d['candidate_id']:24s} score={d['opus_score']:.4f}  status={d['status']:9s}"
-              f"  override={d['protected_floor_override']}  eff_tokens={d['effective_token_estimate']}")
-    print(f"\n{len(decisions)} OPUS decisions written to submission_artifacts/ledgers/opus_decisions.jsonl")
+        log(f"  {d['candidate_id']:24s} score={d['opus_score']:.4f}  status={d['status']:9s}"
+            f"  override={d['protected_floor_override']}  eff_tokens={d['effective_token_estimate']}")
+    log(f"\n{len(decisions)} OPUS decisions written to submission_artifacts/ledgers/opus_decisions.jsonl")
+    n_rejected = sum(1 for d in decisions if d["status"] == "rejected")
+    log(f"{n_rejected} rejected shard(s) (shard_id + doc_ids) written to submission_artifacts/ledgers/opus_rejected.jsonl")

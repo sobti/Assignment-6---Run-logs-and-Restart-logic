@@ -9,6 +9,11 @@ trained proxy model. See opus_score()'s docstring for exactly what's mocked
 (the scoring formula) vs grounded in real data (the signals it's computed
 from).
 
+Every rejected shard is also recorded separately in
+submission_artifacts/ledgers/opus_rejected.jsonl, with its doc_ids resolved
+from packed/<lane>/<shard_id>.npz -- so a rejection can be traced back to the
+exact source documents it kept out of training, not just the shard.
+
 Usage: imported by train_tiny_transformer.py and restart.py, not run directly.
 """
 
@@ -19,8 +24,12 @@ import inspect
 import json
 from pathlib import Path
 
+import numpy as np
+
 REGISTRY_MANIFEST = Path("submission_artifacts/manifests/registry_manifest.jsonl")
 OPUS_MANIFEST = Path("submission_artifacts/ledgers/opus_decisions.jsonl")
+OPUS_REJECTED_LOG = Path("submission_artifacts/ledgers/opus_rejected.jsonl")
+PACKED_DIR = Path("packed")
 
 # Data protected from being scored out regardless of OPUS score -- code is
 # by far the smallest lane (25.8% of tokens vs 50/22 for web/indic; see
@@ -77,6 +86,14 @@ def opus_decide(shard: dict, checkpoint_id: str, proxy_version: str) -> dict:
     }
 
 
+def _doc_ids_for_shard(lane: str, shard_id: str) -> list[int]:
+    """Resolves a shard_id back to the doc_ids packed into it, by reading the
+    per-token doc_id array out of packed/<lane>/<shard_id>.npz -- the same
+    shard_id -> doc_id lookup run_audit.py's phase_learning_trace uses."""
+    doc_id = np.load(PACKED_DIR / lane.lower() / f"{shard_id}.npz")["doc_id"]
+    return sorted(int(x) for x in set(doc_id.flatten().tolist()) if x != -1)
+
+
 def run_opus(checkpoint_id: str) -> list[dict]:
     proxy_version = "proxy_" + hashlib.sha256(inspect.getsource(opus_score).encode()).hexdigest()[:12]
     shards = [json.loads(line) for line in REGISTRY_MANIFEST.read_text().splitlines() if line.strip()]
@@ -86,4 +103,19 @@ def run_opus(checkpoint_id: str) -> list[dict]:
     with OPUS_MANIFEST.open("w", encoding="utf-8") as f:
         for d in decisions:
             f.write(json.dumps(d, ensure_ascii=False) + "\n")
+
+    rejected = [d for d in decisions if d["status"] == "rejected"]
+    with OPUS_REJECTED_LOG.open("w", encoding="utf-8") as f:
+        for d in rejected:
+            shard_id = d["shard_ids"][0]
+            record = {
+                "candidate_id": d["candidate_id"],
+                "shard_id": shard_id,
+                "capability_lane": d["capability_lane"],
+                "opus_score": d["opus_score"],
+                "rejection_reason": d["rejection_reason"],
+                "doc_ids": _doc_ids_for_shard(d["capability_lane"], shard_id),
+            }
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
     return decisions
